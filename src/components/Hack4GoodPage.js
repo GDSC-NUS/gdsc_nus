@@ -2,6 +2,7 @@ import React from "react";
 import PageHeader from "./PageHeader";
 import Footer from "./Footer.js";
 import logo from "../assets/ProjectsPage/hglogo.png";
+import headerLogo from "../assets/ProjectsPage/HFG_Logo.png";
 import sponsorOsa from "../assets/Hack4GoodPage/sponsor-osa.png";
 import sponsorSl2 from "../assets/Hack4GoodPage/sponsor-sl2.png";
 import sponsorPaypal from "../assets/Hack4GoodPage/sponsor-paypal.png";
@@ -20,7 +21,7 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { Grid, Icon, Image, Divider } from "semantic-ui-react";
+import { Grid, Icon, Image, Divider, Button } from "semantic-ui-react";
 import PdfRenderer from "./PdfRenderer";
 
 const panelJudges = [
@@ -160,11 +161,18 @@ const Hack4GoodPage = () => {
   return (
     <>
       <PageHeader />
-      <header class="home-header projects-header">
-        <div class="home-header__text-box">
-          <h1 class="heading-primary">
-            <span class="heading-primary--main">Hack For Good</span>
-          </h1>
+      <header class="home-header hackathon-header">
+        <Image src={headerLogo} />
+        <div className="btn-border">
+          <div className="btn-content">
+            <a
+              href="https://www.google.com"
+              target="_blank"
+              className="btn-white"
+            >
+              Register
+            </a>
+          </div>
         </div>
       </header>
       <section className="section">
@@ -178,7 +186,9 @@ const Hack4GoodPage = () => {
               <img src={logo} alt="logo" style={{ width: "50%" }} />
             </div>
             <div className="card-horizontal__content">
-              <h2 class="heading-secondary">Hack for Good will return in 2022!</h2>
+              <h2 class="heading-secondary">
+                Hack for Good will return in 2022!
+              </h2>
               <h2>Find out more about our 2021 edition below.</h2>
               <br />
               <p>
