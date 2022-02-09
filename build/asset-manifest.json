@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.9d1d4b8e.chunk.css",
-    "main.js": "/static/js/main.d91edbab.chunk.js",
-    "main.js.map": "/static/js/main.d91edbab.chunk.js.map",
+    "main.css": "/static/css/main.77e412f5.chunk.css",
+    "main.js": "/static/js/main.62bc989e.chunk.js",
+    "main.js.map": "/static/js/main.62bc989e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7d2ab4be.js",
     "runtime-main.js.map": "/static/js/runtime-main.7d2ab4be.js.map",
     "static/css/2.bd9e88d5.chunk.css": "/static/css/2.bd9e88d5.chunk.css",
-    "static/js/2.df2113e4.chunk.js": "/static/js/2.df2113e4.chunk.js",
-    "static/js/2.df2113e4.chunk.js.map": "/static/js/2.df2113e4.chunk.js.map",
+    "static/js/2.697dfdf1.chunk.js": "/static/js/2.697dfdf1.chunk.js",
+    "static/js/2.697dfdf1.chunk.js.map": "/static/js/2.697dfdf1.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.49a82c64060aa64096e09b8f5a3c3189.js": "/precache-manifest.49a82c64060aa64096e09b8f5a3c3189.js",
+    "precache-manifest.521cf8be2bf525a0259be3eb7aa23ec1.js": "/precache-manifest.521cf8be2bf525a0259be3eb7aa23ec1.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.bd9e88d5.chunk.css.map": "/static/css/2.bd9e88d5.chunk.css.map",
-    "static/css/main.9d1d4b8e.chunk.css.map": "/static/css/main.9d1d4b8e.chunk.css.map",
-    "static/js/2.df2113e4.chunk.js.LICENSE.txt": "/static/js/2.df2113e4.chunk.js.LICENSE.txt",
+    "static/css/main.77e412f5.chunk.css.map": "/static/css/main.77e412f5.chunk.css.map",
+    "static/js/2.697dfdf1.chunk.js.LICENSE.txt": "/static/js/2.697dfdf1.chunk.js.LICENSE.txt",
     "static/media/HFG_Logo.png": "/static/media/HFG_Logo.04e4ef31.png",
     "static/media/styles.scss": "/static/media/header.ddf27670.png",
     "static/media/bizIcon.svg": "/static/media/bizIcon.95b9b8f9.svg",
@@ -63,6 +63,7 @@
     "static/media/journey-website-logo.svg": "/static/media/journey-website-logo.73b52dad.svg",
     "static/media/lead.jpg": "/static/media/lead.0e12a1ec.jpg",
     "static/media/operationsIcon.svg": "/static/media/operationsIcon.50982119.svg",
+    "static/media/ourThemes.png": "/static/media/ourThemes.03502b34.png",
     "static/media/panel-alexis.jpg": "/static/media/panel-alexis.5764a6b4.jpg",
     "static/media/panel-company-better.png": "/static/media/panel-company-better.02f0394a.png",
     "static/media/panel-company-monk.png": "/static/media/panel-company-monk.02e10240.png",
@@ -104,8 +105,8 @@
   "entrypoints": [
     "static/js/runtime-main.7d2ab4be.js",
     "static/css/2.bd9e88d5.chunk.css",
-    "static/js/2.df2113e4.chunk.js",
-    "static/css/main.9d1d4b8e.chunk.css",
-    "static/js/main.d91edbab.chunk.js"
+    "static/js/2.697dfdf1.chunk.js",
+    "static/css/main.77e412f5.chunk.css",
+    "static/js/main.62bc989e.chunk.js"
   ]
 }

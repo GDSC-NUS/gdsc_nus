@@ -3,6 +3,7 @@ import PageHeader from "./PageHeader";
 import Footer from "./Footer.js";
 import logo from "../assets/ProjectsPage/hglogo.png";
 import headerLogo from "../assets/ProjectsPage/HFG_Logo.png";
+import ourThemes from "../assets/Hack4GoodPage/ourThemes.png";
 import sponsorOsa from "../assets/Hack4GoodPage/sponsor-osa.png";
 import sponsorSl2 from "../assets/Hack4GoodPage/sponsor-sl2.png";
 import sponsorPaypal from "../assets/Hack4GoodPage/sponsor-paypal.png";
@@ -163,12 +164,12 @@ const Hack4GoodPage = () => {
       <PageHeader />
       <header class="home-header hackathon-header">
         <Image src={headerLogo} />
-        <div className="btn-border">
-          <div className="btn-content">
+        <div className="black-btn-border">
+          <div className="black-btn-content">
             <a
               href="https://www.google.com"
               target="_blank"
-              className="btn-white"
+              className="black-btn-text"
             >
               Register
             </a>
@@ -176,36 +177,34 @@ const Hack4GoodPage = () => {
         </div>
       </header>
       <section className="section">
-        <div className="projects">
-          <div className="card-horizontal projects__project">
-            <div
-              className="card-horizontal__image-box"
-              style={{ textAlign: "center" }}
-            >
-              <span />
-              <img src={logo} alt="logo" style={{ width: "50%" }} />
-            </div>
-            <div className="card-horizontal__content">
-              <h2 class="heading-secondary">
-                Hack for Good will return in 2022!
-              </h2>
-              <h2>Find out more about our 2021 edition below.</h2>
-              <br />
-              <p>
-                In collaboration with Conjunct Consulting, and sponsored by NUS
-                OSA, DSC SoC presents Hack For Good, a student-run hackathon
-                which seeks to inspire students to learn and use technology for
-                social causes. Our innovation challenge is unique in that we are
-                posing real problem statements provided by NPOs in Singapore.
-              </p>
-              <p>
-                Participating teams are expected to create technological
-                prototypes as part of their solution to tackle their chosen
-                statement and directly benefit the NPO backing it. We want to be
-                practical and do real good with this initiative. We are hoping
-                to foster collaborations between the club, corporate sponsors,
-                NPOs and the students in this event!
-              </p>
+        <div className="projects flex hack-background">
+          <h2 className="hack-header">About HFG 2022</h2>
+          <p className="hack-body">
+            In collaboration with Conjunct Consulting, and sponsored by NUS OSA,
+            DSC SoC presents Hack For Good, a student-run hackathon which seeks
+            to inspire students to learn and use technology for social causes.
+            Our innovation challenge is unique in that we are posing real
+            problem statements provided by NPOs in Singapore.
+          </p>
+          <p className="hack-body">
+            Participating teams are expected to create technological prototypes
+            as part of their solution to tackle their chosen statement and
+            directly benefit the NPO backing it. We want to be practical and do
+            real good with this initiative. We are hoping to foster
+            collaborations between the club, corporate sponsors, NPOs and the
+            students in this event!
+          </p>
+          <h2 className="hack-header">Our Themes</h2>
+          <Image src={ourThemes} />
+          <div className="white-btn-border">
+            <div className="white-btn-content">
+              <a
+                href="https://www.naver.com"
+                target="_blank"
+                className="white-btn-text"
+              >
+                Register
+              </a>
             </div>
           </div>
         </div>
