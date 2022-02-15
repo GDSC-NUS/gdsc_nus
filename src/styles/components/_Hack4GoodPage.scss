@@ -2,6 +2,12 @@
   background: #f8f8f8;
 }
 
+.hack-section {
+  display: flex;
+  align-items: center;
+  margin: 100px 0;
+}
+
 .hack-header {
   font-size: 60px;
   font-weight: 700;
@@ -9,7 +15,7 @@
   text-align: center;
   color: #444444;
   margin-top: 100px;
-  margin-bottom: 67px;
+  margin-bottom: 20px;
 }
 
 .white-header {
@@ -17,44 +23,90 @@
 }
 
 .hack-body {
-  width: 624px;
+  max-width: 624px;
   font-size: 23px;
   font-weight: 400;
   line-height: 46px;
   text-align: center;
-  margin-bottom: 33px;
+  margin-bottom: 47px;
 }
 
-.timeline {
-  padding-top: 0 !important;
-  margin-bottom: 70px !important;
-  width: 75% !important;
+.hack-card {
+  margin: 38px 0;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-column-gap: 5vw;
+  justify-items: center;
 
-  @media only screen and (min-width: 1920px) {
-    max-width: 1600px !important;
+  @media (max-width: 700px) {
+    grid-template-columns: 100%;
+  }
+
+  &__image {
+    max-width: 227px;
+    max-height: 227px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  &__textbox {
+    max-width: 832px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 72px;
+    text-align: left;
+  }
+
+  &__body {
+    width: 50vw;
+    max-width: 832px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: left;
   }
 }
 
-.vertical-timeline-element-date {
-  font-size: 16px !important;
+.hack-timeline {
+  height: 100%;
+  width: 100%;
 }
 
-.vertical-timeline-element-subtitle {
-  font-size: 16px !important;
-}
+// .timeline {
+//   padding-top: 0 !important;
+//   margin-bottom: 70px !important;
+//   width: 75% !important;
 
-.vertical-timeline-element-title {
-  font-size: 20px;
-}
+//   @media only screen and (min-width: 1920px) {
+//     max-width: 1600px !important;
+//   }
+// }
 
-.vertical-timeline-element-body {
-  font-size: 14px !important;
-}
+// .vertical-timeline-element-date {
+//   font-size: 16px !important;
+// }
 
-.vertical-timeline-element-body-list {
-  padding-top: 10px;
-  padding-left: 40px;
-}
+// .vertical-timeline-element-subtitle {
+//   font-size: 16px !important;
+// }
+
+// .vertical-timeline-element-title {
+//   font-size: 20px;
+// }
+
+// .vertical-timeline-element-body {
+//   font-size: 14px !important;
+// }
+
+// .vertical-timeline-element-body-list {
+//   padding-top: 10px;
+//   padding-left: 40px;
+// }
 
 .h4g-sponsor-logos {
   display: flex;

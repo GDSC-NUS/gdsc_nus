@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.77e412f5.chunk.css",
-    "main.js": "/static/js/main.62bc989e.chunk.js",
-    "main.js.map": "/static/js/main.62bc989e.chunk.js.map",
+    "main.css": "/static/css/main.63ccd424.chunk.css",
+    "main.js": "/static/js/main.324f54f4.chunk.js",
+    "main.js.map": "/static/js/main.324f54f4.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7d2ab4be.js",
     "runtime-main.js.map": "/static/js/runtime-main.7d2ab4be.js.map",
     "static/css/2.bd9e88d5.chunk.css": "/static/css/2.bd9e88d5.chunk.css",
-    "static/js/2.697dfdf1.chunk.js": "/static/js/2.697dfdf1.chunk.js",
-    "static/js/2.697dfdf1.chunk.js.map": "/static/js/2.697dfdf1.chunk.js.map",
+    "static/js/2.0acbe184.chunk.js": "/static/js/2.0acbe184.chunk.js",
+    "static/js/2.0acbe184.chunk.js.map": "/static/js/2.0acbe184.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.521cf8be2bf525a0259be3eb7aa23ec1.js": "/precache-manifest.521cf8be2bf525a0259be3eb7aa23ec1.js",
+    "precache-manifest.2b90b8d264629a9a4702840a31119808.js": "/precache-manifest.2b90b8d264629a9a4702840a31119808.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.bd9e88d5.chunk.css.map": "/static/css/2.bd9e88d5.chunk.css.map",
-    "static/css/main.77e412f5.chunk.css.map": "/static/css/main.77e412f5.chunk.css.map",
-    "static/js/2.697dfdf1.chunk.js.LICENSE.txt": "/static/js/2.697dfdf1.chunk.js.LICENSE.txt",
+    "static/css/main.63ccd424.chunk.css.map": "/static/css/main.63ccd424.chunk.css.map",
+    "static/js/2.0acbe184.chunk.js.LICENSE.txt": "/static/js/2.0acbe184.chunk.js.LICENSE.txt",
     "static/media/HFG_Logo.png": "/static/media/HFG_Logo.04e4ef31.png",
     "static/media/styles.scss": "/static/media/header.ddf27670.png",
     "static/media/bizIcon.svg": "/static/media/bizIcon.95b9b8f9.svg",
@@ -94,6 +94,7 @@
     "static/media/teamCdeck.pdf": "/static/media/teamCdeck.ac41edd8.pdf",
     "static/media/teamChori.jpg": "/static/media/teamChori.64f02145.jpg",
     "static/media/techIcon.svg": "/static/media/techIcon.7253761d.svg",
+    "static/media/timeline.png": "/static/media/timeline.a052c93c.png",
     "static/media/whatwedo.jpg": "/static/media/whatwedo.19ca977a.jpg",
     "static/media/whoarewe.jpg": "/static/media/whoarewe.6a5230ee.jpg",
     "static/media/workshop.jpg": "/static/media/workshop.7d5ae095.jpg",
@@ -105,8 +106,8 @@
   "entrypoints": [
     "static/js/runtime-main.7d2ab4be.js",
     "static/css/2.bd9e88d5.chunk.css",
-    "static/js/2.697dfdf1.chunk.js",
-    "static/css/main.77e412f5.chunk.css",
-    "static/js/main.62bc989e.chunk.js"
+    "static/js/2.0acbe184.chunk.js",
+    "static/css/main.63ccd424.chunk.css",
+    "static/js/main.324f54f4.chunk.js"
   ]
 }

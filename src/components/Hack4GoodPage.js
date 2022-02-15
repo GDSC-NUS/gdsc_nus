@@ -4,6 +4,7 @@ import Footer from "./Footer.js";
 import logo from "../assets/ProjectsPage/hglogo.png";
 import headerLogo from "../assets/ProjectsPage/HFG_Logo.png";
 import ourThemes from "../assets/Hack4GoodPage/ourThemes.png";
+import timeline from "../assets/Hack4GoodPage/timeline.png";
 import sponsorOsa from "../assets/Hack4GoodPage/sponsor-osa.png";
 import sponsorSl2 from "../assets/Hack4GoodPage/sponsor-sl2.png";
 import sponsorPaypal from "../assets/Hack4GoodPage/sponsor-paypal.png";
@@ -160,7 +161,7 @@ const ProblemStatementsComponent = ({ problemStatement }) => (
 
 const Hack4GoodPage = () => {
   return (
-    <>
+    <div className="hack-background">
       <PageHeader />
       <header class="home-header hackathon-header">
         <Image src={headerLogo} />
@@ -176,177 +177,83 @@ const Hack4GoodPage = () => {
           </div>
         </div>
       </header>
-      <section className="section">
-        <div className="projects flex hack-background">
-          <h2 className="hack-header">About HFG 2022</h2>
-          <p className="hack-body">
-            In collaboration with Conjunct Consulting, and sponsored by NUS OSA,
-            DSC SoC presents Hack For Good, a student-run hackathon which seeks
-            to inspire students to learn and use technology for social causes.
-            Our innovation challenge is unique in that we are posing real
-            problem statements provided by NPOs in Singapore.
-          </p>
-          <p className="hack-body">
-            Participating teams are expected to create technological prototypes
-            as part of their solution to tackle their chosen statement and
-            directly benefit the NPO backing it. We want to be practical and do
-            real good with this initiative. We are hoping to foster
-            collaborations between the club, corporate sponsors, NPOs and the
-            students in this event!
-          </p>
-          <h2 className="hack-header">Our Themes</h2>
-          <Image src={ourThemes} />
-          <div className="white-btn-border">
-            <div className="white-btn-content">
-              <a
-                href="https://www.naver.com"
-                target="_blank"
-                className="white-btn-text"
-              >
-                Register
-              </a>
-            </div>
+      <section className="projects hack-section">
+        <h2 className="hack-header">About HFG 2022</h2>
+        <p className="hack-body" style={{ marginTop: "47px" }}>
+          In collaboration with Conjunct Consulting, and sponsored by NUS OSA,
+          DSC SoC presents Hack For Good, a student-run hackathon which seeks to
+          inspire students to learn and use technology for social causes. Our
+          innovation challenge is unique in that we are posing real problem
+          statements provided by NPOs in Singapore.
+        </p>
+        <p className="hack-body">
+          Participating teams are expected to create technological prototypes as
+          part of their solution to tackle their chosen statement and directly
+          benefit the NPO backing it. We want to be practical and do real good
+          with this initiative. We are hoping to foster collaborations between
+          the club, corporate sponsors, NPOs and the students in this event!
+        </p>
+        <h2 className="hack-header">Our Themes</h2>
+        <Image src={ourThemes} style={{ marginTop: "90px" }} />
+        <div className="white-btn-border">
+          <div className="white-btn-content">
+            <a
+              href="https://www.naver.com"
+              target="_blank"
+              className="white-btn-text"
+            >
+              Register
+            </a>
           </div>
         </div>
       </section>
-      <VerticalTimeline className="timeline">
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="22 February"
-          iconStyle={{
-            background: "rgb(33, 150, 243)",
-            color: "#fff",
-          }}
-          icon={
-            <Icon
-              name="pencil alternate"
-              size="large"
-              style={{
-                width: "100%",
-                height: "100%",
-                marginTop: "30%",
-              }}
-            />
-          }
-        >
-          <h3 className="vertical-timeline-element-title">Sign up</h3>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="5 March"
-          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-          icon={
-            <Icon
-              name="file alternate outline"
-              size="large"
-              style={{
-                width: "100%",
-                height: "100%",
-                marginTop: "30%",
-              }}
-            />
-          }
-        >
-          <h3 className="vertical-timeline-element-title">
-            Release of problem statements & Briefing
-          </h3>
-          <p className="vertical-timeline-element-body">
-            Problem statement will be release during our first briefing.
-          </p>
-          <ul className="vertical-timeline-element-body-list">
-            <li>
-              <b>Time</b>: 7:00 - 9:30 pm
-            </li>
-            <li>
-              <b>Venue</b>: Online via Zoom (link will be sent to participants)
-            </li>
-          </ul>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="9 March"
-          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-          icon={
-            <Icon
-              name="tv"
-              size="large"
-              style={{
-                width: "100%",
-                height: "100%",
-                marginTop: "30%",
-              }}
-            />
-          }
-        >
-          <h3 className="vertical-timeline-element-title">Conjunct Workshop</h3>
-          <h4 className="vertical-timeline-element-subtitle">
-            Systematic problem solving for the Social Sector
-          </h4>
-          <p className="vertical-timeline-element-body">
-            In this interactive 45 mins workshop, participants will be exposed
-            to an overview of the unique challenges and constraints that
-            charities and social good organisations typically face within the
-            sector, as well as introduced to frameworks and methodologies used
-            to ensure that their ideas and solutions are aligned to the needs of
-            the social sector.
-          </p>
-          <ul className="vertical-timeline-element-body-list">
-            <li>
-              <b>Time</b>: 8:00 pm
-            </li>
-            <li>
-              <b>Venue</b>: Online workshop
-            </li>
-          </ul>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="17 March"
-          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-          icon={
-            <Icon
-              name="calendar check outline"
-              size="large"
-              style={{
-                width: "100%",
-                height: "100%",
-                marginTop: "30%",
-              }}
-            />
-          }
-        >
-          <h3 className="vertical-timeline-element-title">Close submissions</h3>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="20 March"
-          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-          icon={
-            <Icon
-              name="paper plane"
-              size="large"
-              style={{
-                width: "90%",
-                height: "90%",
-                marginTop: "30%",
-              }}
-            />
-          }
-        >
-          <h3 className="vertical-timeline-element-title">Finale</h3>
-          <p className="vertical-timeline-element-body">
-            Wrap up of our Hack for Good event and winners will be announced.
-          </p>
-          <ul className="vertical-timeline-element-body-list">
-            <li>
-              <b>Time</b>: 1:30 pm
-            </li>
-            <li>
-              <b>Venue</b>: Online
-            </li>
-          </ul>
-        </VerticalTimelineElement>
-      </VerticalTimeline>
+      <section className="projects hack-section">
+        <h2 className="hack-header">Problem Statements</h2>
+        <p className="hack-body">
+          Your team may choose from 1 of the 3 problem statements
+        </p>
+        <div className="hack-card">
+          <img src={logo} alt="event" className="hack-card__image" />
+          <div className="hack-card__textbox">
+            <h2 class="hack-card__header">NPO Name</h2>
+            <p className="hack-card__body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Vestibulum rhoncus est pellentesque elit ullamcorper dignissim.
+              Sed egestas egestas fringilla phasellus faucibus scelerisque.
+              Aenean pharetra magna ac placerat vestibulum.
+            </p>
+          </div>
+        </div>
+        <div className="hack-card">
+          <img src={logo} alt="event" className="hack-card__image" />
+          <div className="hack-card__textbox">
+            <h2 class="hack-card__header">NPO Name</h2>
+            <p className="hack-card__body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Vestibulum rhoncus est pellentesque elit ullamcorper dignissim.
+              Sed egestas egestas fringilla phasellus faucibus scelerisque.
+              Aenean pharetra magna ac placerat vestibulum.
+            </p>
+          </div>
+        </div>
+        <div className="hack-card">
+          <img src={logo} alt="event" className="hack-card__image" />
+          <div className="hack-card__textbox">
+            <h2 class="hack-card__header">NPO Name</h2>
+            <p className="hack-card__body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Vestibulum rhoncus est pellentesque elit ullamcorper dignissim.
+              Sed egestas egestas fringilla phasellus faucibus scelerisque.
+              Aenean pharetra magna ac placerat vestibulum.
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* <div className="timeline" /> */}
+      <Image src={timeline} className="hack-timeline" />
       <h3 class="h4g-section-title">Problem Statements</h3>
       <div class="h4g-problem-statements-container">
         {problemStatements.map((problemStatement) => (
@@ -384,7 +291,7 @@ const Hack4GoodPage = () => {
       </div>
       <PdfRenderer file={booklet} />
       <Footer />
-    </>
+    </div>
   );
 };
 
