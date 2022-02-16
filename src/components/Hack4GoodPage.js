@@ -8,6 +8,9 @@ import timeline from "../assets/Hack4GoodPage/timeline.png";
 import firstPrize from "../assets/Hack4GoodPage/1st-prize.png";
 import secondPrize from "../assets/Hack4GoodPage/2nd-prize.png";
 import thirdPrize from "../assets/Hack4GoodPage/3rd-prize.png";
+import firstWorkshop from "../assets/Hack4GoodPage/workshop1.png";
+import secondWorkshop from "../assets/Hack4GoodPage/workshop2.png";
+import thirdWorkshop from "../assets/Hack4GoodPage/workshop3.png";
 import sponsorOsa from "../assets/Hack4GoodPage/sponsor-osa.png";
 import sponsorSl2 from "../assets/Hack4GoodPage/sponsor-sl2.png";
 import sponsorPaypal from "../assets/Hack4GoodPage/sponsor-paypal.png";
@@ -335,6 +338,47 @@ const PrizesComponent = () => {
 const WorkshopComponent = () => (
   <section className="projects hack-section">
     <h2 className="hack-header">Workshops</h2>
+    <div className="hack-workshops">
+      <img src={firstWorkshop} alt="event" className="hack-workshops__image" />
+      <div className="hack-workshops__textbox">
+        <h2 class="hack-workshops__header">Name of Workshop</h2>
+        <p className="hack-workshops__body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit
+          aliquam etiam erat velit scelerisque in dictum non. Faucibus pulvinar
+          elementum integer enim neque volutpat ac tincidunt. Consequat id porta
+          nibh venenatis cras sed.
+        </p>
+      </div>
+    </div>
+    <div className="hack-workshops">
+      <div className="hack-workshops__textbox">
+        <h2 class="hack-workshops__header" style={{ textAlign: "right" }}>
+          Name of Workshop
+        </h2>
+        <p className="hack-workshops__body" style={{ textAlign: "right" }}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit
+          aliquam etiam erat velit scelerisque in dictum non. Faucibus pulvinar
+          elementum integer enim neque volutpat ac tincidunt. Consequat id porta
+          nibh venenatis cras sed.
+        </p>
+      </div>
+      <img src={secondWorkshop} alt="event" className="hack-workshops__image" />
+    </div>
+    <div className="hack-workshops">
+      <img src={thirdWorkshop} alt="event" className="hack-workshops__image" />
+      <div className="hack-workshops__textbox">
+        <h2 class="hack-workshops__header">Name of Workshop</h2>
+        <p className="hack-workshops__body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit
+          aliquam etiam erat velit scelerisque in dictum non. Faucibus pulvinar
+          elementum integer enim neque volutpat ac tincidunt. Consequat id porta
+          nibh venenatis cras sed.
+        </p>
+      </div>
+    </div>
   </section>
 );
 

@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.29e3dbcf.chunk.css",
-    "main.js": "/static/js/main.786f0f31.chunk.js",
-    "main.js.map": "/static/js/main.786f0f31.chunk.js.map",
+    "main.css": "/static/css/main.cc17833c.chunk.css",
+    "main.js": "/static/js/main.b9f52d09.chunk.js",
+    "main.js.map": "/static/js/main.b9f52d09.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7d2ab4be.js",
     "runtime-main.js.map": "/static/js/runtime-main.7d2ab4be.js.map",
     "static/css/2.be7ce31b.chunk.css": "/static/css/2.be7ce31b.chunk.css",
-    "static/js/2.f63dd958.chunk.js": "/static/js/2.f63dd958.chunk.js",
-    "static/js/2.f63dd958.chunk.js.map": "/static/js/2.f63dd958.chunk.js.map",
+    "static/js/2.4223e31d.chunk.js": "/static/js/2.4223e31d.chunk.js",
+    "static/js/2.4223e31d.chunk.js.map": "/static/js/2.4223e31d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.5bd78225fce518a048a38fc76de4eb30.js": "/precache-manifest.5bd78225fce518a048a38fc76de4eb30.js",
+    "precache-manifest.51f92d01280b2024e8c89132623d407b.js": "/precache-manifest.51f92d01280b2024e8c89132623d407b.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.be7ce31b.chunk.css.map": "/static/css/2.be7ce31b.chunk.css.map",
-    "static/css/main.29e3dbcf.chunk.css.map": "/static/css/main.29e3dbcf.chunk.css.map",
-    "static/js/2.f63dd958.chunk.js.LICENSE.txt": "/static/js/2.f63dd958.chunk.js.LICENSE.txt",
+    "static/css/main.cc17833c.chunk.css.map": "/static/css/main.cc17833c.chunk.css.map",
+    "static/js/2.4223e31d.chunk.js.LICENSE.txt": "/static/js/2.4223e31d.chunk.js.LICENSE.txt",
     "static/media/1st-prize.png": "/static/media/1st-prize.c996c8b8.png",
     "static/media/2nd-prize.png": "/static/media/2nd-prize.4ad82e6c.png",
     "static/media/3rd-prize.png": "/static/media/3rd-prize.eb617033.png",
@@ -103,15 +103,15 @@
     "static/media/whoarewe.jpg": "/static/media/whoarewe.6a5230ee.jpg",
     "static/media/workshop.jpg": "/static/media/workshop.7d5ae095.jpg",
     "static/media/workshop.png": "/static/media/workshop.c23b4aba.png",
-    "static/media/workshop1.png": "/static/media/workshop1.7c6b0786.png",
+    "static/media/workshop1.png": "/static/media/workshop1.ff5e3a58.png",
     "static/media/workshop2.png": "/static/media/workshop2.9a481d13.png",
     "static/media/workshop3.png": "/static/media/workshop3.7a8ca1eb.png"
   },
   "entrypoints": [
     "static/js/runtime-main.7d2ab4be.js",
     "static/css/2.be7ce31b.chunk.css",
-    "static/js/2.f63dd958.chunk.js",
-    "static/css/main.29e3dbcf.chunk.css",
-    "static/js/main.786f0f31.chunk.js"
+    "static/js/2.4223e31d.chunk.js",
+    "static/css/main.cc17833c.chunk.css",
+    "static/js/main.b9f52d09.chunk.js"
   ]
 }
