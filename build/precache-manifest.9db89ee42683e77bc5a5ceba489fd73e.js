@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9b89af79b1810c78933d8069801c24f5",
+    "revision": "eb5d5fe2840f088679c4a52c6cbaa07f",
     "url": "/index.html"
   },
   {
-    "revision": "6c920e02d0b9099a52bd",
+    "revision": "fe06108307ba4cba0155",
     "url": "/static/css/2.be7ce31b.chunk.css"
   },
   {
-    "revision": "c7de1d5f37168ab663b5",
-    "url": "/static/css/main.cc17833c.chunk.css"
+    "revision": "07a216cbb42f698dec74",
+    "url": "/static/css/main.18886375.chunk.css"
   },
   {
-    "revision": "6c920e02d0b9099a52bd",
-    "url": "/static/js/2.4223e31d.chunk.js"
+    "revision": "fe06108307ba4cba0155",
+    "url": "/static/js/2.2bf4d31e.chunk.js"
   },
   {
     "revision": "78483c9fa544e038846045506308727b",
-    "url": "/static/js/2.4223e31d.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.2bf4d31e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c7de1d5f37168ab663b5",
-    "url": "/static/js/main.b9f52d09.chunk.js"
+    "revision": "07a216cbb42f698dec74",
+    "url": "/static/js/main.366ac84c.chunk.js"
   },
   {
     "revision": "0d3b8522413ea50bd7ca",
@@ -296,6 +296,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/operationsIcon.50982119.svg"
   },
   {
+    "revision": "4ef866a2d3c1e9c7e375380748939f42",
+    "url": "/static/media/organizer.4ef866a2.png"
+  },
+  {
     "revision": "03502b34fb9419d173afb8f899ab888a",
     "url": "/static/media/ourThemes.03502b34.png"
   },
@@ -392,16 +396,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/signup.76095a73.png"
   },
   {
+    "revision": "c3d952a5d106384e9043aa3abcf43982",
+    "url": "/static/media/sponsor-gic.c3d952a5.jpg"
+  },
+  {
     "revision": "0331bb3c53574e553854fb4c7b3b8c0f",
     "url": "/static/media/sponsor-osa.0331bb3c.png"
   },
   {
-    "revision": "15f8d633c2758695af5738702452d956",
-    "url": "/static/media/sponsor-paypal.15f8d633.png"
-  },
-  {
     "revision": "9484634a9790735d9d096f971d5528ef",
     "url": "/static/media/sponsor-sl2.9484634a.png"
+  },
+  {
+    "revision": "c5cdebf7f1cde1c6113521f21a9fc5a2",
+    "url": "/static/media/sponsor-tw.c5cdebf7.jpg"
   },
   {
     "revision": "9f428d28e54580cf05d1d625c6b89f8e",

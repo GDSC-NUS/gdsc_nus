@@ -85,8 +85,13 @@
 }
 
 .hack-timeline {
-  height: 100%;
-  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  &__image {
+    min-width: 1000px;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .with-underline {
@@ -238,6 +243,48 @@
       font-size: 23px;
       line-height: 46px;
     }
+  }
+}
+
+.hack-sponsor {
+  &__header {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 82px;
+    text-align: center;
+  }
+
+  &__group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__gold {
+    background: white;
+    max-height: 272px;
+    max-width: 272px;
+    object-fit: contain;
+    border-radius: 25%;
+    margin: 50px;
+  }
+
+  &__silver {
+    background: white;
+    max-height: 227px;
+    max-width: 227px;
+    object-fit: contain;
+    border-radius: 25%;
+    margin: 50px;
+  }
+
+  &__bronze {
+    background: white;
+    max-height: 177px;
+    max-width: 177px;
+    object-fit: contain;
+    border-radius: 25%;
+    margin: 50px;
   }
 }
 

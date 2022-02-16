@@ -11,9 +11,11 @@ import thirdPrize from "../assets/Hack4GoodPage/3rd-prize.png";
 import firstWorkshop from "../assets/Hack4GoodPage/workshop1.png";
 import secondWorkshop from "../assets/Hack4GoodPage/workshop2.png";
 import thirdWorkshop from "../assets/Hack4GoodPage/workshop3.png";
+import organizer from "../assets/Hack4GoodPage/organizer.png";
 import sponsorOsa from "../assets/Hack4GoodPage/sponsor-osa.png";
+import sponsorGIC from "../assets/Hack4GoodPage/sponsor-gic.jpg";
+import sponsorTW from "../assets/Hack4GoodPage/sponsor-tw.jpg";
 import sponsorSl2 from "../assets/Hack4GoodPage/sponsor-sl2.png";
-import sponsorPaypal from "../assets/Hack4GoodPage/sponsor-paypal.png";
 import sponsorQuest from "../assets/Hack4GoodPage/sponsor-quest.png";
 import monk from "../assets/Hack4GoodPage/panel-company-monk.png";
 import better from "../assets/Hack4GoodPage/panel-company-better.png";
@@ -205,7 +207,7 @@ const ProblemStatementsComponent = () => (
       Your team may choose from 1 of the 3 problem statements
     </p>
     <div className="hack-card">
-      <img src={logo} alt="event" className="hack-card__image" />
+      <img src={logo} alt="NPO logo" className="hack-card__image" />
       <div className="hack-card__textbox">
         <h2 class="hack-card__header">NPO Name</h2>
         <p className="hack-card__body">
@@ -218,7 +220,7 @@ const ProblemStatementsComponent = () => (
       </div>
     </div>
     <div className="hack-card">
-      <img src={logo} alt="event" className="hack-card__image" />
+      <img src={logo} alt="NPO logo" className="hack-card__image" />
       <div className="hack-card__textbox">
         <h2 class="hack-card__header">NPO Name</h2>
         <p className="hack-card__body">
@@ -231,7 +233,7 @@ const ProblemStatementsComponent = () => (
       </div>
     </div>
     <div className="hack-card">
-      <img src={logo} alt="event" className="hack-card__image" />
+      <img src={logo} alt="NPO logo" className="hack-card__image" />
       <div className="hack-card__textbox">
         <h2 class="hack-card__header">NPO Name</h2>
         <p className="hack-card__body">
@@ -285,16 +287,22 @@ const ScheduleComponent = () => {
           className="hack-tabpanel"
           selectedClassName="hack-tabpanel__selected"
         >
-          <p className="hack-body__time">10:00am - 11:00am</p>
-          <p className="hack-body__activity">Lorem ipsum dolor sit amet</p>
-          <p className="hack-body__time">11:00am - 12:00pm</p>
-          <p className="hack-body__activity">Lorem ipsum dolor</p>
-          <p className="hack-body__time">12:00pm - 01:00pm</p>
-          <p className="hack-body__activity">Loren Ipsum</p>
-          <p className="hack-body__time">01:00pm - 02:00pm</p>
-          <p className="hack-body__activity">Lorem ipsum dolor sit amet</p>
-          <p className="hack-body__time">02:00pm - 03:00pm</p>
-          <p className="hack-body__activity">Lorem ipsum dolor</p>
+          <p className="hack-body__time">01:30pm - 02:30pm</p>
+          <p className="hack-body__activity">Event set-up</p>
+          <p className="hack-body__time">02:30pm - 02:40pm</p>
+          <p className="hack-body__activity">Participants' Arrival</p>
+          <p className="hack-body__time">02:40pm - 02:50pm</p>
+          <p className="hack-body__activity">Opening address by DSC Lead</p>
+          <p className="hack-body__time">02:50pm - 03:00pm</p>
+          <p className="hack-body__activity">Opening address by Prof Sharon</p>
+          <p className="hack-body__time">03:00pm - 04:50pm</p>
+          <p className="hack-body__activity">
+            Final round pitching by finalists
+          </p>
+          <p className="hack-body__time">04:50pm - 05:10pm</p>
+          <p className="hack-body__activity">Judges Deliberation</p>
+          <p className="hack-body__time">05:10pm - 05:30pm</p>
+          <p className="hack-body__activity">Annoucement of top 3 teams</p>
         </TabPanel>
       </Tabs>
     </section>
@@ -339,7 +347,11 @@ const WorkshopComponent = () => (
   <section className="projects hack-section">
     <h2 className="hack-header">Workshops</h2>
     <div className="hack-workshops">
-      <img src={firstWorkshop} alt="event" className="hack-workshops__image" />
+      <img
+        src={firstWorkshop}
+        alt="workshop 1"
+        className="hack-workshops__image"
+      />
       <div className="hack-workshops__textbox">
         <h2 class="hack-workshops__header">Name of Workshop</h2>
         <p className="hack-workshops__body">
@@ -364,10 +376,18 @@ const WorkshopComponent = () => (
           nibh venenatis cras sed.
         </p>
       </div>
-      <img src={secondWorkshop} alt="event" className="hack-workshops__image" />
+      <img
+        src={secondWorkshop}
+        alt="workshop 2"
+        className="hack-workshops__image"
+      />
     </div>
     <div className="hack-workshops">
-      <img src={thirdWorkshop} alt="event" className="hack-workshops__image" />
+      <img
+        src={thirdWorkshop}
+        alt="workshop 2"
+        className="hack-workshops__image"
+      />
       <div className="hack-workshops__textbox">
         <h2 class="hack-workshops__header">Name of Workshop</h2>
         <p className="hack-workshops__body">
@@ -381,6 +401,46 @@ const WorkshopComponent = () => (
     </div>
   </section>
 );
+
+const JudgesAndSponsorsComponent = () => (
+  <section className="projects hack-section">
+    <h2 className="hack-header">Judges</h2>
+    <h2 className="hack-header">Sponsors</h2>
+    <h2 className="hack-sponsor__header with-underline">Gold</h2>
+    <div className="hack-sponsor__group">
+      <img src={sponsorGIC} alt="GIC" className="hack-sponsor__gold" />
+      <img src={sponsorTW} alt="Thoughtworks" className="hack-sponsor__gold" />
+    </div>
+    <h2 className="hack-sponsor__header with-underline">Silver</h2>
+    <div className="hack-sponsor__group">
+      <img
+        src={sponsorQuest}
+        alt="QuestVentures"
+        className="hack-sponsor__silver"
+      />
+    </div>
+    <h2 className="hack-sponsor__header with-underline">Bronze</h2>
+    <div className="hack-sponsor__group">
+      <img
+        src={sponsorSl2}
+        alt="Sustainable Living Lab"
+        className="hack-sponsor__bronze"
+      />
+    </div>
+  </section>
+);
+
+const OrganizerFaqsContactUsComponent = () => {
+  return (
+    <section className="projects hack-section">
+      <h2 className="hack-header">Organizer</h2>
+      <Image src={organizer} />
+      <h2 className="hack-header">FAQs</h2>
+      {/* react accordion library */}
+      <h2 className="hack-header">Contact Us</h2>
+    </section>
+  );
+};
 
 const Hack4GoodPage = () => {
   return (
@@ -402,10 +462,14 @@ const Hack4GoodPage = () => {
       </header>
       <AboutComponent />
       <ProblemStatementsComponent />
-      <Image src={timeline} className="hack-timeline" />
+      <div className="hack-timeline">
+        <Image src={timeline} className="hack-timeline__image" />
+      </div>
       <ScheduleComponent />
       <PrizesComponent />
       <WorkshopComponent />
+      <JudgesAndSponsorsComponent />
+      <OrganizerFaqsContactUsComponent />
       {/* <h3 class="h4g-section-title">Problem Statements</h3>
       <div class="h4g-problem-statements-container">
         {problemStatements.map((problemStatement) => (
