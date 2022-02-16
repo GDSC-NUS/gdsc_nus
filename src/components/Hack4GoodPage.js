@@ -5,6 +5,9 @@ import logo from "../assets/ProjectsPage/hglogo.png";
 import headerLogo from "../assets/ProjectsPage/HFG_Logo.png";
 import ourThemes from "../assets/Hack4GoodPage/ourThemes.png";
 import timeline from "../assets/Hack4GoodPage/timeline.png";
+import firstPrize from "../assets/Hack4GoodPage/1st-prize.png";
+import secondPrize from "../assets/Hack4GoodPage/2nd-prize.png";
+import thirdPrize from "../assets/Hack4GoodPage/3rd-prize.png";
 import sponsorOsa from "../assets/Hack4GoodPage/sponsor-osa.png";
 import sponsorSl2 from "../assets/Hack4GoodPage/sponsor-sl2.png";
 import sponsorPaypal from "../assets/Hack4GoodPage/sponsor-paypal.png";
@@ -21,6 +24,8 @@ import access from "../assets/Hack4GoodPage/ps-access.jpg";
 import booklet from "../assets/Hack4GoodPage/booklet.pdf";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import { Grid, Icon, Image, Divider, Button } from "semantic-ui-react";
 import PdfRenderer from "./PdfRenderer";
 
@@ -293,6 +298,46 @@ const ScheduleComponent = () => {
   );
 };
 
+const PrizesComponent = () => {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+  const images = [firstPrize, secondPrize, thirdPrize];
+  return (
+    <section className="projects hack-section">
+      <h2 className="hack-header">Prizes</h2>
+      <Carousel
+        responsive={responsive}
+        infinite={true}
+        autoPlay={true}
+        containerClass="hack-prize__carousel"
+        itemClass="hack-prize__item"
+      >
+        {images.map((img) => (
+          <Image src={img} className="hack-prize__image" />
+        ))}
+      </Carousel>
+    </section>
+  );
+};
+
+const WorkshopComponent = () => (
+  <section className="projects hack-section">
+    <h2 className="hack-header">Workshops</h2>
+  </section>
+);
+
 const Hack4GoodPage = () => {
   return (
     <div className="hack-background">
@@ -315,6 +360,8 @@ const Hack4GoodPage = () => {
       <ProblemStatementsComponent />
       <Image src={timeline} className="hack-timeline" />
       <ScheduleComponent />
+      <PrizesComponent />
+      <WorkshopComponent />
       {/* <h3 class="h4g-section-title">Problem Statements</h3>
       <div class="h4g-problem-statements-container">
         {problemStatements.map((problemStatement) => (
