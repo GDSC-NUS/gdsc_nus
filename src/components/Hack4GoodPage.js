@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PageHeader from "./PageHeader";
 import Footer from "./Footer.js";
 import logo from "../assets/ProjectsPage/hglogo.png";
@@ -19,10 +19,8 @@ import gift from "../assets/Hack4GoodPage/ps-gift.jpg";
 import girls from "../assets/Hack4GoodPage/ps-girls.png";
 import access from "../assets/Hack4GoodPage/ps-access.jpg";
 import booklet from "../assets/Hack4GoodPage/booklet.pdf";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 import { Grid, Icon, Image, Divider, Button } from "semantic-ui-react";
 import PdfRenderer from "./PdfRenderer";
 
@@ -138,26 +136,162 @@ const problemStatements = [
   },
 ];
 
-const ProblemStatementsComponent = ({ problemStatement }) => (
-  <div class="h4g-problem-statement-component card-horizontal projects__project">
-    <div class="h4g-problem-statement-component-img-container">
-      <img alt="problem statement" src={problemStatement.img} />
-    </div>
-    <div class="h4g-problem-statement-description-container">
-      {problemStatement.description}
-      <Divider />
-      {problemStatement.problem}
+// const ProblemStatementsComponent = ({ problemStatement }) => (
+//   <div class="h4g-problem-statement-component card-horizontal projects__project">
+//     <div class="h4g-problem-statement-component-img-container">
+//       <img alt="problem statement" src={problemStatement.img} />
+//     </div>
+//     <div class="h4g-problem-statement-description-container">
+//       {problemStatement.description}
+//       <Divider />
+//       {problemStatement.problem}
 
-      {problemStatement.problem2 && (
-        <>
-          <br />
-          <br />
-          {problemStatement.problem2}
-        </>
-      )}
+//       {problemStatement.problem2 && (
+//         <>
+//           <br />
+//           <br />
+//           {problemStatement.problem2}
+//         </>
+//       )}
+//     </div>
+//   </div>
+// );
+
+const AboutComponent = () => (
+  <section className="projects hack-section">
+    <h2 className="hack-header">About HFG 2022</h2>
+    <p className="hack-body" style={{ marginTop: "47px" }}>
+      In collaboration with Conjunct Consulting, and sponsored by NUS OSA, DSC
+      SoC presents Hack For Good, a student-run hackathon which seeks to inspire
+      students to learn and use technology for social causes. Our innovation
+      challenge is unique in that we are posing real problem statements provided
+      by NPOs in Singapore.
+    </p>
+    <p className="hack-body">
+      Participating teams are expected to create technological prototypes as
+      part of their solution to tackle their chosen statement and directly
+      benefit the NPO backing it. We want to be practical and do real good with
+      this initiative. We are hoping to foster collaborations between the club,
+      corporate sponsors, NPOs and the students in this event!
+    </p>
+    <h2 className="hack-header">Our Themes</h2>
+    <Image src={ourThemes} style={{ marginTop: "90px" }} />
+    <div className="white-btn-border">
+      <div className="white-btn-content">
+        <a
+          href="https://www.naver.com"
+          target="_blank"
+          className="white-btn-text"
+        >
+          Register
+        </a>
+      </div>
     </div>
-  </div>
+  </section>
 );
+
+const ProblemStatementsComponent = () => (
+  <section className="projects hack-section">
+    <h2 className="hack-header">Problem Statements</h2>
+    <p className="hack-body">
+      Your team may choose from 1 of the 3 problem statements
+    </p>
+    <div className="hack-card">
+      <img src={logo} alt="event" className="hack-card__image" />
+      <div className="hack-card__textbox">
+        <h2 class="hack-card__header">NPO Name</h2>
+        <p className="hack-card__body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum
+          rhoncus est pellentesque elit ullamcorper dignissim. Sed egestas
+          egestas fringilla phasellus faucibus scelerisque. Aenean pharetra
+          magna ac placerat vestibulum.
+        </p>
+      </div>
+    </div>
+    <div className="hack-card">
+      <img src={logo} alt="event" className="hack-card__image" />
+      <div className="hack-card__textbox">
+        <h2 class="hack-card__header">NPO Name</h2>
+        <p className="hack-card__body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum
+          rhoncus est pellentesque elit ullamcorper dignissim. Sed egestas
+          egestas fringilla phasellus faucibus scelerisque. Aenean pharetra
+          magna ac placerat vestibulum.
+        </p>
+      </div>
+    </div>
+    <div className="hack-card">
+      <img src={logo} alt="event" className="hack-card__image" />
+      <div className="hack-card__textbox">
+        <h2 class="hack-card__header">NPO Name</h2>
+        <p className="hack-card__body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum
+          rhoncus est pellentesque elit ullamcorper dignissim. Sed egestas
+          egestas fringilla phasellus faucibus scelerisque. Aenean pharetra
+          magna ac placerat vestibulum.
+        </p>
+      </div>
+    </div>
+  </section>
+);
+
+const ScheduleComponent = () => {
+  const [tabIndex, setTabIndex] = useState(0);
+  let scheduleSectionClassName =
+    tabIndex == 0
+      ? "projects hack-section hack-schedule-background__first"
+      : "projects hack-section hack-schedule-background__second";
+  return (
+    <section className={`${scheduleSectionClassName}`}>
+      <h2 className="hack-header">Schedule</h2>
+      <Tabs
+        selectedIndex={tabIndex}
+        onSelect={(index) => setTabIndex(index)}
+        className="hack-tabcontainer"
+        selectedTabClassName="hack-tab__selected with-underline"
+      >
+        <TabList className="hack-tablist">
+          <Tab className="hack-tab">7 Mar</Tab>
+          <Tab className="hack-tab">19 Mar</Tab>
+        </TabList>
+
+        <TabPanel
+          className="hack-tabpanel"
+          selectedClassName="hack-tabpanel__selected"
+        >
+          <p className="hack-body__time">10:00am - 11:00am</p>
+          <p className="hack-body__activity">Loren Ipsum</p>
+          <p className="hack-body__time">11:00am - 12:00pm</p>
+          <p className="hack-body__activity">Lorem ipsum dolor sit amet</p>
+          <p className="hack-body__time">12:00pm - 01:00pm</p>
+          <p className="hack-body__activity">Lorem ipsum dolor</p>
+          <p className="hack-body__time">01:00pm - 02:00pm</p>
+          <p className="hack-body__activity">Loren Ipsum</p>
+          <p className="hack-body__time">02:00pm - 03:00pm</p>
+          <p className="hack-body__activity">Lorem ipsum dolor sit amet</p>
+        </TabPanel>
+        <TabPanel
+          className="hack-tabpanel"
+          selectedClassName="hack-tabpanel__selected"
+        >
+          <p className="hack-body__time">10:00am - 11:00am</p>
+          <p className="hack-body__activity">Lorem ipsum dolor sit amet</p>
+          <p className="hack-body__time">11:00am - 12:00pm</p>
+          <p className="hack-body__activity">Lorem ipsum dolor</p>
+          <p className="hack-body__time">12:00pm - 01:00pm</p>
+          <p className="hack-body__activity">Loren Ipsum</p>
+          <p className="hack-body__time">01:00pm - 02:00pm</p>
+          <p className="hack-body__activity">Lorem ipsum dolor sit amet</p>
+          <p className="hack-body__time">02:00pm - 03:00pm</p>
+          <p className="hack-body__activity">Lorem ipsum dolor</p>
+        </TabPanel>
+      </Tabs>
+    </section>
+  );
+};
 
 const Hack4GoodPage = () => {
   return (
@@ -177,84 +311,11 @@ const Hack4GoodPage = () => {
           </div>
         </div>
       </header>
-      <section className="projects hack-section">
-        <h2 className="hack-header">About HFG 2022</h2>
-        <p className="hack-body" style={{ marginTop: "47px" }}>
-          In collaboration with Conjunct Consulting, and sponsored by NUS OSA,
-          DSC SoC presents Hack For Good, a student-run hackathon which seeks to
-          inspire students to learn and use technology for social causes. Our
-          innovation challenge is unique in that we are posing real problem
-          statements provided by NPOs in Singapore.
-        </p>
-        <p className="hack-body">
-          Participating teams are expected to create technological prototypes as
-          part of their solution to tackle their chosen statement and directly
-          benefit the NPO backing it. We want to be practical and do real good
-          with this initiative. We are hoping to foster collaborations between
-          the club, corporate sponsors, NPOs and the students in this event!
-        </p>
-        <h2 className="hack-header">Our Themes</h2>
-        <Image src={ourThemes} style={{ marginTop: "90px" }} />
-        <div className="white-btn-border">
-          <div className="white-btn-content">
-            <a
-              href="https://www.naver.com"
-              target="_blank"
-              className="white-btn-text"
-            >
-              Register
-            </a>
-          </div>
-        </div>
-      </section>
-      <section className="projects hack-section">
-        <h2 className="hack-header">Problem Statements</h2>
-        <p className="hack-body">
-          Your team may choose from 1 of the 3 problem statements
-        </p>
-        <div className="hack-card">
-          <img src={logo} alt="event" className="hack-card__image" />
-          <div className="hack-card__textbox">
-            <h2 class="hack-card__header">NPO Name</h2>
-            <p className="hack-card__body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Vestibulum rhoncus est pellentesque elit ullamcorper dignissim.
-              Sed egestas egestas fringilla phasellus faucibus scelerisque.
-              Aenean pharetra magna ac placerat vestibulum.
-            </p>
-          </div>
-        </div>
-        <div className="hack-card">
-          <img src={logo} alt="event" className="hack-card__image" />
-          <div className="hack-card__textbox">
-            <h2 class="hack-card__header">NPO Name</h2>
-            <p className="hack-card__body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Vestibulum rhoncus est pellentesque elit ullamcorper dignissim.
-              Sed egestas egestas fringilla phasellus faucibus scelerisque.
-              Aenean pharetra magna ac placerat vestibulum.
-            </p>
-          </div>
-        </div>
-        <div className="hack-card">
-          <img src={logo} alt="event" className="hack-card__image" />
-          <div className="hack-card__textbox">
-            <h2 class="hack-card__header">NPO Name</h2>
-            <p className="hack-card__body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Vestibulum rhoncus est pellentesque elit ullamcorper dignissim.
-              Sed egestas egestas fringilla phasellus faucibus scelerisque.
-              Aenean pharetra magna ac placerat vestibulum.
-            </p>
-          </div>
-        </div>
-      </section>
-      {/* <div className="timeline" /> */}
+      <AboutComponent />
+      <ProblemStatementsComponent />
       <Image src={timeline} className="hack-timeline" />
-      <h3 class="h4g-section-title">Problem Statements</h3>
+      <ScheduleComponent />
+      {/* <h3 class="h4g-section-title">Problem Statements</h3>
       <div class="h4g-problem-statements-container">
         {problemStatements.map((problemStatement) => (
           <ProblemStatementsComponent problemStatement={problemStatement} />
@@ -289,7 +350,7 @@ const Hack4GoodPage = () => {
           <Image src={sponsorPaypal} />
         </Image.Group>
       </div>
-      <PdfRenderer file={booklet} />
+      <PdfRenderer file={booklet} /> */}
       <Footer />
     </div>
   );
