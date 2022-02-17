@@ -12,139 +12,141 @@ import firstWorkshop from "../assets/Hack4GoodPage/workshop1.png";
 import secondWorkshop from "../assets/Hack4GoodPage/workshop2.png";
 import thirdWorkshop from "../assets/Hack4GoodPage/workshop3.png";
 import organizer from "../assets/Hack4GoodPage/organizer.png";
-import sponsorOsa from "../assets/Hack4GoodPage/sponsor-osa.png";
+// import sponsorOsa from "../assets/Hack4GoodPage/sponsor-osa.png";
 import sponsorGIC from "../assets/Hack4GoodPage/sponsor-gic.jpg";
 import sponsorTW from "../assets/Hack4GoodPage/sponsor-tw.jpg";
 import sponsorSl2 from "../assets/Hack4GoodPage/sponsor-sl2.png";
 import sponsorQuest from "../assets/Hack4GoodPage/sponsor-quest.png";
-import monk from "../assets/Hack4GoodPage/panel-company-monk.png";
-import better from "../assets/Hack4GoodPage/panel-company-better.png";
-import ogp from "../assets/Hack4GoodPage/panel-company-ogp.png";
-import jeremy from "../assets/Hack4GoodPage/panel-jeremy.jpg";
-import shawn from "../assets/Hack4GoodPage/panel-shawn.jpg";
-import alexis from "../assets/Hack4GoodPage/panel-alexis.jpg";
-import gift from "../assets/Hack4GoodPage/ps-gift.jpg";
-import girls from "../assets/Hack4GoodPage/ps-girls.png";
-import access from "../assets/Hack4GoodPage/ps-access.jpg";
-import booklet from "../assets/Hack4GoodPage/booklet.pdf";
+import FaqDropdownArrow from "../assets/Hack4GoodPage/faq-dropdown-arrow.png";
+// import monk from "../assets/Hack4GoodPage/panel-company-monk.png";
+// import better from "../assets/Hack4GoodPage/panel-company-better.png";
+// import ogp from "../assets/Hack4GoodPage/panel-company-ogp.png";
+// import jeremy from "../assets/Hack4GoodPage/panel-jeremy.jpg";
+// import shawn from "../assets/Hack4GoodPage/panel-shawn.jpg";
+// import alexis from "../assets/Hack4GoodPage/panel-alexis.jpg";
+// import gift from "../assets/Hack4GoodPage/ps-gift.jpg";
+// import girls from "../assets/Hack4GoodPage/ps-girls.png";
+// import access from "../assets/Hack4GoodPage/ps-access.jpg";
+// import booklet from "../assets/Hack4GoodPage/booklet.pdf";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Faq from "react-faq-component";
 import { Grid, Icon, Image, Divider, Button } from "semantic-ui-react";
-import PdfRenderer from "./PdfRenderer";
+// import PdfRenderer from "./PdfRenderer";
 
-const panelJudges = [
-  {
-    profileImg: jeremy,
-    name: "Jeremy Au",
-    accreditations: [
-      "Head of Strategic Projects, Monk's Hill Ventures.",
-      "Harvard MBA.",
-      "Forbes 30 Under 30.",
-      "Cofounder, Conjunct Consulting",
-    ],
-    companyImg: monk,
-  },
-  {
-    profileImg: shawn,
-    name: "Shawn Low",
-    accreditations: [
-      "Co-founder of Better.com, valued at $4 billion as of their Series D raise.",
-      "Amongst Better’s accolades include LinkedIn's #1 Start-Up in the US, Forbes Fintech 50 and CNBC Disruptor 50.",
-      "Former BCG Consultant",
-    ],
-    companyImg: better,
-  },
-  {
-    profileImg: alexis,
-    name: "Alexis Goh",
-    accreditations: [
-      "Software Engineer at Open Government Products.",
-      "Stanford Master of Computer Science (Artificial Intelligence).",
-      "Previously a computer vision researcher at Whiterabbit.ai",
-    ],
-    companyImg: ogp,
-  },
-];
+// const panelJudges = [
+//   {
+//     profileImg: jeremy,
+//     name: "Jeremy Au",
+//     accreditations: [
+//       "Head of Strategic Projects, Monk's Hill Ventures.",
+//       "Harvard MBA.",
+//       "Forbes 30 Under 30.",
+//       "Cofounder, Conjunct Consulting",
+//     ],
+//     companyImg: monk,
+//   },
+//   {
+//     profileImg: shawn,
+//     name: "Shawn Low",
+//     accreditations: [
+//       "Co-founder of Better.com, valued at $4 billion as of their Series D raise.",
+//       "Amongst Better’s accolades include LinkedIn's #1 Start-Up in the US, Forbes Fintech 50 and CNBC Disruptor 50.",
+//       "Former BCG Consultant",
+//     ],
+//     companyImg: better,
+//   },
+//   {
+//     profileImg: alexis,
+//     name: "Alexis Goh",
+//     accreditations: [
+//       "Software Engineer at Open Government Products.",
+//       "Stanford Master of Computer Science (Artificial Intelligence).",
+//       "Previously a computer vision researcher at Whiterabbit.ai",
+//     ],
+//     companyImg: ogp,
+//   },
+// ];
 
-const PanelJudgeComponent = ({ judge }) => (
-  <div class="h4g-panel-judges-component">
-    <img
-      src={judge.profileImg}
-      alt="judge"
-      class="h4g-panel-judges-component-profile-img"
-    />
-    <h4 class="h4g-panel-judges-component-name">{judge.name}</h4>
-    <ul>
-      {judge.accreditations.map((accreditation) => (
-        <li>{accreditation}</li>
-      ))}
-    </ul>
-    <img
-      src={judge.companyImg}
-      alt="company"
-      style={{ width: "50%" }}
-      class="h4g-panel-judges-component-company-img"
-    />
-  </div>
-);
+// const PanelJudgeComponent = ({ judge }) => (
+//   <div class="h4g-panel-judges-component">
+//     <img
+//       src={judge.profileImg}
+//       alt="judge"
+//       class="h4g-panel-judges-component-profile-img"
+//     />
+//     <h4 class="h4g-panel-judges-component-name">{judge.name}</h4>
+//     <ul>
+//       {judge.accreditations.map((accreditation) => (
+//         <li>{accreditation}</li>
+//       ))}
+//     </ul>
+//     <img
+//       src={judge.companyImg}
+//       alt="company"
+//       style={{ width: "50%" }}
+//       class="h4g-panel-judges-component-company-img"
+//     />
+//   </div>
+// );
 
-const problemStatements = [
-  {
-    img: access,
-    description: (
-      <p>
-        <b>Access</b> is a ground-up organisation providing non-academic
-        opportunities to underserved students through externships and
-        mentorships.
-      </p>
-    ),
-    problem:
-      "Traditionally, industry interest and understanding have been assessed by looking at past experiences on the resumes of youths. How can we better reflect their interest and understanding of different industries and jobs for better job matching?",
-  },
-  {
-    img: girls,
-    description: (
-      <p>
-        Founded in 2007 by Adriana Gascoigne, <b>Girls in Tech</b> is a
-        nonprofit organization dedicated to eliminating the gender gap in tech.
-      </p>
-    ),
-    problem:
-      "How do we get young girls interested in STEM (Science, Technology, Engineering, and Mathematics) from an early age? (Ideas for solutions can be STEM-related gamification, toys, video content etc.)",
-  },
-  {
-    img: gift,
-    description: (
-      <p>
-        <b>Gift-It-Forward</b> is a social enterprise in Singapore. It aims to
-        create more meaningful gifts and teach kids about generosity and helping
-        others, while simplifying the event planning and gift giving experience
-        for parents.
-      </p>
-    ),
-    problem:
-      "Kids, who receive most of these gifts through birthday celebrations should also learn to think about the impact this has on their environment and community. Design a solution that makes gifting more meaningful for both the recipient and communities in need, while reducing gift waste.",
-  },
-  {
-    img: sponsorOsa,
-    description: (
-      <p>
-        The <b>NUS Office of Student Affairs (OSA)</b> seizes every opportunity
-        and dedicates itself to provide and support the NUS student community in
-        all aspects of student life outside-of-the-classroom, including student
-        services, housing admission and residential life, student organisations,
-        student leaders’ training, community engagement, integration and service
-        learning, student support and wellness, as well as disability support.
-      </p>
-    ),
-    problem:
-      "How can we engage youths to adopt and use Asset-Based Community Development or a strength-based approach for community projects instead of the usual problem/gaps-based approach?",
-    problem2:
-      "How can we tap on technology to get youths to learn, understand and appreciate diversity/difference and participate in creating a more inclusive space?",
-  },
-];
+// const problemStatements = [
+//   {
+//     img: access,
+//     description: (
+//       <p>
+//         <b>Access</b> is a ground-up organisation providing non-academic
+//         opportunities to underserved students through externships and
+//         mentorships.
+//       </p>
+//     ),
+//     problem:
+//       "Traditionally, industry interest and understanding have been assessed by looking at past experiences on the resumes of youths. How can we better reflect their interest and understanding of different industries and jobs for better job matching?",
+//   },
+//   {
+//     img: girls,
+//     description: (
+//       <p>
+//         Founded in 2007 by Adriana Gascoigne, <b>Girls in Tech</b> is a
+//         nonprofit organization dedicated to eliminating the gender gap in tech.
+//       </p>
+//     ),
+//     problem:
+//       "How do we get young girls interested in STEM (Science, Technology, Engineering, and Mathematics) from an early age? (Ideas for solutions can be STEM-related gamification, toys, video content etc.)",
+//   },
+//   {
+//     img: gift,
+//     description: (
+//       <p>
+//         <b>Gift-It-Forward</b> is a social enterprise in Singapore. It aims to
+//         create more meaningful gifts and teach kids about generosity and helping
+//         others, while simplifying the event planning and gift giving experience
+//         for parents.
+//       </p>
+//     ),
+//     problem:
+//       "Kids, who receive most of these gifts through birthday celebrations should also learn to think about the impact this has on their environment and community. Design a solution that makes gifting more meaningful for both the recipient and communities in need, while reducing gift waste.",
+//   },
+//   {
+//     img: sponsorOsa,
+//     description: (
+//       <p>
+//         The <b>NUS Office of Student Affairs (OSA)</b> seizes every opportunity
+//         and dedicates itself to provide and support the NUS student community in
+//         all aspects of student life outside-of-the-classroom, including student
+//         services, housing admission and residential life, student organisations,
+//         student leaders’ training, community engagement, integration and service
+//         learning, student support and wellness, as well as disability support.
+//       </p>
+//     ),
+//     problem:
+//       "How can we engage youths to adopt and use Asset-Based Community Development or a strength-based approach for community projects instead of the usual problem/gaps-based approach?",
+//     problem2:
+//       "How can we tap on technology to get youths to learn, understand and appreciate diversity/difference and participate in creating a more inclusive space?",
+//   },
+// ];
 
 // const ProblemStatementsComponent = ({ problemStatement }) => (
 //   <div class="h4g-problem-statement-component card-horizontal projects__project">
@@ -431,12 +433,51 @@ const JudgesAndSponsorsComponent = () => (
 );
 
 const OrganizerFaqsContactUsComponent = () => {
+  const data = {
+    rows: [
+      {
+        title: "I don't have a team. Can my project be done solo?",
+        content: "No, a team should be composed of at least 2 members.",
+      },
+      {
+        title:
+          "I am registering alone / do not have a full team. How do I look for teammates?",
+        content: `A Telegram group will be created to facilitate communication amongst the participants. Feel 
+        free to look for team members there. More details will be released later.`,
+      },
+      {
+        title:
+          "I am not from Singapore. Am I eligible to participate in the hackathon?",
+        content: `No, this hackathon is opened to participants currently residing in Singapore. As our finale 
+        round is conducted face-to-face at NUS campus, we expect all shortlisted participants to turn 
+        up physically.`,
+      },
+      {
+        title: "Do I have to be a software developer to join this hackathon?",
+        content: `No. We encourage participants with a diverse range of skillsets and experience. As with all 
+        hackathons, there are non-technical elements as well.`,
+      },
+      {
+        title: "How much does it cost to join this hackathon?",
+        content: "Participation in Hack for Good is free-of-charge.",
+      },
+    ],
+  };
+  const styles = {
+    //rowContentTextSize: "25px",
+    //rowContentPaddingBottom: "20px",
+  };
+  const config = {
+    arrowIcon: <Image src={FaqDropdownArrow} className="hack-faq___arrow" />,
+  };
   return (
     <section className="projects hack-section">
       <h2 className="hack-header">Organizer</h2>
       <Image src={organizer} />
       <h2 className="hack-header">FAQs</h2>
-      {/* react accordion library */}
+      <div className="hack-faq__container">
+        <Faq data={data} styles={styles} config={config} />
+      </div>
       <h2 className="hack-header">Contact Us</h2>
     </section>
   );
