@@ -15,6 +15,7 @@ import TeamArticlePage from "./components/TeamArticlePage";
 import HackathonTeamsPage from "./components/HackathonTeamsPage";
 import RecruitmentPage from "./components/RecruitmentPage";
 import PastWebinarPage from "./components/PastWebinarPage";
+import Hack4Good2022 from "./components/Hack4Good2022";
 import Hack4GoodPage from "./components/Hack4GoodPage";
 import { Router, Route, Switch } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
@@ -67,9 +68,10 @@ class App extends Component {
               render={() => <TeamArticlePage team={2} key={3} />}
             />
             <Route
-              path="/hackforgood2020"
+              path="/hack4good2020"
               render={() => <TeamArticlePage team={3} key={4} />}
             />
+            <Route path="/hack4good2022" component={Hack4Good2022} />
             <Route path="/hack4good" component={Hack4GoodPage} />
             <Route path="/hackathon-teams" component={HackathonTeamsPage} />
             <Route path="/recruitment" component={RecruitmentPage} />

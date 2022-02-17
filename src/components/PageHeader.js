@@ -51,15 +51,17 @@ class PageHeader extends Component {
                 Home
               </Menu.Item>
 
-              { appOpen && <Menu.Item
-                name="home"
-                active={this.state.activeItem === "apply"}
-                as={Link}
-                to="/recruitment"
-                onClick={this.handleItemClick}
-              >
-                Apply to DSC
-              </Menu.Item> }
+              {appOpen && (
+                <Menu.Item
+                  name="home"
+                  active={this.state.activeItem === "apply"}
+                  as={Link}
+                  to="/recruitment"
+                  onClick={this.handleItemClick}
+                >
+                  Apply to DSC
+                </Menu.Item>
+              )}
 
               <Dropdown item text="About">
                 <Dropdown.Menu>
@@ -127,13 +129,13 @@ class PageHeader extends Component {
               </Menu.Item>
 
               <Menu.Item
-                name="hack4good"
-                active={this.state.activeItem === "hack4good"}
+                name="hack4good2022"
+                active={this.state.activeItem === "hack4good2022"}
                 onClick={this.handleItemClick}
                 as={Link}
-                to="/hack4good"
+                to="/hack4good2022"
               >
-                Hack For Good
+                Hack For Good 2022
               </Menu.Item>
 
               <Menu.Item
@@ -232,13 +234,13 @@ class PageHeader extends Component {
             </Menu.Item>
 
             <Menu.Item
-              name="hack4good"
-              active={this.state.activeItem === "hack4good"}
+              name="hack4good2022"
+              active={this.state.activeItem === "hack4good2022"}
               onClick={this.handleItemClick}
               as={Link}
-              to="/hack4good"
+              to="/hack4good2022"
             >
-              Hack For Good
+              Hack For Good 2022
             </Menu.Item>
 
             <Menu.Item
