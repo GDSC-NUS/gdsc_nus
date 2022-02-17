@@ -141,25 +141,26 @@
   display: inline-block;
   list-style: none;
   cursor: pointer;
-  color: #c4c4c4;
+  color: rgba(68, 68, 68, 0.5);
   font-size: 40px;
   font-weight: 700;
   line-height: 66px;
   text-align: center;
 
+  &:hover {
+    color: #444444;
+  }
   &__selected {
     color: #444444;
   }
 }
 
 .hack-tabpanel {
-  padding: 0;
-
   &__selected {
     padding: 65px 0;
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: 5vw;
+    grid-template-columns: 40% 60%;
+    column-gap: 5vw;
     justify-items: start;
 
     @media (max-width: 700px) {
@@ -262,29 +263,29 @@
 
   &__gold {
     background: white;
-    max-height: 272px;
-    max-width: 272px;
     object-fit: contain;
     border-radius: 25%;
     margin: 50px;
+    max-height: 272px;
+    max-width: 272px;
   }
 
   &__silver {
     background: white;
-    max-height: 227px;
-    max-width: 227px;
     object-fit: contain;
     border-radius: 25%;
     margin: 50px;
+    max-height: 227px;
+    max-width: 227px;
   }
 
   &__bronze {
     background: white;
-    max-height: 177px;
-    max-width: 177px;
     object-fit: contain;
     border-radius: 25%;
     margin: 50px;
+    max-height: 177px;
+    max-width: 177px;
   }
 }
 
@@ -304,6 +305,7 @@
           & .row-title {
             color: #4285f4;
             font-size: 30px;
+
             .icon-wrapper {
               max-width: 40px;
               max-height: 40px;
@@ -324,6 +326,7 @@
           }
           & .row-content {
             max-width: 1050px;
+
             .row-content-text {
               font-size: 25px;
               padding-bottom: 20px;
@@ -332,21 +335,53 @@
         }
       }
     }
-
-    .icon-wrapper {
-      max-width: 40px;
-      max-height: 40px;
-      transform: rotate(0deg);
-      transition: transform 0.3s;
-      position: absolute;
-      top: 13px;
-      right: 12px;
-    }
   }
 
   &__arrow {
     width: 40px;
     height: 40px;
+  }
+}
+
+.hack-contact-us {
+  &__bg {
+    height: 400px !important;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-dark-yellow-grey, 0.6),
+        rgba($color-dark-yellow-grey, 0.6)
+      ),
+      url("../../assets/Hack4GoodPage/contact-us.png") !important;
+    flex-direction: column;
+  }
+
+  &__links {
+    max-width: 900px;
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    @media (max-width: 600px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__image {
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+
+  &__white-line {
+    background-color: white;
+    height: 2px;
+    width: 5vw;
+    max-width: 133px;
+
+    @media (max-width: 600px) {
+      width: 0px;
+    }
   }
 }
 

@@ -18,6 +18,10 @@ import sponsorTW from "../assets/Hack4GoodPage/sponsor-tw.jpg";
 import sponsorSl2 from "../assets/Hack4GoodPage/sponsor-sl2.png";
 import sponsorQuest from "../assets/Hack4GoodPage/sponsor-quest.png";
 import FaqDropdownArrow from "../assets/Hack4GoodPage/faq-dropdown-arrow.png";
+import telegram from "../assets/Hack4GoodPage/telegram.png";
+import insta from "../assets/Hack4GoodPage/insta.png";
+import linkedin from "../assets/Hack4GoodPage/linkedin.png";
+import email from "../assets/Hack4GoodPage/email.png";
 // import monk from "../assets/Hack4GoodPage/panel-company-monk.png";
 // import better from "../assets/Hack4GoodPage/panel-company-better.png";
 // import ogp from "../assets/Hack4GoodPage/panel-company-ogp.png";
@@ -188,17 +192,14 @@ const AboutComponent = () => (
     </p>
     <h2 className="hack-header">Our Themes</h2>
     <Image src={ourThemes} style={{ marginTop: "90px" }} />
-    <div className="white-btn-border">
-      <div className="white-btn-content">
-        <a
-          href="https://www.naver.com"
-          target="_blank"
-          className="white-btn-text"
-        >
-          Register
-        </a>
+
+    <a href="https://www.naver.com" target="_blank">
+      <div className="white-btn-border">
+        <div className="white-btn-content">
+          <text className="white-btn-text">Register</text>
+        </div>
       </div>
-    </div>
+    </a>
   </section>
 );
 
@@ -432,7 +433,7 @@ const JudgesAndSponsorsComponent = () => (
   </section>
 );
 
-const OrganizerFaqsContactUsComponent = () => {
+const OrganizerAndFaqsComponent = () => {
   const data = {
     rows: [
       {
@@ -463,10 +464,6 @@ const OrganizerFaqsContactUsComponent = () => {
       },
     ],
   };
-  const styles = {
-    //rowContentTextSize: "25px",
-    //rowContentPaddingBottom: "20px",
-  };
   const config = {
     arrowIcon: <Image src={FaqDropdownArrow} className="hack-faq___arrow" />,
   };
@@ -476,9 +473,8 @@ const OrganizerFaqsContactUsComponent = () => {
       <Image src={organizer} />
       <h2 className="hack-header">FAQs</h2>
       <div className="hack-faq__container">
-        <Faq data={data} styles={styles} config={config} />
+        <Faq data={data} config={config} />
       </div>
-      <h2 className="hack-header">Contact Us</h2>
     </section>
   );
 };
@@ -489,17 +485,13 @@ const Hack4GoodPage = () => {
       <PageHeader />
       <header class="home-header hackathon-header">
         <Image src={headerLogo} />
-        <div className="black-btn-border">
-          <div className="black-btn-content">
-            <a
-              href="https://www.google.com"
-              target="_blank"
-              className="black-btn-text"
-            >
-              Register
-            </a>
+        <a href="https://www.google.com" target="_blank">
+          <div className="black-btn-border">
+            <div className="black-btn-content">
+              <text className="black-btn-text">Register</text>
+            </div>
           </div>
-        </div>
+        </a>
       </header>
       <AboutComponent />
       <ProblemStatementsComponent />
@@ -510,7 +502,26 @@ const Hack4GoodPage = () => {
       <PrizesComponent />
       <WorkshopComponent />
       <JudgesAndSponsorsComponent />
-      <OrganizerFaqsContactUsComponent />
+      <OrganizerAndFaqsComponent />
+      <header class="home-header hack-contact-us__bg">
+        <h2 className="hack-header white-header">Contact Us</h2>
+        <div className="hack-contact-us__links">
+          <a href="https://t.me/dscnus" target="_blank">
+            <img src={telegram} className="hack-contact-us__image" />
+          </a>
+          <hr className="hack-contact-us__white-line" />
+          <a href="https://www.instagram.com/dscnus/" target="_blank">
+            <img src={insta} className="hack-contact-us__image" />
+          </a>
+          <hr className="hack-contact-us__white-line" />
+          <a href="https://www.linkedin.com/company/dscnus" target="_blank">
+            <img src={linkedin} className="hack-contact-us__image" />
+          </a>
+          <hr className="hack-contact-us__white-line" />
+          <img src={email} className="hack-contact-us__image" />
+        </div>
+      </header>
+
       {/* <h3 class="h4g-section-title">Problem Statements</h3>
       <div class="h4g-problem-statements-container">
         {problemStatements.map((problemStatement) => (

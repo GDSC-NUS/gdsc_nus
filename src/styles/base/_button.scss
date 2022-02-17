@@ -63,9 +63,10 @@
   height: 84px;
   background: #f8f8f8;
   padding: 7px;
-  transition: 1s;
+  transition: 0.5s;
   &:hover {
     cursor: pointer;
+    transform: scale(1.05);
     background: linear-gradient(
       90deg,
       #4285f4 0%,
@@ -99,9 +100,10 @@
   height: 59px;
   background: black;
   padding: 3px;
-  transition: 1s;
+  transition: 0.5s;
   &:hover {
     cursor: pointer;
+    transform: scale(1.05);
     background: linear-gradient(
       180deg,
       #db4437 0%,
