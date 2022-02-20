@@ -59,8 +59,8 @@ class InternalTeamPage extends Component {
                 </p>
                 <br></br>
                 <p>
-                  Look out for more updates for HFG 2021{" "}
-                  <Link to="/hack4good">here</Link>
+                  Look out for more updates for HFG 2022{" "}
+                  <Link to="/hack4good2022">here</Link>
                 </p>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PageHeader from "./PageHeader";
 import Footer from "./Footer.js";
 import logo from "../assets/ProjectsPage/hglogo.png";
@@ -157,6 +157,9 @@ const ProblemStatementsComponent = ({ problemStatement }) => (
 );
 
 const Hack4GoodPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <PageHeader />
@@ -178,7 +181,9 @@ const Hack4GoodPage = () => {
               <img src={logo} alt="logo" style={{ width: "50%" }} />
             </div>
             <div className="card-horizontal__content">
-              <h2 class="heading-secondary">Hack for Good will return in 2022!</h2>
+              <h2 class="heading-secondary">
+                Hack for Good will return in 2022!
+              </h2>
               <h2>Find out more about our 2021 edition below.</h2>
               <br />
               <p>

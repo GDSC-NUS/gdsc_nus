@@ -1,0 +1,439 @@
+.hack-background {
+  background: #f8f8f8;
+}
+
+.hack-section {
+  display: flex;
+  align-items: center;
+  margin: 100px 0;
+}
+
+.hack-header {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 82px;
+  text-align: center;
+  color: #444444;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.white-header {
+  color: white;
+}
+
+.hack-body {
+  max-width: 624px;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 46px;
+  text-align: center;
+  margin-bottom: 47px;
+
+  &__time {
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 44px;
+    text-align: left;
+  }
+
+  &__activity {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: left;
+  }
+}
+
+.hack-card {
+  margin: 38px 0;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  column-gap: 5vw;
+  justify-items: center;
+
+  @media (max-width: 700px) {
+    grid-template-columns: 100%;
+  }
+
+  &__image {
+    max-width: 227px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  &__textbox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 72px;
+    text-align: left;
+  }
+
+  &__body {
+    inline-size: 95%;
+    max-width: 832px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: left;
+  }
+}
+
+.hack-timeline {
+  overflow: auto;
+  white-space: nowrap;
+  &__image {
+    min-width: 1000px;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.with-underline {
+  border-bottom: solid 3px;
+  border-image: linear-gradient(
+      90deg,
+      #db4437 0.72%,
+      #4285f4 38.68%,
+      #f4b400 68.96%,
+      #0f9d58 100%
+    )
+    1 round;
+}
+
+.hack-schedule-background {
+  &__first {
+    background-image: url("../../assets/Hack4Good2022/schedule-background-1.png") !important;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__second {
+    background-image: url("../../assets/Hack4Good2022/schedule-background-2.png") !important;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.hack-tabcontainer {
+  max-width: 750px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.hack-tablist {
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.hack-tab {
+  display: inline-block;
+  list-style: none;
+  cursor: pointer;
+  color: rgba(68, 68, 68, 0.5);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 66px;
+  text-align: center;
+
+  &:hover {
+    color: #444444;
+  }
+  &__selected {
+    color: #444444;
+  }
+}
+
+.hack-tabpanel {
+  &__selected {
+    padding: 65px 0;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    column-gap: 5vw;
+    justify-items: start;
+
+    @media (max-width: 700px) {
+      grid-template-columns: 100%;
+    }
+  }
+}
+
+.hack-prize {
+  &__carousel {
+    margin: 40px 0;
+    max-width: 900px;
+    max-height: 594px;
+    width: 100%;
+    height: 100%;
+    & .react-multiple-carousel__arrow--left {
+      left: 0;
+    }
+    & .react-multiple-carousel__arrow--right {
+      right: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__image {
+    @media (max-width: 850px) {
+      height: 400px;
+    }
+    @media (max-width: 600px) {
+      height: 300px;
+    }
+    @media (max-width: 450px) {
+      height: 200px;
+    }
+  }
+}
+
+.hack-workshops {
+  margin: 70px 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 5w;
+  justify-items: center;
+
+  @media (max-width: 960px) {
+    grid-template-columns: 100%;
+  }
+
+  &__image {
+    max-width: 615px;
+    width: 100%;
+  }
+
+  &__textbox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 82px;
+  }
+
+  &__body {
+    inline-size: 95%;
+    max-width: 675px;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 46px;
+    @media (max-width: 1200px) {
+      font-size: 1.8vw;
+      line-height: 3.6vw;
+    }
+    @media (max-width: 960px) {
+      font-size: 23px;
+      line-height: 46px;
+    }
+  }
+}
+
+.hack-judges {
+  &__panel {
+    margin: 40px 0;
+    max-width: 1180px;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+
+  &__judge {
+    margin: 40px 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__image {
+    max-width: 272px;
+    max-height: 272px;
+    border-radius: 50%;
+  }
+
+  &__name {
+    color: #444444;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 49px;
+    text-align: center;
+  }
+
+  &__accreditation {
+    max-width: 300px;
+    width: 25vw;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+
+    @media (max-width: 1000px) {
+      max-width: 500px;
+      width: 60vw;
+    }
+  }
+
+  &__company {
+    margin: 30px;
+    max-width: 187px;
+    max-height: 82px;
+  }
+}
+
+.hack-sponsor {
+  &__header {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 82px;
+    text-align: center;
+  }
+
+  &__group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__gold {
+    object-fit: contain;
+    margin: 50px;
+    max-height: 400px;
+    max-width: 400px;
+  }
+
+  &__silver {
+    margin: 50px;
+    max-height: 250px;
+    max-width: 250px;
+  }
+
+  &__bronze {
+    margin: 50px;
+    max-height: 150px;
+    max-width: 150px;
+  }
+}
+
+.hack-faq {
+  &__container {
+    max-width: 1150px;
+    margin: 33px 5vw;
+
+    & .faq-row-wrapper {
+      background-color: transparent;
+
+      & .faq-body {
+        & .faq-row {
+          border-bottom: 2px solid rgba(68, 68, 68, 0.3);
+          padding-top: 20px;
+
+          & .row-title {
+            color: #4285f4;
+            font-size: 30px;
+
+            @media (max-width: 850px) {
+              font-size: 4vw;
+            }
+
+            .icon-wrapper {
+              max-width: 40px;
+              max-height: 40px;
+              top: 30px;
+            }
+
+            &.expanded {
+              .icon-wrapper {
+                transform: rotate(45deg);
+              }
+            }
+
+            &.expanding {
+              .icon-wrapper {
+                transform: rotate(45deg);
+              }
+            }
+          }
+          & .row-content {
+            max-width: 1050px;
+
+            .row-content-text {
+              font-size: 25px;
+              padding-bottom: 20px;
+
+              @media (max-width: 850px) {
+                font-size: 3.5vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__arrow {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.hack-contact-us {
+  &__bg {
+    height: 400px !important;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-dark-yellow-grey, 0.6),
+        rgba($color-dark-yellow-grey, 0.6)
+      ),
+      url("../../assets/Hack4Good2022/contact-us.png") !important;
+    flex-direction: column;
+  }
+
+  &__links {
+    max-width: 900px;
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    @media (max-width: 600px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__image {
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+
+  &__white-line {
+    background-color: white;
+    height: 2px;
+    width: 5vw;
+    max-width: 133px;
+
+    @media (max-width: 600px) {
+      width: 0px;
+    }
+  }
+}

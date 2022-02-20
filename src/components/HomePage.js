@@ -38,31 +38,35 @@ class Home extends Component {
             </h1>
           </div>
         </header>
-        {appOpen && <section className="section-home">
-          <div className="section-home__content section-home__content-reverse">
-            <div class="section-home__image-box">
-              <img
-                className="section-home__image"
-                alt="Sign Up"
-                src={signup}
-              />
+        {appOpen && (
+          <section className="section-home">
+            <div className="section-home__content section-home__content-reverse">
+              <div class="section-home__image-box">
+                <img
+                  className="section-home__image"
+                  alt="Sign Up"
+                  src={signup}
+                />
+              </div>
+              <div class="section-home__text-box">
+                <h2 class="heading-secondary">
+                  Sign ups for AY21/22 are open!
+                </h2>
+                <p>
+                  We are so excited to welcome you to the DSC family!
+                  <br />
+                  Find out more about our teams and roles below.
+                  <br />
+                  <br />
+                  Sign ups close 21 August 2359.
+                </p>
+                <a href="/recruitment" className="btn btn-yellow">
+                  Apply now
+                </a>
+              </div>
             </div>
-            <div class="section-home__text-box">
-              <h2 class="heading-secondary">Sign ups for AY21/22 are open!</h2>
-              <p>
-                We are so excited to welcome you to the DSC family!
-                <br />
-                Find out more about our teams and roles below.
-                <br />
-                <br />
-                Sign ups close 21 August 2359.
-              </p>
-              <a href="/recruitment" className="btn btn-yellow">
-                Apply now
-              </a>
-            </div>
-          </div>
-        </section> }
+          </section>
+        )}
         <section className="section-home section-blue">
           <div className="section-home__content">
             <div class="section-home__text-box">
