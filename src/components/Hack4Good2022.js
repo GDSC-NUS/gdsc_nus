@@ -411,6 +411,29 @@ const FaqsComponent = () => {
   );
 };
 
+const ContactUsComponent = () => (
+  <header class="home-header hack-contact-us__bg">
+    <h2 className="hack-header white-header">Contact Us</h2>
+    <div className="hack-contact-us__links">
+      <a href="https://t.me/dscnus" target="_blank">
+        <img src={telegram} className="hack-contact-us__image" />
+      </a>
+      <hr className="hack-contact-us__white-line" />
+      <a href="https://www.instagram.com/dscnus/" target="_blank">
+        <img src={insta} className="hack-contact-us__image" />
+      </a>
+      <hr className="hack-contact-us__white-line" />
+      <a href="https://www.linkedin.com/company/dscnus" target="_blank">
+        <img src={linkedin} className="hack-contact-us__image" />
+      </a>
+      <hr className="hack-contact-us__white-line" />
+      <a href="mailto:ops.head.dscnus@gmail.com" target="_blank">
+        <img src={email} className="hack-contact-us__image" />
+      </a>
+    </div>
+  </header>
+);
+
 const Hack4Good2022 = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -444,26 +467,7 @@ const Hack4Good2022 = () => {
         <OrganizerComponent />
         <FaqsComponent />
       </section>
-      <header class="home-header hack-contact-us__bg">
-        <h2 className="hack-header white-header">Contact Us</h2>
-        <div className="hack-contact-us__links">
-          <a href="https://t.me/dscnus" target="_blank">
-            <img src={telegram} className="hack-contact-us__image" />
-          </a>
-          <hr className="hack-contact-us__white-line" />
-          <a href="https://www.instagram.com/dscnus/" target="_blank">
-            <img src={insta} className="hack-contact-us__image" />
-          </a>
-          <hr className="hack-contact-us__white-line" />
-          <a href="https://www.linkedin.com/company/dscnus" target="_blank">
-            <img src={linkedin} className="hack-contact-us__image" />
-          </a>
-          <hr className="hack-contact-us__white-line" />
-          <a href="mailto:ops.head.dscnus@gmail.com" target="_blank">
-            <img src={email} className="hack-contact-us__image" />
-          </a>
-        </div>
-      </header>
+      <ContactUsComponent />
       <Footer />
     </div>
   );
