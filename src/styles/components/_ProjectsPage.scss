@@ -9,7 +9,13 @@
 
 .hackathon-header {
   height: 950px !important;
-  background-image: url("../../assets/ProjectsPage/hackathonHeader.png") !important;
+  background-image: linear-gradient(
+      to bottom,
+      transparent,
+      transparent,
+      #f8f8f8
+    ),
+    url("../../assets/ProjectsPage/hfg2022_background.png") !important;
   flex-direction: column;
 }
 

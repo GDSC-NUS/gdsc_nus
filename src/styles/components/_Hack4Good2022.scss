@@ -46,6 +46,10 @@
   }
 }
 
+.hack-logo {
+  max-height: 650px;
+}
+
 .hack-card {
   margin: 38px 0;
   display: grid;
@@ -360,10 +364,10 @@
 
           & .row-title {
             color: #4285f4;
-            font-size: 3rem;
+            font-size: 2rem;
 
-            @media (max-width: 850px) {
-              font-size: 4vw;
+            @media (max-width: 500px) {
+              font-size: 5vw;
             }
 
             .icon-wrapper {
@@ -388,11 +392,11 @@
             max-width: 1050px;
 
             .row-content-text {
-              font-size: 2.5rem;
+              font-size: 2rem;
               padding-bottom: 20px;
 
-              @media (max-width: 850px) {
-                font-size: 3.5vw;
+              @media (max-width: 500px) {
+                font-size: 4.5vw;
               }
             }
           }

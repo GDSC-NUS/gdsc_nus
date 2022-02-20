@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4e19e3cb342e74d708707c657a632668",
+    "revision": "7d1352d5948cabf374d4a1780278e086",
     "url": "/index.html"
   },
   {
-    "revision": "6e5b7154d224ab337017",
+    "revision": "55e1eb6dd4a1dde1d0cf",
     "url": "/static/css/2.be7ce31b.chunk.css"
   },
   {
-    "revision": "53f9fc75429690f29b7f",
-    "url": "/static/css/main.bfcbcd0c.chunk.css"
+    "revision": "8c94e7e4d83ceaeccdfb",
+    "url": "/static/css/main.e4bffd8d.chunk.css"
   },
   {
-    "revision": "6e5b7154d224ab337017",
-    "url": "/static/js/2.a3169f4f.chunk.js"
+    "revision": "55e1eb6dd4a1dde1d0cf",
+    "url": "/static/js/2.e49b6328.chunk.js"
   },
   {
     "revision": "78483c9fa544e038846045506308727b",
-    "url": "/static/js/2.a3169f4f.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.e49b6328.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "53f9fc75429690f29b7f",
-    "url": "/static/js/main.7a17481c.chunk.js"
+    "revision": "8c94e7e4d83ceaeccdfb",
+    "url": "/static/js/main.dcd1491f.chunk.js"
   },
   {
     "revision": "0d3b8522413ea50bd7ca",
@@ -38,10 +38,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "eb6170335e49a9f2dd7619dc37b900f1",
     "url": "/static/media/3rd-prize.eb617033.png"
-  },
-  {
-    "revision": "04e4ef3195d52a8363d1721e7e5d833f",
-    "url": "/static/media/HFG_Logo.04e4ef31.png"
   },
   {
     "revision": "8247bdfe5fa472ec44f694918daa4b6c",
@@ -228,10 +224,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/g9p1.590e362b.jpg"
   },
   {
-    "revision": "4d35a0704f39002d67bf110ec17210f0",
-    "url": "/static/media/hackathonHeader.4d35a070.png"
-  },
-  {
     "revision": "cbaf5ad5f814f14b769872b2c6f858a9",
     "url": "/static/media/hackforgood.cbaf5ad5.jpeg"
   },
@@ -250,6 +242,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ddf27670f10ec2539a85bc506de98c47",
     "url": "/static/media/header.ddf27670.png"
+  },
+  {
+    "revision": "dc78d1dd0e78fb3f7f87780358cc6b26",
+    "url": "/static/media/hfg2022_background.dc78d1dd.png"
+  },
+  {
+    "revision": "fc0c3eaf7db3d65bca41ba7ad6346abb",
+    "url": "/static/media/hfg2022_logo.fc0c3eaf.svg"
   },
   {
     "revision": "8688d5bc043b7fb2bf275664c58334f1",
@@ -400,8 +400,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/signup.76095a73.png"
   },
   {
-    "revision": "b4445aeb3abdb53d1ff520d980b86d81",
-    "url": "/static/media/sponsor-gic.b4445aeb.png"
+    "revision": "0ad1fa0c1bdbbe28ca06c4a621873e15",
+    "url": "/static/media/sponsor-gic.0ad1fa0c.svg"
   },
   {
     "revision": "0331bb3c53574e553854fb4c7b3b8c0f",

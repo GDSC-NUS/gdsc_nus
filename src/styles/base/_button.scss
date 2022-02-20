@@ -58,10 +58,10 @@
   }
 }
 
-.black-btn-border {
+.blue-btn-border {
   width: 241px;
   height: 84px;
-  background: #f8f8f8;
+  background: #004bac;
   padding: 7px;
   transition: 0.5s;
   &:hover {
@@ -77,19 +77,19 @@
     );
   }
 }
-.black-btn-content {
+.blue-btn-content {
   padding: 11px 0;
   width: 227px;
   height: 70px;
-  background: #222;
+  background: white;
   text-align: center;
 }
 
-.black-btn-text {
+.blue-btn-text {
   font-size: 35px;
   font-weight: 400;
   line-height: 48px;
-  color: #ffffff !important;
+  color: #004bac !important;
   letter-spacing: 0.125em;
   text-transform: uppercase;
 }

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PageHeader from "./PageHeader";
 import Footer from "./Footer.js";
-import logo from "../assets/ProjectsPage/hglogo.png";
-import headerLogo from "../assets/ProjectsPage/HFG_Logo.png";
+import headerLogo from "../assets/Hack4Good2022/hfg2022_logo.svg";
 import ourThemes from "../assets/Hack4Good2022/ourThemes.png";
 import timeline from "../assets/Hack4Good2022/timeline.png";
 import firstPrize from "../assets/Hack4Good2022/1st-prize.png";
@@ -12,7 +11,7 @@ import firstWorkshop from "../assets/Hack4Good2022/workshop1.png";
 import secondWorkshop from "../assets/Hack4Good2022/workshop2.png";
 import thirdWorkshop from "../assets/Hack4Good2022/workshop3.png";
 import organizer from "../assets/Hack4Good2022/organizer.png";
-import sponsorGIC from "../assets/Hack4Good2022/sponsor-gic.png";
+import sponsorGIC from "../assets/Hack4Good2022/sponsor-gic.svg";
 import sponsorTW from "../assets/Hack4Good2022/sponsor-tw.png";
 import sponsorSl2 from "../assets/Hack4Good2022/sponsor-sl2.png";
 import sponsorQuest from "../assets/Hack4Good2022/sponsor-quest.png";
@@ -38,11 +37,10 @@ const AboutComponent = () => (
   <section className="projects hack-section">
     <h2 className="hack-header">About HFG 2022</h2>
     <p className="hack-body" style={{ marginTop: "47px" }}>
-      In collaboration with Conjunct Consulting, and sponsored by NUS OSA, DSC
-      SoC presents Hack For Good, a student-run hackathon which seeks to inspire
-      students to learn and use technology for social causes. Our innovation
-      challenge is unique in that we are posing real problem statements provided
-      by NPOs in Singapore.
+      DSC NUS presents Hack For Good, a student-run hackathon which seeks to
+      inspire students to learn and use technology for social causes. Our
+      innovation challenge is unique in that we are posing real problem
+      statements provided by NPOs in Singapore.
     </p>
     <p className="hack-body">
       Participating teams are expected to create technological prototypes as
@@ -53,8 +51,7 @@ const AboutComponent = () => (
     </p>
     <h2 className="hack-header">Our Themes</h2>
     <Image src={ourThemes} style={{ marginTop: "90px" }} />
-
-    <a href="https://gdsc.community.dev/j/w7y9gphq52x9u/" target="_blank">
+    <a href="https://gdsc.community.dev/e/mp83tu/" target="_blank">
       <div className="white-btn-border">
         <div className="white-btn-content">
           <text className="white-btn-text">Register</text>
@@ -342,7 +339,7 @@ const SponsorsComponent = () => (
         src={sponsorGIC}
         alt="GIC"
         className="hack-sponsor__gold"
-        style={{ transform: "scale(0.7)" }}
+        style={{ transform: "scale(0.6)" }}
       />
       <img src={sponsorTW} alt="Thoughtworks" className="hack-sponsor__gold" />
     </div>
@@ -449,11 +446,11 @@ const Hack4Good2022 = () => {
     <div className="hack-background">
       <PageHeader />
       <header class="home-header hackathon-header">
-        <Image src={headerLogo} />
-        <a href="https://gdsc.community.dev/j/w7y9gphq52x9u/" target="_blank">
-          <div className="black-btn-border">
-            <div className="black-btn-content">
-              <text className="black-btn-text">Register</text>
+        <Image src={headerLogo} className="hack-logo" />
+        <a href="https://gdsc.community.dev/e/mp83tu/" target="_blank">
+          <div className="blue-btn-border">
+            <div className="blue-btn-content">
+              <text className="blue-btn-text">Register</text>
             </div>
           </div>
         </a>
