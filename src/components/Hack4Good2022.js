@@ -122,6 +122,10 @@ const ScheduleComponent = () => {
   return (
     <section className={`${scheduleSectionClassName}`}>
       <h2 className="hack-header">Schedule</h2>
+      <p style={{ fontWeight: "bold", fontSize: "2rem", color: "#8B0000" }}>
+        *** 7th March is a Zoom event, while 19th March will be held
+        face-to-face at Seminar Room 1 (SR 1)
+      </p>
       <Tabs
         selectedIndex={tabIndex}
         onSelect={(index) => setTabIndex(index)}
