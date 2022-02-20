@@ -338,7 +338,12 @@ const SponsorsComponent = () => (
     <h2 className="hack-header">Sponsors</h2>
     <h2 className="hack-sponsor__header with-underline">Gold</h2>
     <div className="hack-sponsor__group">
-      <img src={sponsorGIC} alt="GIC" className="hack-sponsor__gold" />
+      <img
+        src={sponsorGIC}
+        alt="GIC"
+        className="hack-sponsor__gold"
+        style={{ transform: "scale(0.7)" }}
+      />
       <img src={sponsorTW} alt="Thoughtworks" className="hack-sponsor__gold" />
     </div>
     <h2 className="hack-sponsor__header with-underline">Silver</h2>
@@ -347,6 +352,7 @@ const SponsorsComponent = () => (
         src={sponsorQuest}
         alt="QuestVentures"
         className="hack-sponsor__silver"
+        style={{ transform: "scale(0.7)" }}
       />
     </div>
     <h2 className="hack-sponsor__header with-underline">Bronze</h2>
@@ -355,6 +361,7 @@ const SponsorsComponent = () => (
         src={sponsorSl2}
         alt="Sustainable Living Lab"
         className="hack-sponsor__bronze"
+        style={{ transform: "scale(0.8)" }}
       />
     </div>
   </>
