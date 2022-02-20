@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6f9ceda0f9897f134b354e6655faa6c0",
+    "revision": "6b7490708f625fe424dd7a088fca1f31",
     "url": "/index.html"
   },
   {
-    "revision": "60018218861f38373acc",
+    "revision": "6e5b7154d224ab337017",
     "url": "/static/css/2.be7ce31b.chunk.css"
   },
   {
-    "revision": "7efa480cd98e6a4ba55c",
-    "url": "/static/css/main.aa44a9a5.chunk.css"
+    "revision": "8fbdba602b4c4b189ae4",
+    "url": "/static/css/main.d5b764b2.chunk.css"
   },
   {
-    "revision": "60018218861f38373acc",
-    "url": "/static/js/2.af595378.chunk.js"
+    "revision": "6e5b7154d224ab337017",
+    "url": "/static/js/2.a3169f4f.chunk.js"
   },
   {
     "revision": "78483c9fa544e038846045506308727b",
-    "url": "/static/js/2.af595378.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.a3169f4f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7efa480cd98e6a4ba55c",
-    "url": "/static/js/main.103e266a.chunk.js"
+    "revision": "8fbdba602b4c4b189ae4",
+    "url": "/static/js/main.00473788.chunk.js"
   },
   {
     "revision": "0d3b8522413ea50bd7ca",
@@ -400,8 +400,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/signup.76095a73.png"
   },
   {
-    "revision": "c3d952a5d106384e9043aa3abcf43982",
-    "url": "/static/media/sponsor-gic.c3d952a5.jpg"
+    "revision": "b4445aeb3abdb53d1ff520d980b86d81",
+    "url": "/static/media/sponsor-gic.b4445aeb.png"
   },
   {
     "revision": "0331bb3c53574e553854fb4c7b3b8c0f",
@@ -412,12 +412,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/sponsor-paypal.15f8d633.png"
   },
   {
+    "revision": "5bdeff929d94daec2200d798441e5dfd",
+    "url": "/static/media/sponsor-sl2.5bdeff92.png"
+  },
+  {
     "revision": "9484634a9790735d9d096f971d5528ef",
     "url": "/static/media/sponsor-sl2.9484634a.png"
   },
   {
-    "revision": "c5cdebf7f1cde1c6113521f21a9fc5a2",
-    "url": "/static/media/sponsor-tw.c5cdebf7.jpg"
+    "revision": "7b7bbab8f499668f55fb61948a1696cb",
+    "url": "/static/media/sponsor-tw.7b7bbab8.png"
   },
   {
     "revision": "9f428d28e54580cf05d1d625c6b89f8e",

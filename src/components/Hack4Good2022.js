@@ -12,8 +12,8 @@ import firstWorkshop from "../assets/Hack4Good2022/workshop1.png";
 import secondWorkshop from "../assets/Hack4Good2022/workshop2.png";
 import thirdWorkshop from "../assets/Hack4Good2022/workshop3.png";
 import organizer from "../assets/Hack4Good2022/organizer.png";
-import sponsorGIC from "../assets/Hack4Good2022/sponsor-gic.jpg";
-import sponsorTW from "../assets/Hack4Good2022/sponsor-tw.jpg";
+import sponsorGIC from "../assets/Hack4Good2022/sponsor-gic.png";
+import sponsorTW from "../assets/Hack4Good2022/sponsor-tw.png";
 import sponsorSl2 from "../assets/Hack4Good2022/sponsor-sl2.png";
 import sponsorQuest from "../assets/Hack4Good2022/sponsor-quest.png";
 import FaqDropdownArrow from "../assets/Hack4Good2022/faq-dropdown-arrow.png";
@@ -54,7 +54,7 @@ const AboutComponent = () => (
     <h2 className="hack-header">Our Themes</h2>
     <Image src={ourThemes} style={{ marginTop: "90px" }} />
 
-    <a href="https://www.naver.com" target="_blank">
+    <a href="https://gdsc.community.dev/j/w7y9gphq52x9u/" target="_blank">
       <div className="white-btn-border">
         <div className="white-btn-content">
           <text className="white-btn-text">Register</text>
@@ -68,9 +68,10 @@ const ProblemStatementsComponent = () => (
   <section className="projects hack-section">
     <h2 className="hack-header">Problem Statements</h2>
     <p className="hack-body">
-      Your team may choose from 1 of the 3 problem statements
+      To be released on the opening ceremony
+      {/* Your team may choose from 1 of the 3 problem statements */}
     </p>
-    <div className="hack-card">
+    {/* <div className="hack-card">
       <img src={logo} alt="NPO logo" className="hack-card__image" />
       <div className="hack-card__textbox">
         <h2 class="hack-card__header">NPO Name</h2>
@@ -108,7 +109,7 @@ const ProblemStatementsComponent = () => (
           magna ac placerat vestibulum.
         </p>
       </div>
-    </div>
+    </div> */}
   </section>
 );
 
@@ -136,16 +137,16 @@ const ScheduleComponent = () => {
           className="hack-tabpanel"
           selectedClassName="hack-tabpanel__selected"
         >
-          <p className="hack-body__time">10:00am - 11:00am</p>
-          <p className="hack-body__activity">Loren Ipsum</p>
-          <p className="hack-body__time">11:00am - 12:00pm</p>
-          <p className="hack-body__activity">Lorem ipsum dolor sit amet</p>
-          <p className="hack-body__time">12:00pm - 01:00pm</p>
-          <p className="hack-body__activity">Lorem ipsum dolor</p>
-          <p className="hack-body__time">01:00pm - 02:00pm</p>
-          <p className="hack-body__activity">Loren Ipsum</p>
-          <p className="hack-body__time">02:00pm - 03:00pm</p>
-          <p className="hack-body__activity">Lorem ipsum dolor sit amet</p>
+          <p className="hack-body__time">06:00pm - 06:05pm</p>
+          <p className="hack-body__activity">DSC Introduction</p>
+          <p className="hack-body__time">06:05pm - 06:15pm</p>
+          <p className="hack-body__activity">HFC Introduction</p>
+          <p className="hack-body__time">06:15pm - 06:45pm</p>
+          <p className="hack-body__activity">
+            Sharing of problem statements by NPOs
+          </p>
+          <p className="hack-body__time">06:45pm - 07:00pm</p>
+          <p className="hack-body__activity">Sharing by sponsors</p>
         </TabPanel>
         <TabPanel
           className="hack-tabpanel"
@@ -415,7 +416,7 @@ const Hack4Good2022 = () => {
       <PageHeader />
       <header class="home-header hackathon-header">
         <Image src={headerLogo} />
-        <a href="https://www.google.com" target="_blank">
+        <a href="https://gdsc.community.dev/j/w7y9gphq52x9u/" target="_blank">
           <div className="black-btn-border">
             <div className="black-btn-content">
               <text className="black-btn-text">Register</text>
@@ -430,9 +431,9 @@ const Hack4Good2022 = () => {
       </div>
       <ScheduleComponent />
       <PrizesComponent />
-      <WorkshopComponent />
+      {/* <WorkshopComponent /> */}
       <section className="projects hack-section">
-        <JudgesComponent />
+        {/* <JudgesComponent /> */}
         <SponsorsComponent />
       </section>
       <section className="projects hack-section">
@@ -454,7 +455,9 @@ const Hack4Good2022 = () => {
             <img src={linkedin} className="hack-contact-us__image" />
           </a>
           <hr className="hack-contact-us__white-line" />
-          <img src={email} className="hack-contact-us__image" />
+          <a href="mailto:ops.head.dscnus@gmail.com" target="_blank">
+            <img src={email} className="hack-contact-us__image" />
+          </a>
         </div>
       </header>
       <Footer />

@@ -315,30 +315,22 @@
   }
 
   &__gold {
-    background: white;
     object-fit: contain;
-    border-radius: 25%;
     margin: 50px;
-    max-height: 272px;
-    max-width: 272px;
+    max-height: 400px;
+    max-width: 400px;
   }
 
   &__silver {
-    background: white;
-    object-fit: contain;
-    border-radius: 25%;
     margin: 50px;
-    max-height: 227px;
-    max-width: 227px;
+    max-height: 250px;
+    max-width: 250px;
   }
 
   &__bronze {
-    background: white;
-    object-fit: contain;
-    border-radius: 25%;
     margin: 50px;
-    max-height: 177px;
-    max-width: 177px;
+    max-height: 150px;
+    max-width: 150px;
   }
 }
 
@@ -358,6 +350,10 @@
           & .row-title {
             color: #4285f4;
             font-size: 30px;
+
+            @media (max-width: 850px) {
+              font-size: 4vw;
+            }
 
             .icon-wrapper {
               max-width: 40px;
@@ -383,6 +379,10 @@
             .row-content-text {
               font-size: 25px;
               padding-bottom: 20px;
+
+              @media (max-width: 850px) {
+                font-size: 3.5vw;
+              }
             }
           }
         }
