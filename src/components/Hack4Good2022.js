@@ -141,7 +141,7 @@ const ScheduleComponent = () => {
           <p className="hack-body__time">06:00pm - 06:05pm</p>
           <p className="hack-body__activity">DSC Introduction</p>
           <p className="hack-body__time">06:05pm - 06:15pm</p>
-          <p className="hack-body__activity">HFC Introduction</p>
+          <p className="hack-body__activity">HFG Introduction</p>
           <p className="hack-body__time">06:15pm - 06:45pm</p>
           <p className="hack-body__activity">
             Sharing of problem statements by NPOs
