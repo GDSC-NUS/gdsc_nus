@@ -45,9 +45,7 @@ const AboutComponent = () => (
     <p className="hack-body">
       Participating teams are expected to create technological prototypes as
       part of their solution to tackle their chosen statement and directly
-      benefit the NPO backing it. We want to be practical and do real good with
-      this initiative. We are hoping to foster collaborations between the club,
-      corporate sponsors, NPOs and the students in this event!
+      benefit the NPO backing it. Register early with a <strong>team of 2 to 5</strong> today!
     </p>
     <h2 className="hack-header">Our Themes</h2>
     <Image src={ourThemes} style={{ marginTop: "90px" }} />
@@ -153,8 +151,6 @@ const ScheduleComponent = () => {
           className="hack-tabpanel"
           selectedClassName="hack-tabpanel__selected"
         >
-          <p className="hack-body__time">01:30pm - 02:30pm</p>
-          <p className="hack-body__activity">Event set-up</p>
           <p className="hack-body__time">02:30pm - 02:40pm</p>
           <p className="hack-body__activity">Participants' Arrival</p>
           <p className="hack-body__time">02:40pm - 02:50pm</p>
@@ -376,13 +372,13 @@ const FaqsComponent = () => {
     rows: [
       {
         title: "I don't have a team. Can my project be done solo?",
-        content: "No, a team should be composed of at least 2 members.",
+        content: "No, a team should be composed of at least 2 members, up to a maximum of 4.",
       },
       {
         title:
-          "I am registering alone / do not have a full team. How do I look for teammates?",
-        content: `A Telegram group will be created to facilitate communication amongst the participants. Feel 
-        free to look for team members there. More details will be released later.`,
+          "I do not have a full team. How do I look for teammates?",
+        content: `A Telegram group is created to facilitate communication amongst the participants. Feel 
+        free to look for team members there. Join <a href="https://t.me/+UCPnv6WjGOE5ODBl" target="_blank" >here</a>`,
       },
       {
         title:
@@ -399,6 +395,10 @@ const FaqsComponent = () => {
       {
         title: "How much does it cost to join this hackathon?",
         content: "Participation in Hack for Good is free-of-charge.",
+      },
+      {
+        title: "How would we submit our project?",
+        content: "Project submission will be done via Devpost. Link will be sent via email to the participants.",
       },
     ],
   };
