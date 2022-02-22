@@ -45,7 +45,7 @@ const AboutComponent = () => (
     <p className="hack-body">
       Participating teams are expected to create technological prototypes as
       part of their solution to tackle their chosen statement and directly
-      benefit the NPO backing it. Register early with a <strong>team of 2 to 5</strong> today!
+      benefit the NPO backing it. Register with a <strong>team of 2 to 4</strong> today!
     </p>
     <h2 className="hack-header">Our Themes</h2>
     <Image src={ourThemes} style={{ marginTop: "90px" }} />
@@ -164,7 +164,7 @@ const ScheduleComponent = () => {
           <p className="hack-body__time">04:50pm - 05:10pm</p>
           <p className="hack-body__activity">Judges Deliberation</p>
           <p className="hack-body__time">05:10pm - 05:30pm</p>
-          <p className="hack-body__activity">Annoucement of top 3 teams</p>
+          <p className="hack-body__activity">Announcement of top 3 teams</p>
         </TabPanel>
       </Tabs>
     </section>
