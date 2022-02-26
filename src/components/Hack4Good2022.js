@@ -13,6 +13,7 @@ import thirdWorkshop from "../assets/Hack4Good2022/workshop3.png";
 import organizer from "../assets/Hack4Good2022/organizer.png";
 import sponsorGIC from "../assets/Hack4Good2022/sponsor-gic.svg";
 import sponsorTW from "../assets/Hack4Good2022/sponsor-tw.png";
+import sponsorDSTA from "../assets/Hack4Good2022/sponsor-dsta.png";
 import sponsorSl2 from "../assets/Hack4Good2022/sponsor-sl2.png";
 import sponsorQuest from "../assets/Hack4Good2022/sponsor-quest.png";
 import FaqDropdownArrow from "../assets/Hack4Good2022/faq-dropdown-arrow.png";
@@ -45,7 +46,8 @@ const AboutComponent = () => (
     <p className="hack-body">
       Participating teams are expected to create technological prototypes as
       part of their solution to tackle their chosen statement and directly
-      benefit the NPO backing it. Register with a <strong>team of 2 to 4</strong> today!
+      benefit the NPO backing it. Register with a{" "}
+      <strong>team of 2 to 4</strong> today!
     </p>
     <h2 className="hack-header">Our Themes</h2>
     <Image src={ourThemes} style={{ marginTop: "90px" }} />
@@ -338,6 +340,7 @@ const SponsorsComponent = () => (
         style={{ transform: "scale(0.6)" }}
       />
       <img src={sponsorTW} alt="Thoughtworks" className="hack-sponsor__gold" />
+      <img src={sponsorDSTA} alt="DSTA" className="hack-sponsor__gold" />
     </div>
     <h2 className="hack-sponsor__header with-underline">Silver</h2>
     <div className="hack-sponsor__group">
@@ -372,11 +375,11 @@ const FaqsComponent = () => {
     rows: [
       {
         title: "I don't have a team. Can my project be done solo?",
-        content: "No, a team should be composed of at least 2 members, up to a maximum of 4.",
+        content:
+          "No, a team should be composed of at least 2 members, up to a maximum of 4.",
       },
       {
-        title:
-          "I do not have a full team. How do I look for teammates?",
+        title: "I do not have a full team. How do I look for teammates?",
         content: `A Telegram group is created to facilitate communication amongst the participants. Feel 
         free to look for team members there. Join <a href="https://t.me/+UCPnv6WjGOE5ODBl" target="_blank" >here</a>`,
       },
@@ -398,7 +401,8 @@ const FaqsComponent = () => {
       },
       {
         title: "How would we submit our project?",
-        content: "Project submission will be done via Devpost. Link will be sent via email to the participants.",
+        content:
+          "Project submission will be done via Devpost. Link will be sent via email to the participants.",
       },
     ],
   };
