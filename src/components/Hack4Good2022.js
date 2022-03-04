@@ -16,6 +16,7 @@ import sponsorTW from "../assets/Hack4Good2022/sponsor-tw.png";
 import sponsorDSTA from "../assets/Hack4Good2022/sponsor-dsta.png";
 import sponsorSl2 from "../assets/Hack4Good2022/sponsor-sl2.png";
 import sponsorQuest from "../assets/Hack4Good2022/sponsor-quest.png";
+import sponsorCiti from "../assets/Hack4Good2022/sponsor-citibank.png";
 import FaqDropdownArrow from "../assets/Hack4Good2022/faq-dropdown-arrow.png";
 import telegram from "../assets/Hack4Good2022/telegram.png";
 import insta from "../assets/Hack4Good2022/insta.png";
@@ -350,6 +351,12 @@ const SponsorsComponent = () => (
         className="hack-sponsor__silver"
         style={{ transform: "scale(0.7)" }}
       />
+      <img
+        src={sponsorCiti}
+        alt="Citibank"
+        className="hack-sponsor__silver"
+        style={{ transform: "scale(0.9)" }}
+      />
     </div>
     <h2 className="hack-sponsor__header with-underline">Bronze</h2>
     <div className="hack-sponsor__group">
@@ -403,6 +410,16 @@ const FaqsComponent = () => {
         title: "How would we submit our project?",
         content:
           "Project submission will be done via Devpost. Link will be sent via email to the participants.",
+      },
+      {
+        title: "I am not from NUS. Am I eligible to participate in this event?",
+        content:
+          "Yes, all students from institutes of higher learning (junior colleges, polytechnics, NSFs, Universities) are welcomed.",
+      },
+      {
+        title: "Are prizes given to each team member?",
+        content:
+          "Yes, each member of the winning team will receive one of the listed prizes.",
       },
     ],
   };
