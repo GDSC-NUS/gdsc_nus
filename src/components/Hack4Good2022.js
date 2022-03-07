@@ -3,6 +3,9 @@ import PageHeader from "./PageHeader";
 import Footer from "./Footer.js";
 import headerLogo from "../assets/Hack4Good2022/hfg2022_logo.svg";
 import ourThemes from "../assets/Hack4Good2022/ourThemes.png";
+import npoRaise from "../assets/Hack4Good2022/npo-raise.jpg";
+import npoHabitatSg from "../assets/Hack4Good2022/npo-habitatSg.jpg";
+import npoDot from "../assets/Hack4Good2022/npo-dot.png";
 import timeline from "../assets/Hack4Good2022/timeline.png";
 import firstPrize from "../assets/Hack4Good2022/1st-prize.png";
 import secondPrize from "../assets/Hack4Good2022/2nd-prize.png";
@@ -66,48 +69,39 @@ const ProblemStatementsComponent = () => (
   <section className="projects hack-section">
     <h2 className="hack-header">Problem Statements</h2>
     <p className="hack-body">
-      To be released on the opening ceremony
-      {/* Your team may choose from 1 of the 3 problem statements */}
+      Your team may choose from 1 of the 3 problem statements
     </p>
-    {/* <div className="hack-card">
-      <img src={logo} alt="NPO logo" className="hack-card__image" />
+    <div className="hack-card">
+      <img src={npoRaise} alt="NPO logo" className="hack-card__image" />
       <div className="hack-card__textbox">
-        <h2 class="hack-card__header">NPO Name</h2>
+        <h2 class="hack-card__header">raiSE SG</h2>
         <p className="hack-card__body">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum
-          rhoncus est pellentesque elit ullamcorper dignissim. Sed egestas
-          egestas fringilla phasellus faucibus scelerisque. Aenean pharetra
-          magna ac placerat vestibulum.
+          How should we build resilience among social enterprises to support
+          them through these difficult times of COVID-19?
         </p>
       </div>
     </div>
     <div className="hack-card">
-      <img src={logo} alt="NPO logo" className="hack-card__image" />
+      <img src={npoHabitatSg} alt="NPO logo" className="hack-card__image" />
       <div className="hack-card__textbox">
-        <h2 class="hack-card__header">NPO Name</h2>
+        <h2 class="hack-card__header">Habitat Singapore</h2>
         <p className="hack-card__body">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum
-          rhoncus est pellentesque elit ullamcorper dignissim. Sed egestas
-          egestas fringilla phasellus faucibus scelerisque. Aenean pharetra
-          magna ac placerat vestibulum.
+          What are some alternate ways we can continue to effectively engage the
+          public about the need for decent housing worldwide amidst the
+          pandemic?
         </p>
       </div>
     </div>
     <div className="hack-card">
-      <img src={logo} alt="NPO logo" className="hack-card__image" />
+      <img src={npoDot} alt="NPO logo" className="hack-card__image" />
       <div className="hack-card__textbox">
-        <h2 class="hack-card__header">NPO Name</h2>
+        <h2 class="hack-card__header">Daughters of Tomorrow</h2>
         <p className="hack-card__body">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum
-          rhoncus est pellentesque elit ullamcorper dignissim. Sed egestas
-          egestas fringilla phasellus faucibus scelerisque. Aenean pharetra
-          magna ac placerat vestibulum.
+          How can we get employers to be open and hire women who have less
+          social mobility and may not have access to livelihood opportunities?
         </p>
       </div>
-    </div> */}
+    </div>
   </section>
 );
 
@@ -384,11 +378,6 @@ const FaqsComponent = () => {
         title: "I don't have a team. Can my project be done solo?",
         content:
           "No, a team should be composed of at least 2 members, up to a maximum of 4.",
-      },
-      {
-        title: "I do not have a full team. How do I look for teammates?",
-        content: `A Telegram group is created to facilitate communication amongst the participants. Feel 
-        free to look for team members there. Join <a href="https://t.me/+UCPnv6WjGOE5ODBl" target="_blank" >here</a>`,
       },
       {
         title:
