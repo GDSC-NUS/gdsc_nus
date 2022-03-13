@@ -181,8 +181,8 @@
 .hack-prize {
   &__carousel {
     margin: 40px 0;
-    max-width: 900px;
-    max-height: 594px;
+    max-width: 1000px;
+    max-height: 600px;
     width: 100%;
     height: 100%;
     & .react-multiple-carousel__arrow--left {
@@ -197,6 +197,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   &__image {
@@ -231,27 +232,26 @@
   &__textbox {
     display: flex;
     flex-direction: column;
+    margin: 20px;
+    overflow-y: scroll;
+    max-height: 360px;
   }
 
   &__header {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 700;
-    line-height: 82px;
+    line-height: 66px;
   }
 
   &__body {
     inline-size: 95%;
     max-width: 675px;
-    font-size: 2.3rem;
+    font-size: 1.7rem;
+    line-height: 2.4rem;
     font-weight: 400;
-    line-height: 4.6rem;
-    @media (max-width: 1200px) {
-      font-size: 1.8vw;
-      line-height: 3.6vw;
-    }
-    @media (max-width: 960px) {
-      font-size: 2.3rem;
-      line-height: 46px;
+    @media (max-width: 600px) {
+      font-size: 2rem;
+      line-height: 2.6rem;
     }
   }
 }
@@ -320,15 +320,18 @@
   &__group {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
   }
 
   &__gold {
     object-fit: contain;
-    margin: 50px;
-    max-height: 400px;
+    margin: 5px;
     max-width: 400px;
+    max-height: 400px;
+    @media (max-width: 1050px) {
+      margin: 50px;
+    }
     @media (max-width: 600px) {
       max-width: 90%;
     }
@@ -339,14 +342,19 @@
     max-width: 250px;
     height: fit-content;
     @media (max-width: 400px) {
-      max-width: 70%;
+      max-width: 90%;
     }
   }
 
   &__bronze {
     margin: 50px;
-    max-height: 150px;
     max-width: 150px;
+    max-height: 150px;
+  }
+
+  &__cardImage {
+    max-width: 400px !important;
+    height: fit-content;
   }
 }
 

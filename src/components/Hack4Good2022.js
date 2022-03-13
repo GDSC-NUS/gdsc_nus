@@ -323,9 +323,119 @@ const JudgeComponent = ({ judge }) => {
   );
 };
 
+const goldSponsors = [
+  {
+    image: <img src={sponsorDSTA} alt="DSTA" className="hack-sponsor__gold" />,
+    content: (
+      <>
+        <p className="hack-workshops__body">
+          The Defence Science and Technology Agency (DSTA) is a top-notch
+          technology organisation that drives innovation and delivers
+          state-of-the-art capabilities to make the Singapore Armed Forces a
+          formidable fighting force.
+        </p>
+        <p className="hack-workshops__body">
+          Harnessing and exploiting science and technology, their engineers and
+          IT professionals leverage multidisciplinary expertise to equip our
+          soldiers with advanced systems to defend Singapore. DSTA also
+          contributes its technological expertise to support national-level
+          developments.
+        </p>
+        <p className="hack-workshops__body">
+          To achieve its mission, DSTA excels in systems engineering,
+          digitalised platforms, cyber, software development and more.
+        </p>
+      </>
+    ),
+  },
+  {
+    image: (
+      <img
+        src={sponsorGIC}
+        alt="GIC"
+        className="hack-sponsor__gold"
+        style={{ transform: "scale(0.6)" }}
+      />
+    ),
+    content: (
+      <p className="hack-workshops__body" style={{ textAlign: "center" }}>
+        GIC is one of the three investment entities in Singapore that manage the
+        Government’s reserves, alongside the Monetary Authority of Singapore
+        (MAS) and Temasek. They manage most of the Government’s financial
+        assets, investing for the long term with an aim to preserve and enhance
+        the international purchasing power of the funds placed in its care.
+      </p>
+    ),
+  },
+  {
+    image: (
+      <img
+        src={sponsorTW}
+        alt="Thoughtworks"
+        className="hack-sponsor__gold"
+        style={{ marginBottom: "20px" }}
+      />
+    ),
+    content: (
+      <>
+        <p className="hack-workshops__body">
+          Thoughtworks is a leading global technology consultancy that
+          integrates strategy, design and software engineering to enable
+          enterprises and technology disruptors across the globe to thrive as
+          modern digital businesses.
+        </p>
+        <p className="hack-workshops__body">
+          They leverage on their experience to improve clients’ ability to
+          respond to change; utilize data assets to unlock new sources of value;
+          create adaptable technology platforms that move with business
+          strategies; and rapidly design, deliver and evolve exceptional digital
+          products and experiences at scale.
+        </p>
+      </>
+    ),
+  },
+];
+
+const GoldSponsorsComponent = () => {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+  return (
+    <Carousel
+      responsive={responsive}
+      infinite={true}
+      autoPlay={true}
+      containerClass="hack-prize__carousel"
+      itemClass="hack-prize__item"
+    >
+      {goldSponsors.map((sponsor) => {
+        const { image, content } = sponsor;
+        return (
+          <div class="hack-judges__judge">
+            {image}
+            <div className="hack-workshops__textbox">{content}</div>
+          </div>
+        );
+      })}
+    </Carousel>
+  );
+};
+
 const SponsorsComponent = () => (
   <>
-    <h2 className="hack-header">Sponsors</h2>
+    <h2 className="hack-header">Introducing our Sponsors</h2>
+    <GoldSponsorsComponent />
     <h2 className="hack-sponsor__header with-underline">Gold</h2>
     <div className="hack-sponsor__group">
       <img
@@ -335,7 +445,12 @@ const SponsorsComponent = () => (
         style={{ transform: "scale(0.6)" }}
       />
       <img src={sponsorTW} alt="Thoughtworks" className="hack-sponsor__gold" />
-      <img src={sponsorDSTA} alt="DSTA" className="hack-sponsor__gold" />
+      <img
+        src={sponsorDSTA}
+        alt="DSTA"
+        className="hack-sponsor__gold"
+        style={{ transform: "scale(0.8)" }}
+      />
     </div>
     <h2 className="hack-sponsor__header with-underline">Silver</h2>
     <div className="hack-sponsor__group">
