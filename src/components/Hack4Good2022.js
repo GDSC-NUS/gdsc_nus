@@ -106,7 +106,7 @@ const ProblemStatementsComponent = () => (
 );
 
 const ScheduleComponent = () => {
-  const [tabIndex, setTabIndex] = useState(0);
+  const [tabIndex, setTabIndex] = useState(1);
   let scheduleSectionClassName =
     tabIndex == 0
       ? "projects hack-section hack-schedule-background__first"
@@ -420,7 +420,7 @@ const GoldSponsorsComponent = () => {
     <Carousel
       responsive={responsive}
       infinite={true}
-      autoPlay={false}
+      autoPlay={true}
       containerClass="hack-prize__carousel"
       itemClass="hack-prize__item"
     >
