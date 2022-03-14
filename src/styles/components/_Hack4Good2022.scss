@@ -182,7 +182,6 @@
   &__carousel {
     margin: 40px 0;
     max-width: 1000px;
-    max-height: 600px;
     width: 100%;
     height: 100%;
     & .react-multiple-carousel__arrow--left {
@@ -234,7 +233,7 @@
     flex-direction: column;
     margin: 20px;
     overflow-y: scroll;
-    max-height: 360px;
+    height: 350px;
   }
 
   &__header {
@@ -245,9 +244,9 @@
 
   &__body {
     inline-size: 95%;
-    max-width: 675px;
-    font-size: 1.7rem;
-    line-height: 2.4rem;
+    max-width: 700px;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
     font-weight: 400;
     @media (max-width: 600px) {
       font-size: 2rem;
@@ -258,7 +257,7 @@
 
 .hack-judges {
   &__panel {
-    margin: 40px 0;
+    margin: 20px 0;
     max-width: 1180px;
     width: 90vw;
     display: flex;
@@ -269,7 +268,7 @@
   }
 
   &__judge {
-    margin: 40px 3vw;
+    margin: 0px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -330,7 +329,7 @@
     max-width: 400px;
     max-height: 400px;
     @media (max-width: 1050px) {
-      margin: 50px;
+      margin: 50px 0px;
     }
     @media (max-width: 600px) {
       max-width: 90%;

@@ -329,21 +329,26 @@ const goldSponsors = [
     content: (
       <>
         <p className="hack-workshops__body">
-          The Defence Science and Technology Agency (DSTA) is a top-notch
-          technology organisation that drives innovation and delivers
-          state-of-the-art capabilities to make the Singapore Armed Forces a
-          formidable fighting force.
+          The Defence Science and Technology Agency (DSTA) brings you to the
+          forefront of cybersecurity, digital transformation and engineering.
+          From working on software development and systems integration to
+          unmanned technologies and artificial intelligence, you can have an
+          impact on Singapore’s defence.
         </p>
         <p className="hack-workshops__body">
-          Harnessing and exploiting science and technology, their engineers and
-          IT professionals leverage multidisciplinary expertise to equip our
-          soldiers with advanced systems to defend Singapore. DSTA also
-          contributes its technological expertise to support national-level
-          developments.
+          Achieve your fullest potential with opportunities to build your
+          technical expertise and hone your competencies in diverse domains. You
+          can also expect an immersive learning experience, where you will work
+          with bright minds and collaborate with global industry experts.
         </p>
         <p className="hack-workshops__body">
-          To achieve its mission, DSTA excels in systems engineering,
-          digitalised platforms, cyber, software development and more.
+          DSTA is recognised as one of the top 10 employers in the Engineering
+          &amp; IT sector, where our engineers and IT professionals work
+          alongside procurement specialists to deliver state-of-the-art
+          capabilities for Singapore’s peace and security.
+        </p>
+        <p className="hack-workshops__body">
+          Internship opportunities and a meaningful career await you.
         </p>
       </>
     ),
@@ -415,14 +420,14 @@ const GoldSponsorsComponent = () => {
     <Carousel
       responsive={responsive}
       infinite={true}
-      autoPlay={true}
+      autoPlay={false}
       containerClass="hack-prize__carousel"
       itemClass="hack-prize__item"
     >
       {goldSponsors.map((sponsor) => {
         const { image, content } = sponsor;
         return (
-          <div class="hack-judges__judge">
+          <div className="hack-judges__judge">
             {image}
             <div className="hack-workshops__textbox">{content}</div>
           </div>
