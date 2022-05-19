@@ -3,23 +3,29 @@ import YouTube from "react-youtube";
 
 export interface YoutubeProps {
   className?: string;
-  videoId: string;
-  height: number;
-  width: number;
+  videoId?: string;
+  height?: number;
+  width?: number;
 }
 
 export default function YoutubeVideo({
   className,
-  videoId = "Pi8BmaV3f_M",
-  height = 390,
-  width = 640,
+  videoId,
+  height,
+  width,
 }: YoutubeProps) {
   const opts = {
-    height: height.toString(),
-    width: width.toString(),
+    height: height ? height.toString() : "390",
+    width: width ? width.toString() : "640",
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
     },
   };
-  return <YouTube videoId={videoId} opts={opts} className={className} />;
+  return (
+    <YouTube
+      videoId={videoId ?? "Pi8BmaV3f_M"}
+      opts={opts}
+      className={className}
+    />
+  );
 }

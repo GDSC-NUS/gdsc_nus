@@ -24,6 +24,7 @@ export const PLASMIC = initPlasmicLoader({
 PLASMIC.registerComponent(HelloWorld, {
   name: "HelloWorld",
   props: {
+    className: "string",
     verbose: "boolean",
     children: "slot",
   },
