@@ -35,3 +35,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - jhlee1997
 - brian16600
+- Josephaedan
