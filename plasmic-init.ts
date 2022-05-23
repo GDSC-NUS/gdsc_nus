@@ -1,6 +1,6 @@
 import getConfig from "next/config";
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
-import { HelloWorld, YoutubeVideo } from "./components";
+import { HelloWorld, YoutubeVideo, Link } from "./components";
 
 const { publicRuntimeConfig } = getConfig();
 const {
@@ -37,5 +37,15 @@ PLASMIC.registerComponent(YoutubeVideo, {
     height: "number",
     width: "number",
     className: "string",
+  },
+});
+
+PLASMIC.registerComponent(Link, {
+  name: "Link",
+  props: {
+    link: "string",
+    openInNewTab: "boolean",
+    className: "string",
+    children: "slot",
   },
 });
