@@ -51,16 +51,16 @@ PLASMIC.registerComponent(Carousel, {
     showArrows: "boolean",
     ArrowsClassName: "string",
     autoplay: "boolean",
-  }
-})
+  },
+});
 
 PLASMIC.registerComponent(CarouselCard, {
   name: "CarouselCard",
   props: {
     className: "string",
     children: "slot",
-  }
-})
+  },
+});
 
 PLASMIC.registerComponent(Link, {
   name: "Link",

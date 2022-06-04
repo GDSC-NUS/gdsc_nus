@@ -6,11 +6,17 @@ export type CarouselCardProps = {
   children: JSX.Element;
 };
 
-export default function CarouselCard(props: CarouselCardProps): CarouselCardInterface {
-  const { className, children } = props;
-
+export default function CarouselCard({
+  className,
+  children,
+}: CarouselCardProps): CarouselCardInterface {
   return (
-    <div className={clsx("h-full w-full p-0 m-0 flex items-center justify-center bg-cover", className)}>
+    <div
+      className={clsx(
+        "m-0 flex h-full w-full items-center justify-center bg-cover p-0",
+        className
+      )}
+    >
       {children}
     </div>
   );

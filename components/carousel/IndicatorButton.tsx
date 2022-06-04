@@ -15,25 +15,32 @@ export default function IndicatorButtons({
   className,
 }: IndicatorButtonsProps) {
   const [selected, setSelected] = useState<number>(index);
-  const [numElements, setNumElements] = useState<number>(size);
 
   useEffect(() => {
     setSelected(index);
-    setNumElements(size);
   }, [index, size]);
 
   return (
-    <div className="w-screen h-5 flex flex-row space-x-5 justify-center">
-      {[...Array(numElements)].map((e, i) =>
+    <div className="flex h-5 w-screen flex-row justify-center space-x-5">
+      {[...Array(size)].map((e, i) =>
         i === selected ? (
-          <button key={i} className={clsx("w-3 h-3 rounded-full bg-gray-500 border cursor-default", className)} />
+          <button
+            key={i}
+            className={clsx(
+              "h-3 w-3 cursor-default rounded-full border bg-gray-500",
+              className
+            )}
+          />
         ) : (
           <button
             key={i}
             onClick={() => {
               setIndex(i);
             }}
-            className={clsx("w-3 h-3 rounded-full bg-gray-200 cursor-default", className)}
+            className={clsx(
+              "h-3 w-3 cursor-default rounded-full bg-gray-200",
+              className
+            )}
           />
         )
       )}
