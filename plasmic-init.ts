@@ -1,7 +1,7 @@
 import getConfig from "next/config";
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
-import { HelloWorld, YoutubeVideo } from "./components";
-import { Button, Carousel, CarouselCard } from "./components/carousel";
+import { HelloWorld, Link, YoutubeVideo } from "./components";
+import { Carousel, CarouselCard } from "./components/carousel";
 
 const { publicRuntimeConfig } = getConfig();
 const {
@@ -50,6 +50,7 @@ PLASMIC.registerComponent(Carousel, {
     IndicatorsClassName: "string",
     showArrows: "boolean",
     ArrowsClassName: "string",
+    autoplay: "boolean",
   }
 })
 
@@ -57,17 +58,16 @@ PLASMIC.registerComponent(CarouselCard, {
   name: "CarouselCard",
   props: {
     className: "string",
-    showButton: "boolean",
-    image: "string",
-    button: "slot",
+    children: "slot",
   }
 })
 
-PLASMIC.registerComponent(Button, {
-  name: "Button",
+PLASMIC.registerComponent(Link, {
+  name: "Link",
   props: {
+    link: "string",
+    openInNewTab: "boolean",
     className: "string",
-    label: "string",
-    href: "string",
-  }
-})
+    children: "slot",
+  },
+});
