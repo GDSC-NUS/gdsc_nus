@@ -17,15 +17,17 @@ export type CarouselProps = {
   IndicatorsClassName: string;
   showArrows: boolean;
   ArrowsClassName: string;
+  autoplay: boolean;
 };
 
 export default function Carousel(props: CarouselProps): CarouselInterface {
-  const { className, children, showIndicators, IndicatorsClassName, showArrows, ArrowsClassName } = props;
+  const { className, children, showIndicators, IndicatorsClassName, showArrows, ArrowsClassName, autoplay } = props;
   const [selectedCard, setSelectedCard] = useState<number>(0);
   const [currentLoop, setCurrentLoop] = useState<boolean>(false);
 
   // Autoloop card every 5 seconds
   useEffect(() => {
+    autoplay &&
     setTimeout(() => {
       if (children && selectedCard >= children.length - 1) {
         setSelectedCard(0);

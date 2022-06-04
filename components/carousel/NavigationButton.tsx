@@ -27,13 +27,8 @@ next,
 
 return (
     <>
-    <div className={clsx("absolute left-5 rounded-full bg-slate-500 text-white", className)}>
-        <button className="h-10 w-10" onClick={() => setIndex(previousIndex)}>{"<"}</button>
-    </div>
-    <div className={clsx("absolute right-5 rounded-full bg-slate-500 text-white", className)}>
-        <button className=" h-10 w-10" onClick={() => setIndex(nextIndex)}>{">"}</button>
-    </div>
+        <button className={clsx("absolute h-10 w-10 left-5 rounded-full bg-slate-500 text-white", className)} onClick={() => setIndex(previousIndex)}>{"<"}</button>
+        <button className={clsx("absolute right-5 h-10 w-10 rounded-full bg-slate-500 text-white", className)} onClick={() => setIndex(nextIndex)}>{">"}</button>
     </>
 )
-
 }

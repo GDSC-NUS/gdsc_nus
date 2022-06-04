@@ -23,17 +23,17 @@ export default function IndicatorButtons({
   }, [index, size]);
 
   return (
-    <div className={clsx("w-screen h-5 flex flex-row space-x-5 justify-center", className)}>
+    <div className="w-screen h-5 flex flex-row space-x-5 justify-center">
       {[...Array(numElements)].map((e, i) =>
         i === selected ? (
-          <button key={i} className="h-3 w-3 rounded-full bg-gray-500 border cursor-default" />
+          <button key={i} className={clsx("w-3 h-3 rounded-full bg-gray-500 border cursor-default", className)} />
         ) : (
           <button
             key={i}
             onClick={() => {
               setIndex(i);
             }}
-            className="h-3 w-3 rounded-full bg-gray-200 cursor-default"
+            className={clsx("w-3 h-3 rounded-full bg-gray-200 cursor-default", className)}
           />
         )
       )}
