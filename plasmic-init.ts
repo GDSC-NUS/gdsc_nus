@@ -1,6 +1,6 @@
 import getConfig from "next/config";
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
-import { HelloWorld, YoutubeVideo } from "./components";
+import { HelloWorld, YoutubeVideo, PopupWindow } from "./components";
 
 const { publicRuntimeConfig } = getConfig();
 const {
@@ -39,3 +39,13 @@ PLASMIC.registerComponent(YoutubeVideo, {
     className: "string",
   },
 });
+
+
+PLASMIC.registerComponent(PopupWindow, {
+  name: "PopupWindow",
+  props: {
+    className: "string",
+    content: "string",
+    children: "slot"
+  }
+})
