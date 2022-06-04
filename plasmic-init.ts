@@ -46,8 +46,10 @@ PLASMIC.registerComponent(Carousel, {
   props: {
     className: "string",
     children: "slot",
-    height: "string",
-    width: "string",
+    showIndicators: "boolean",
+    IndicatorsClassName: "string",
+    showArrows: "boolean",
+    ArrowsClassName: "string",
   }
 })
 
@@ -66,7 +68,6 @@ PLASMIC.registerComponent(Button, {
   props: {
     className: "string",
     label: "string",
-    color: "string",
     href: "string",
   }
 })

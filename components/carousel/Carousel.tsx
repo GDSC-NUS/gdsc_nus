@@ -8,28 +8,21 @@ import {
   CarouselInterface,
 } from ".";
 import IndicatorButtons from "./IndicatorButton";
+import NavigationButtons from "./NavigationButton";
 
 export type CarouselProps = {
-  height?: string;
-  width?: string;
   className: string;
   children?: CarouselCardInterface[];
+  showIndicators: boolean;
+  IndicatorsClassName: string;
+  showArrows: boolean;
+  ArrowsClassName: string;
 };
 
 export default function Carousel(props: CarouselProps): CarouselInterface {
-  const { height, width, className, children } = props;
-  const [propWidth, setPropWidth] = useState<string>("screen");
-  const [propHeight, setPropHeight] = useState<string>("250px");
+  const { className, children, showIndicators, IndicatorsClassName, showArrows, ArrowsClassName } = props;
   const [selectedCard, setSelectedCard] = useState<number>(0);
   const [currentLoop, setCurrentLoop] = useState<boolean>(false);
-
-  useEffect(()=> {
-    setPropWidth(width!);
-  }, [width]);
-
-  useEffect(()=> {
-    setPropHeight(height!);
-  }, [height]);
 
   // Autoloop card every 5 seconds
   useEffect(() => {
@@ -41,23 +34,33 @@ export default function Carousel(props: CarouselProps): CarouselInterface {
       }
       setCurrentLoop(!currentLoop);
     }, 5000);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [children, currentLoop]);
 
   return (
-    <div
-      className={`${className} h-[${propHeight}] w-[${propWidth}]`}
-    >
-      <div className="flex flex-row w-full h-full">
+    <div className={className}>
+      <div className="absolute w-full h-full">
         {children && children[selectedCard]}
       </div>
+      {showIndicators &&
       <div className="absolute bottom-5 w-full flex flex-row justify-center">
         <IndicatorButtons
+        className={IndicatorsClassName}
           index={selectedCard}
           setIndex={setSelectedCard}
           size={children!.length}
         />
-      </div>
+      </div>}
+      {showArrows && 
+      <div className="flex flex-row items-center h-full w-full">
+      <NavigationButtons
+      className={ArrowsClassName}
+        previous={selectedCard === 0 ? children!.length : selectedCard - 1}
+        next={selectedCard === children!.length - 1 ? 0 : selectedCard + 1}
+        setIndex={setSelectedCard}
+      />
+      </div>}
+
     </div>
   );
 }
