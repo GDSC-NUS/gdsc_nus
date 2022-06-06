@@ -1,6 +1,8 @@
 import getConfig from "next/config";
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
 import { HelloWorld, YoutubeVideo, Link } from "./components";
+import Navbar from "./components/Navbar/Navbar";
+import DropdownMenu from "./components/Navbar/DropdownMenu";
 
 const { publicRuntimeConfig } = getConfig();
 const {
@@ -46,6 +48,23 @@ PLASMIC.registerComponent(Link, {
     link: "string",
     openInNewTab: "boolean",
     className: "string",
+    children: "slot",
+  },
+});
+
+PLASMIC.registerComponent(Navbar, {
+  name: "Navbar",
+  props: {
+    className: "string",
+    children: "slot",
+  },
+});
+
+PLASMIC.registerComponent(DropdownMenu, {
+  name: "DropdownMenu",
+  props: {
+    className: "string",
+    clickedColor: "string",
     children: "slot",
   },
 });
