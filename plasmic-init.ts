@@ -4,6 +4,7 @@ import { HelloWorld, Link, YoutubeVideo } from "./components";
 import { Carousel, CarouselCard } from "./components/carousel";
 import DropdownMenu from "./components/Navbar/DropdownMenu";
 import Navbar from "./components/Navbar/Navbar";
+import TabPanel from "./components/Tabs/TabPanel"
 
 const { publicRuntimeConfig } = getConfig();
 const {
@@ -87,6 +88,14 @@ PLASMIC.registerComponent(DropdownMenu, {
   props: {
     className: "string",
     clickedColor: "string",
+    children: "slot",
+  },
+});
+
+PLASMIC.registerComponent(TabPanel, {
+  name: "TabPanel",
+  props: {
+    title: "string",
     children: "slot",
   },
 });

@@ -5,26 +5,17 @@ import { useEffect, useState } from "react";
 type DropdownMenuProps = {
     className?: string;
     children: JSX.Element[];
-    clickedColor?: string;
+    menuTitle: string;
 };
 
 export default function DropdownMenu(props: DropdownMenuProps) {
-    const { children, className, clickedColor } = props;
+    const { children, className, menuTitle } = props;
     const [click, setClick] = useState(false);
-    const [dropdown, setDropdown] = useState(false);
+    const [dropdown, setDropdown] = useState(true);
 
-    const handleClick = () => setClick(!click)
-
-    const onMouseEnter = () => {
-        if (window.innerWidth < 800) {
-            setDropdown(false);
-        } else {
-            setDropdown(true);
-        }
-    }
-
-    const onMouseLeave = () => {
-        setDropdown(false);
+    const handleClick = () => {
+        setClick(!click)
+        setDropdown(!dropdown)
     }
 
     if (children && children.length > 1) {
@@ -34,11 +25,9 @@ export default function DropdownMenu(props: DropdownMenuProps) {
           <ul className={clsx("w-80 h-80", className)}>
               <li
                 onClick={handleClick}
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-                className="cursor-pointer"
+                className="cursor-pointer hover:brightness-125"
               >
-                {children[0]}
+                menuTitle
               </li>
             {dropdown &&
               children.map((item, index) => {
