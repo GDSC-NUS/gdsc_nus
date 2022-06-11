@@ -64,6 +64,15 @@ PLASMIC.registerComponent(Carousel, {
     showArrows: "boolean",
     ArrowsClassName: "string",
     autoplay: "boolean",
+    activeKey: {
+      type: "choice",
+      options: (props) => {
+        return Array(props.children!.length)
+          .fill(0)
+          .map((_, index) => index.toString());
+      },
+      editOnly: true,
+    },
   },
 });
 

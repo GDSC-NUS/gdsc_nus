@@ -18,7 +18,7 @@ export default function Navbar({
   editMobile,
   mobileWidthRange = 760,
 }: NavbarProps) {
-  if (!window) return <h2>Error Message</h2>;
+  if (typeof window === "undefined") return <h2>Error Message</h2>;
 
   //handles width: checks for mobile vs small desktop vs normal desktop
   const { height, width } = useWindowDimensions(window);
