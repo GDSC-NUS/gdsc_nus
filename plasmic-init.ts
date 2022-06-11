@@ -3,6 +3,7 @@ import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
 import { HelloWorld, Link, YoutubeVideo } from "./components";
 import { Popup } from "./components/Popup";
 import { Carousel, CarouselCard } from "./components/carousel";
+import { DropdownMenu, Navbar } from "./components/Navbar";
 
 const { publicRuntimeConfig } = getConfig();
 const {
@@ -81,5 +82,24 @@ PLASMIC.registerComponent(Link, {
     openInNewTab: "boolean",
     className: "string",
     children: "slot",
+  },
+});
+
+PLASMIC.registerComponent(Navbar, {
+  name: "Navbar",
+  props: {
+    children: "slot",
+    className: "string",
+    editMobile: "boolean",
+    mobileWidthRange: "number",
+  },
+});
+
+PLASMIC.registerComponent(DropdownMenu, {
+  name: "DropdownMenu",
+  props: {
+    children: "slot",
+    className: "string",
+    menuTitle: "string",
   },
 });
