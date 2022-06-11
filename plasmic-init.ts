@@ -1,7 +1,7 @@
 import getConfig from "next/config";
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
 import { HelloWorld, Link, YoutubeVideo } from "./components";
-import { Popup, PopupWindow } from "./components/Popup";
+import { Popup } from "./components/Popup";
 import { Carousel, CarouselCard } from "./components/carousel";
 
 const { publicRuntimeConfig } = getConfig();
