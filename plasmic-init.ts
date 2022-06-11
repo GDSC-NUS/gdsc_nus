@@ -1,6 +1,8 @@
 import getConfig from "next/config";
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
-import { HelloWorld, YoutubeVideo, PopupWindow } from "./components";
+import { HelloWorld, Link, YoutubeVideo } from "./components";
+import { Popup, PopupWindow } from "./components/Popup";
+import { Carousel, CarouselCard } from "./components/carousel";
 
 const { publicRuntimeConfig } = getConfig();
 const {
@@ -40,12 +42,44 @@ PLASMIC.registerComponent(YoutubeVideo, {
   },
 });
 
+PLASMIC.registerComponent(Popup, {
+  name: "Popup",
+  props: {
+    windowClassName: "string",
+    popupBoxClassName: "string",
+    clickableClassName: "string",
+    clickable: "slot",
+    popupBox: "slot",
+  },
+});
 
-PLASMIC.registerComponent(PopupWindow, {
-  name: "PopupWindow",
+PLASMIC.registerComponent(Carousel, {
+  name: "Carousel",
   props: {
     className: "string",
-    content: "string",
-    children: "slot"
-  }
-})
+    children: "slot",
+    showIndicators: "boolean",
+    IndicatorsClassName: "string",
+    showArrows: "boolean",
+    ArrowsClassName: "string",
+    autoplay: "boolean",
+  },
+});
+
+PLASMIC.registerComponent(CarouselCard, {
+  name: "CarouselCard",
+  props: {
+    className: "string",
+    children: "slot",
+  },
+});
+
+PLASMIC.registerComponent(Link, {
+  name: "Link",
+  props: {
+    link: "string",
+    openInNewTab: "boolean",
+    className: "string",
+    children: "slot",
+  },
+});

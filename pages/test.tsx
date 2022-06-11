@@ -1,6 +1,6 @@
 import { YoutubeVideo } from "../components";
 
-export default function Some() {
+export default function Test() {
   return (
     <>
       <YoutubeVideo />
