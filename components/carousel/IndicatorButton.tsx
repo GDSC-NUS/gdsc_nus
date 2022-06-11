@@ -27,7 +27,7 @@ export default function IndicatorButtons({
           <button
             key={i}
             className={clsx(
-              "h-3 w-3 cursor-default rounded-full border bg-gray-500",
+              "z-20 h-3 w-3 cursor-default rounded-full border bg-gray-500",
               className
             )}
           />
@@ -38,7 +38,7 @@ export default function IndicatorButtons({
               setIndex(i);
             }}
             className={clsx(
-              "h-3 w-3 cursor-default rounded-full bg-gray-200",
+              "z-20 h-3 w-3 cursor-default rounded-full bg-gray-200",
               className
             )}
           />

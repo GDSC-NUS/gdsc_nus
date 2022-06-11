@@ -1,3 +1,4 @@
+import { ChildProcess } from "child_process";
 import { useEffect, useState } from "react";
 import { CarouselCardInterface, CarouselInterface } from ".";
 import IndicatorButtons from "./IndicatorButton";
@@ -11,6 +12,7 @@ export type CarouselProps = {
   showArrows: boolean;
   ArrowsClassName: string;
   autoplay: boolean;
+  activeKey: string;
 };
 
 export default function Carousel({
@@ -21,6 +23,7 @@ export default function Carousel({
   showArrows,
   ArrowsClassName,
   autoplay,
+  activeKey,
 }: CarouselProps): CarouselInterface {
   const [selectedCard, setSelectedCard] = useState<number>(0);
   const [currentLoop, setCurrentLoop] = useState<boolean>(false);
@@ -33,6 +36,11 @@ export default function Carousel({
         setCurrentLoop(!currentLoop);
       }, 5000);
   }, [children, currentLoop]);
+
+  // For displaying card based on activekey selection
+  useEffect(() => {
+    setSelectedCard(parseInt(activeKey));
+  }, [activeKey]);
 
   return (
     <div className={className}>
