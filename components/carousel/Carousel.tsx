@@ -1,4 +1,3 @@
-import { ChildProcess } from "child_process";
 import { useEffect, useState } from "react";
 import { CarouselCardInterface, CarouselInterface } from ".";
 import IndicatorButtons from "./IndicatorButton";
