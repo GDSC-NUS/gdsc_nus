@@ -1,6 +1,7 @@
 import getConfig from "next/config";
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
 import { HelloWorld, Link, YoutubeVideo } from "./components";
+import { Popup } from "./components/Popup";
 import { Carousel, CarouselCard } from "./components/carousel";
 import { DropdownMenu, Navbar } from "./components/Navbar";
 
@@ -39,6 +40,17 @@ PLASMIC.registerComponent(YoutubeVideo, {
     height: "number",
     width: "number",
     className: "string",
+  },
+});
+
+PLASMIC.registerComponent(Popup, {
+  name: "Popup",
+  props: {
+    windowClassName: "string",
+    popupBoxClassName: "string",
+    clickableClassName: "string",
+    clickable: "slot",
+    popupBox: "slot",
   },
 });
 
