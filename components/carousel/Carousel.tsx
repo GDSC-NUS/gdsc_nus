@@ -22,7 +22,7 @@ export default function Carousel({
   showArrows,
   ArrowsClassName,
   autoplay,
-  activeKey,
+  activeKey = "0",
 }: CarouselProps): CarouselInterface {
   const [selectedCard, setSelectedCard] = useState<number>(0);
   const [currentLoop, setCurrentLoop] = useState<boolean>(false);
