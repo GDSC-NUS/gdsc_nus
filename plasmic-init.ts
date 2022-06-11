@@ -2,9 +2,7 @@ import getConfig from "next/config";
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
 import { HelloWorld, Link, YoutubeVideo } from "./components";
 import { Carousel, CarouselCard } from "./components/carousel";
-import DropdownMenu from "./components/Navbar/DropdownMenu";
-import Navbar from "./components/Navbar/Navbar";
-import TabPanel from "./components/Tabs/TabPanel"
+import { DropdownMenu, Navbar } from "./components/Navbar";
 
 const { publicRuntimeConfig } = getConfig();
 const {
@@ -78,24 +76,18 @@ PLASMIC.registerComponent(Link, {
 PLASMIC.registerComponent(Navbar, {
   name: "Navbar",
   props: {
-    className: "string",
     children: "slot",
+    className: "string",
+    editMobile: "boolean",
+    mobileWidthRange: "number",
   },
 });
 
 PLASMIC.registerComponent(DropdownMenu, {
   name: "DropdownMenu",
   props: {
+    children: "slot",
     className: "string",
-    clickedColor: "string",
-    children: "slot",
-  },
-});
-
-PLASMIC.registerComponent(TabPanel, {
-  name: "TabPanel",
-  props: {
-    title: "string",
-    children: "slot",
+    menuTitle: "string",
   },
 });
