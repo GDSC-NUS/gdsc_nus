@@ -63,6 +63,8 @@ PLASMIC.registerComponent(Carousel, {
     IndicatorsClassName: "string",
     showArrows: "boolean",
     ArrowsClassName: "string",
+    leftArrowChild: "slot",
+    rightArrowChild: "slot",
     autoplay: "boolean",
     activeKey: {
       type: "choice",
