@@ -10,7 +10,10 @@ export type CarouselProps = {
   IndicatorsClassName: string;
   showArrows: boolean;
   ArrowsClassName: string;
+  leftArrowChild: JSX.Element;
+  rightArrowChild: JSX.Element;
   autoplay: boolean;
+  activeKey: string;
 };
 
 export default function Carousel({
@@ -20,7 +23,10 @@ export default function Carousel({
   IndicatorsClassName,
   showArrows,
   ArrowsClassName,
+  leftArrowChild,
+  rightArrowChild,
   autoplay,
+  activeKey = "0",
 }: CarouselProps): CarouselInterface {
   const [selectedCard, setSelectedCard] = useState<number>(0);
   const [currentLoop, setCurrentLoop] = useState<boolean>(false);
@@ -33,6 +39,11 @@ export default function Carousel({
         setCurrentLoop(!currentLoop);
       }, 5000);
   }, [children, currentLoop]);
+
+  // For displaying card based on activekey selection
+  useEffect(() => {
+    setSelectedCard(parseInt(activeKey));
+  }, [activeKey]);
 
   return (
     <div className={className}>
@@ -56,6 +67,8 @@ export default function Carousel({
             index={selectedCard}
             setIndex={setSelectedCard}
             size={children!.length}
+            leftChild={leftArrowChild}
+            rightChild={rightArrowChild}
           />
         </div>
       )}
