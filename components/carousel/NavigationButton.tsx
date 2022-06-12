@@ -21,13 +21,13 @@ export default function NavigationButtons({
   return (
     <>
       <button
-        className={clsx("absolute left-5", className)}
+        className={clsx("absolute left-5 z-20", className)}
         onClick={() => setIndex((size + index - 1) % size)}
       >
         {leftChild}
       </button>
       <button
-        className={clsx("absolute right-5", className)}
+        className={clsx("absolute right-5 z-20", className)}
         onClick={() => setIndex((index + 1) % size)}
       >
         {rightChild}
