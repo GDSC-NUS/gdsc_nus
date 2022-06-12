@@ -21,30 +21,27 @@ export default function DropdownMenu({
 
   return (
     <>
-      <div
-        className={clsx(
-          "hover:text-color-white text-xl no-underline",
-          className
-        )}
-      >
-        <div
-          onClick={toggleDropdown}
-          className="cursor-pointer hover:brightness-125"
-        >
-          <div className="inline-block">{menuTitle}</div>
-          <div className="inline-block pl-2">
-            <AiFillCaretDown />
+      <div>
+        <div className={clsx(className)}>
+          <div
+            onClick={toggleDropdown}
+            className="cursor-pointer hover:brightness-125"
+          >
+            <div className="inline-block align-middle">{menuTitle}</div>
+            <div className="inline-block pl-2 align-middle">
+              <AiFillCaretDown />
+            </div>
           </div>
         </div>
+        <ul className="align-left absolute flex flex-col pl-2">
+          {showDropdown &&
+            list.map((item, index) => (
+              <li className="relative flex flex-col" key={index}>
+                {item}
+              </li>
+            ))}
+        </ul>
       </div>
-      <ul className="absolute">
-        {showDropdown &&
-          list.map((item, index) => (
-            <li className="flex flex-col" key={index}>
-              {item}
-            </li>
-          ))}
-      </ul>
     </>
   );
 }

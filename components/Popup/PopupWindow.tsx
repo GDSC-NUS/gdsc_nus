@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { AiOutlineClose } from "react-icons/ai";
 import React, { ReactNode } from "react";
 
 export interface PopupWindowProps {
@@ -33,7 +34,7 @@ export default function PopupWindow({
           className="float-right cursor-pointer font-bold text-gray-500"
           onClick={() => closeButton(false)}
         >
-          X
+          <AiOutlineClose />
         </button>
         <div className="p-8">{children}</div>
       </div>
