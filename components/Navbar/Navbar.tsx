@@ -2,8 +2,11 @@ import clsx from "clsx";
 import DropdownMenu from "./DropdownMenu";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
+import { IconContext } from "react-icons";
 import { Children, useState } from "react";
 import { useWindowDimensions } from ".";
+import Link from "../Link";
+import Image from "next/image";
 
 type NavbarProps = {
   className?: string;
@@ -23,7 +26,6 @@ export default function Navbar({
   //handles width: checks for mobile vs small desktop vs normal desktop
   const { height, width } = useWindowDimensions(window);
   const isMobile = width <= mobileWidthRange;
-
   //For mobile menu only
   const [showSidebar, setShowSidebar] = useState(false);
 
@@ -33,25 +35,31 @@ export default function Navbar({
   if (isMobile) {
     return (
       <>
-        <div className="absolute left-5 top-5">
+        <div className={clsx("absolute left-5 top-5", className)}>
           {showSidebar || editMobile ? (
             <nav>
-              <AiOutlineClose onClick={() => setShowSidebar(false)} />
+              <div className="float-right mb-5 cursor-pointer">
+                <AiOutlineClose onClick={() => setShowSidebar(false)} />
+              </div>
               <ul>
                 {children.map((child, id) =>
                   child.type !== DropdownMenu ? (
-                    <li>{child}</li>
+                    <li className="align-left relative flex flex-col">
+                      {child}
+                    </li>
                   ) : (
                     Children.map(child.props.children, (grandchild) => (
-                      <li>{grandchild}</li>
+                      <li className="align-left flex-col">{grandchild}</li>
                     ))
                   )
                 )}
               </ul>
             </nav>
           ) : (
-            <nav>
-              <FaBars onClick={() => setShowSidebar(true)} />
+            <nav className="cursor-pointer ">
+              <IconContext.Provider value={{ color: "#c0c0c0" }}>
+                <FaBars onClick={() => setShowSidebar(true)} />
+              </IconContext.Provider>
             </nav>
           )}
         </div>
@@ -62,15 +70,23 @@ export default function Navbar({
   //desktop
   return (
     <>
-      <nav
-        className={clsx(
-          "z-1000 sticky top-0 m-0 h-40 w-full rounded-none",
-          className
-        )}
-      >
-        <ul>
+      <nav className={clsx("fixed w-full", className)}>
+        <ul className="items-end">
+          <li className="inline-flex basis-2/5 pl-3 align-middle">
+            <Link link="/">
+              <Image
+                src="/images/DSC_square_logo.png"
+                alt="logo"
+                width="50px"
+                height="50px"
+              />
+            </Link>
+          </li>
           {list.map((child, id) => (
-            <li className="inline-block" key={id}>
+            <li
+              className="float-right inline-flex self-auto align-bottom"
+              key={id}
+            >
               {child}
             </li>
           ))}
