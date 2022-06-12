@@ -10,6 +10,8 @@ export type CarouselProps = {
   IndicatorsClassName: string;
   showArrows: boolean;
   ArrowsClassName: string;
+  leftArrowChild: JSX.Element;
+  rightArrowChild: JSX.Element;
   autoplay: boolean;
   activeKey: string;
 };
@@ -21,6 +23,8 @@ export default function Carousel({
   IndicatorsClassName,
   showArrows,
   ArrowsClassName,
+  leftArrowChild,
+  rightArrowChild,
   autoplay,
   activeKey = "0",
 }: CarouselProps): CarouselInterface {
@@ -63,6 +67,8 @@ export default function Carousel({
             index={selectedCard}
             setIndex={setSelectedCard}
             size={children!.length}
+            leftChild={leftArrowChild}
+            rightChild={rightArrowChild}
           />
         </div>
       )}

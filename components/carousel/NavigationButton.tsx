@@ -6,6 +6,8 @@ type NavigationButtonsProps = {
   size: number;
   setIndex: Dispatch<SetStateAction<number>>;
   className: string;
+  leftChild: JSX.Element;
+  rightChild: JSX.Element;
 };
 
 export default function NavigationButtons({
@@ -13,26 +15,22 @@ export default function NavigationButtons({
   size,
   setIndex,
   className,
+  leftChild,
+  rightChild,
 }: NavigationButtonsProps) {
   return (
     <>
       <button
-        className={clsx(
-          "absolute left-5 z-20 h-10 w-10 rounded-full bg-slate-500 text-white",
-          className
-        )}
+        className={clsx("absolute left-5", className)}
         onClick={() => setIndex((size + index - 1) % size)}
       >
-        {"<"}
+        {leftChild}
       </button>
       <button
-        className={clsx(
-          "absolute right-5 z-20 h-10 w-10 rounded-full bg-slate-500 text-white",
-          className
-        )}
+        className={clsx("absolute right-5", className)}
         onClick={() => setIndex((index + 1) % size)}
       >
-        {">"}
+        {rightChild}
       </button>
     </>
   );
