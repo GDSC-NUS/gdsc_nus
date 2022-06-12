@@ -35,7 +35,7 @@ export default function Navbar({
   if (isMobile) {
     return (
       <>
-        <div className={clsx("absolute left-5 top-5", className)}>
+        <div className={clsx("absolute left-5 top-5 w-6/12", className)}>
           {showSidebar || editMobile ? (
             <nav>
               <div className="float-right mb-5 cursor-pointer">
@@ -72,7 +72,7 @@ export default function Navbar({
     <>
       <nav className={clsx("fixed w-full", className)}>
         <ul className="items-end">
-          <li className="inline-flex basis-2/5 pl-3 align-middle">
+          <li className="inline-flex pl-3 align-middle">
             <Link link="/">
               <Image
                 src="/images/DSC_square_logo.png"

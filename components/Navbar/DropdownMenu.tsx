@@ -22,7 +22,7 @@ export default function DropdownMenu({
   return (
     <>
       <div>
-        <div className={clsx("no-underline", className)}>
+        <div className={clsx(className)}>
           <div
             onClick={toggleDropdown}
             className="cursor-pointer hover:brightness-125"
