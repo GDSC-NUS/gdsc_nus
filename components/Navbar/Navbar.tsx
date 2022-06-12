@@ -72,7 +72,7 @@ export default function Navbar({
     <>
       <nav className={clsx("fixed w-full", className)}>
         <ul className="items-end">
-          <li className="inline-flex pl-3 align-middle">
+          <li className="align-left inline-flex pl-3">
             <Link link="/">
               <Image
                 src="/images/DSC_square_logo.png"
