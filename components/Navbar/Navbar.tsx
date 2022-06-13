@@ -75,7 +75,7 @@ export default function Navbar({
   //desktop
   return (
     <>
-      <nav className={clsx("fixed flex w-full flex-row", className)}>
+      <nav className={clsx("fixed flex h-full w-full flex-row", className)}>
         <div className="inline-flex w-3/12 pl-3 align-middle">
           <Link className="relative float-left ml-5" link="/">
             <Image
