@@ -35,13 +35,13 @@ export default function Navbar({
   if (isMobile) {
     return (
       <>
-        <div
-          className={clsx(
-            "fixed left-0 w-6/12 self-start pt-5 pl-5",
-            className
-          )}
-        >
-          {showSidebar || editMobile ? (
+        {showSidebar || editMobile ? (
+          <div
+            className={clsx(
+              "fixed left-0 w-6/12 self-start pt-5 pl-5",
+              className
+            )}
+          >
             <nav>
               <div className="float-right cursor-pointer">
                 <AiOutlineClose onClick={() => setShowSidebar(false)} />
@@ -60,14 +60,14 @@ export default function Navbar({
                 )}
               </ul>
             </nav>
-          ) : (
-            <nav className="cursor-pointer ">
-              <IconContext.Provider value={{ color: "#c0c0c0" }}>
-                <FaBars onClick={() => setShowSidebar(true)} />
-              </IconContext.Provider>
-            </nav>
-          )}
-        </div>
+          </div>
+        ) : (
+          <nav className="cursor-pointer ">
+            <IconContext.Provider value={{ color: "#c0c0c0" }}>
+              <FaBars onClick={() => setShowSidebar(true)} />
+            </IconContext.Provider>
+          </nav>
+        )}
       </>
     );
   }
