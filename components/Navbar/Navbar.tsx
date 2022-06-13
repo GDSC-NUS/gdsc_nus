@@ -35,13 +35,18 @@ export default function Navbar({
   if (isMobile) {
     return (
       <>
-        <div className={clsx("absolute left-5 top-5 w-6/12", className)}>
+        <div
+          className={clsx(
+            "fixed left-0 w-6/12 self-start pt-5 pl-5",
+            className
+          )}
+        >
           {showSidebar || editMobile ? (
             <nav>
-              <div className="float-right mb-5 cursor-pointer">
+              <div className="float-right cursor-pointer">
                 <AiOutlineClose onClick={() => setShowSidebar(false)} />
               </div>
-              <ul>
+              <ul className="pt-5">
                 {children.map((child, id) =>
                   child.type !== DropdownMenu ? (
                     <li className="align-left relative flex flex-col">
@@ -70,27 +75,22 @@ export default function Navbar({
   //desktop
   return (
     <>
-      <nav className={clsx("fixed w-full", className)}>
-        <ul className="items-end">
-          <li className="inline-flex pl-3 align-middle">
-            <Link link="/">
-              <Image
-                src="/images/DSC_square_logo.png"
-                alt="logo"
-                width="50px"
-                height="50px"
-              />
-            </Link>
-          </li>
+      <nav className={clsx("fixed flex w-full flex-row", className)}>
+        <div className="inline-flex w-3/12 pl-3 align-middle">
+          <Link className="relative float-left ml-5" link="/">
+            <Image
+              src="/images/DSC_square_logo.png"
+              alt="logo"
+              width="50px"
+              height="50px"
+            />
+          </Link>
+        </div>
+        <div className="items float-right mr-5 flex flex-grow flex-row items-center justify-end">
           {list.map((child, id) => (
-            <li
-              className="float-right inline-flex self-auto align-bottom"
-              key={id}
-            >
-              {child}
-            </li>
+            <div className="relative">{child}</div>
           ))}
-        </ul>
+        </div>
       </nav>
     </>
   );
