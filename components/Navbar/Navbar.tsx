@@ -98,7 +98,7 @@ export default function Navbar({
     <>
       <nav
         className={clsx(
-          "fixed z-50 flex w-full flex-row items-stretch bg-white",
+          "fixed z-50 flex w-full flex-row items-center bg-white",
           className
         )}
       >
