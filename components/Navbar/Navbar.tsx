@@ -35,38 +35,59 @@ export default function Navbar({
   if (isMobile) {
     return (
       <>
+        {(showSidebar || editMobile) && (
+          <div
+            className="fixed inset-0 z-30 w-full bg-gray-400 bg-opacity-75"
+            onClick={() => setShowSidebar(false)}
+          />
+        )}
         <div
-          className={clsx(
-            "fixed left-0 w-6/12 self-start pt-5 pl-5",
-            className
-          )}
+          className={
+            showSidebar || editMobile
+              ? clsx(
+                  "fixed left-0 top-0 z-50 h-screen w-6/12 self-start bg-white pt-5 pl-5 duration-1000 ease-out",
+                  className
+                )
+              : clsx(
+                  "fixed -left-full z-40 h-screen self-start pt-5 pl-5",
+                  className
+                )
+          }
         >
-          {showSidebar || editMobile ? (
-            <nav>
-              <div className="float-right cursor-pointer">
-                <AiOutlineClose onClick={() => setShowSidebar(false)} />
-              </div>
-              <ul className="pt-5">
-                {children.map((child, id) =>
-                  child.type !== DropdownMenu ? (
-                    <li className="align-left relative flex flex-col">
-                      {child}
-                    </li>
-                  ) : (
-                    Children.map(child.props.children, (grandchild) => (
-                      <li className="align-left flex-col">{grandchild}</li>
-                    ))
-                  )
-                )}
-              </ul>
-            </nav>
-          ) : (
-            <nav className="cursor-pointer ">
-              <IconContext.Provider value={{ color: "#c0c0c0" }}>
-                <FaBars onClick={() => setShowSidebar(true)} />
-              </IconContext.Provider>
-            </nav>
-          )}
+          <div className="float-right cursor-pointer pr-3">
+            <IconContext.Provider value={{ size: "30px" }}>
+              <AiOutlineClose onClick={() => setShowSidebar(false)} />
+            </IconContext.Provider>
+          </div>
+          <ul className="absolute left-0 pt-10">
+            {list.map((child, id) =>
+              child.type !== DropdownMenu ? (
+                <li className="border-right-color relative left-0 top-0 flex flex-col text-left">
+                  {child}
+                </li>
+              ) : (
+                Children.map(child.props.children, (grandchild) => (
+                  <li className="align-left border-right-color relative flex flex-col">
+                    {grandchild}
+                  </li>
+                ))
+              )
+            )}
+          </ul>
+        </div>
+
+        <div
+          className={
+            showSidebar || editMobile
+              ? "fixed -left-full cursor-pointer pt-3 pl-10"
+              : "fixed left-0 z-50 h-0 cursor-pointer pt-3 pl-10 duration-500 ease-out"
+          }
+        >
+          <button className="">
+            <IconContext.Provider value={{ color: "#c0c0c0", size: "50px" }}>
+              <FaBars onClick={() => setShowSidebar(true)} />
+            </IconContext.Provider>
+          </button>
         </div>
       </>
     );
@@ -75,7 +96,12 @@ export default function Navbar({
   //desktop
   return (
     <>
-      <nav className={clsx("fixed flex w-full flex-row", className)}>
+      <nav
+        className={clsx(
+          "fixed z-50 flex w-full flex-row items-center bg-white",
+          className
+        )}
+      >
         <div className="inline-flex w-3/12 pl-3 align-middle">
           <Link className="relative float-left ml-5" link="/">
             <Image
@@ -86,7 +112,7 @@ export default function Navbar({
             />
           </Link>
         </div>
-        <div className="items float-right mr-5 flex flex-grow flex-row items-center justify-end">
+        <div className="float-right mr-5 flex flex-grow flex-row justify-end">
           {list.map((child, id) => (
             <div className="relative">{child}</div>
           ))}
