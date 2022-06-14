@@ -37,8 +37,6 @@ PLASMIC.registerComponent(YoutubeVideo, {
   name: "YoutubeVideo",
   props: {
     videoId: "string",
-    height: "number",
-    width: "number",
     className: "string",
   },
 });
