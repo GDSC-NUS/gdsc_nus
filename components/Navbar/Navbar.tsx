@@ -4,7 +4,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { Children, useState } from "react";
-import { useWindowDimensions } from ".";
+import { useWindowDimensions } from "../utils";
 import Link from "../Link";
 import Image from "next/image";
 

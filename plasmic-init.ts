@@ -1,9 +1,10 @@
 import getConfig from "next/config";
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
-import { HelloWorld, Link, YoutubeVideo } from "./components";
+import { HelloWorld, Link } from "./components";
 import { Popup } from "./components/Popup";
 import { Carousel, CarouselCard } from "./components/carousel";
 import { DropdownMenu, Navbar } from "./components/Navbar";
+import { registerYouTube, youtubeMeta } from "@plasmicpkgs/react-youtube";
 
 const { publicRuntimeConfig } = getConfig();
 const {
@@ -33,13 +34,7 @@ PLASMIC.registerComponent(HelloWorld, {
   },
 });
 
-PLASMIC.registerComponent(YoutubeVideo, {
-  name: "YoutubeVideo",
-  props: {
-    videoId: "string",
-    className: "string",
-  },
-});
+registerYouTube(PLASMIC, youtubeMeta);
 
 PLASMIC.registerComponent(Popup, {
   name: "Popup",
