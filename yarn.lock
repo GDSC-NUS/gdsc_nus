@@ -139,7 +139,7 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@plasmicapp/host@1.0.58":
+"@plasmicapp/host@1.0.58", "@plasmicapp/host@^1.0.58":
   version "1.0.58"
   resolved "https://registry.yarnpkg.com/@plasmicapp/host/-/host-1.0.58.tgz#2810b58478560163b8a6beaf6695c6b030aaa05a"
   integrity sha512-0R0vhMaayg3aCHruMhd8JSMFFvvlhlNg6Rh8Npc8GST4OFL3zsb5poOIz0FEi0c9hYbHc97UyQe7CLAEEMb+AA==
