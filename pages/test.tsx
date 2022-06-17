@@ -1,9 +1,9 @@
-import { YoutubeVideo } from "../components";
+import { Link } from "../components";
 
 export default function Test() {
   return (
     <>
-      <YoutubeVideo />
+      <Link link="https://dsc.comp.nus.edu.sg">Go to our website!</Link>
     </>
   );
 }
