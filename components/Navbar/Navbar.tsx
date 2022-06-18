@@ -105,17 +105,18 @@ export default function Navbar({
           className
         )}
       >
-        <div className="inline-flex w-3/12 pl-3 align-middle">
+        <div className="inline-flex w-3/12 align-middle">
           <Link className="relative float-left ml-5" link="/">
             <Image
               src="/images/DSC_square_logo.png"
               alt="logo"
               width="50px"
               height="50px"
+              className="h-full"
             />
           </Link>
         </div>
-        <div className="float-right mr-5 flex flex-grow flex-row justify-end">
+        <div className="float-right flex flex-grow flex-row justify-end">
           {list.map((child, id) => (
             <div className="relative">{child}</div>
           ))}
