@@ -54,15 +54,18 @@ export default function Navbar({
                 )
           }
         >
-          <div className="float-right cursor-pointer pr-3">
+          <div
+            className="float-right cursor-pointer pr-3"
+            onClick={() => setShowSidebar(false)}
+          >
             <IconContext.Provider value={{ size: "30px" }}>
-              <AiOutlineClose onClick={() => setShowSidebar(false)} />
+              <AiOutlineClose />
             </IconContext.Provider>
           </div>
           <ul className="absolute left-0 pt-10">
             {list.map((child, id) =>
               child.type !== DropdownMenu ? (
-                <li className="border-right-color relative left-0 top-0 flex flex-col text-left">
+                <li className="border-right-color left -0 relative top-0 flex flex-col text-left">
                   {child}
                 </li>
               ) : (
