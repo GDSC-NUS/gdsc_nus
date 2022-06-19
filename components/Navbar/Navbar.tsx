@@ -82,8 +82,8 @@ export default function Navbar({
         <div
           className={
             showSidebar || editMobile
-              ? "fixed -left-full cursor-pointer pt-3 pl-10"
-              : "fixed left-0 z-50 h-0 cursor-pointer pt-3 pl-10 duration-500 ease-out"
+              ? "absolute -left-full cursor-pointer pt-3 pl-10"
+              : "absolute left-0 z-50 h-0 cursor-pointer pt-3 pl-10 duration-500 ease-out"
           }
         >
           <button className="">
