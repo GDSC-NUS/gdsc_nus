@@ -110,9 +110,9 @@ export default function Navbar({
             <Image
               src="/images/DSC_square_logo.png"
               alt="logo"
-              width="50px"
               height="50px"
-              className="h-full"
+              width="50px"
+              objectPosition="0px 2.5px"
             />
           </Link>
         </div>
