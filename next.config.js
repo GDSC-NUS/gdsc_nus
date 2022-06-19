@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  staticPageGenerationTimeout: 180,
+  staticPageGenerationTimeout: 300,
   publicRuntimeConfig: {
     NEXT_PUBLIC_NODE_ENV: process.env.NODE_ENV,
     NEXT_PUBLIC_PLASMIC_PREVIEW: process.env.PLASMIC_PREVIEW,
