@@ -82,8 +82,8 @@ export default function Navbar({
         <div
           className={
             showSidebar || editMobile
-              ? "fixed -left-full cursor-pointer pt-3 pl-10"
-              : "fixed left-0 z-50 h-0 cursor-pointer pt-3 pl-10 duration-500 ease-out"
+              ? "absolute -left-full cursor-pointer pt-3 pl-10"
+              : "absolute left-0 z-50 h-0 cursor-pointer pt-3 pl-10 duration-500 ease-out"
           }
         >
           <button className="">
@@ -105,17 +105,18 @@ export default function Navbar({
           className
         )}
       >
-        <div className="inline-flex w-3/12 pl-3 align-middle">
-          <Link className="relative float-left ml-5" link="/">
+        <div className="inline-flex w-3/12 align-middle">
+          <Link className="relative float-left ml-3" link="/">
             <Image
               src="/images/DSC_square_logo.png"
               alt="logo"
-              width="50px"
               height="50px"
+              width="50px"
+              objectPosition="0px 2.5px"
             />
           </Link>
         </div>
-        <div className="float-right mr-5 flex flex-grow flex-row justify-end">
+        <div className="float-right flex flex-grow flex-row justify-end">
           {list.map((child, id) => (
             <div className="relative">{child}</div>
           ))}
