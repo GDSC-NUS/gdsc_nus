@@ -106,7 +106,7 @@ export default function Navbar({
         )}
       >
         <div className="inline-flex w-3/12 align-middle">
-          <Link className="relative float-left ml-5" link="/">
+          <Link className="relative float-left ml-3" link="/">
             <Image
               src="/images/DSC_square_logo.png"
               alt="logo"
