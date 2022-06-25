@@ -3,6 +3,38 @@
 @tailwind utilities;
 
 @font-face {
+  font-family: "Product Sans Bold Italic";
+  src: url("fonts/Product Sans Bold Italic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: BoldItalic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Product Sans Bold";
+  src: url("fonts/Product Sans Bold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: Bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Product Sans Italic";
+  src: url("fonts/Product Sans Italic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Product Sans Regular";
+  src: url("fonts/Product Sans Regular.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "GoogleSans-Bold-v1.27";
   src: url("fonts/GoogleSans-Bold-v1.27.ttf") format("truetype");
   font-weight: 800;
