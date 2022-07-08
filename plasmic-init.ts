@@ -39,6 +39,7 @@ registerYouTube(PLASMIC, youtubeMeta);
 PLASMIC.registerComponent(Popup, {
   name: "Popup",
   props: {
+    preview: "boolean",
     windowClassName: "string",
     popupBoxClassName: "string",
     clickableClassName: "string",

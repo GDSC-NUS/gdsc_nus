@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { useState } from "react";
 import PopupWindow from "./PopupWindow";
+import { Transition } from "@headlessui/react";
 
 interface PopupProps {
   windowClassName?: string;
@@ -8,6 +9,7 @@ interface PopupProps {
   clickableClassName?: string;
   clickable?: JSX.Element;
   popupBox?: JSX.Element;
+  preview?: boolean;
 }
 
 export default function Popup({
@@ -16,18 +18,27 @@ export default function Popup({
   clickableClassName,
   clickable,
   popupBox,
+  preview = false,
 }: PopupProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="App">
+    <>
       <div
         className={clsx("hover: cursor-pointer", clickableClassName)}
         onClick={() => setIsOpen(true)}
       >
         {clickable}
       </div>
-      {isOpen && (
+      <Transition
+        show={isOpen || preview}
+        enter="transition-opacity duration-300"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        leave="transition-opacity duration-300"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0"
+      >
         <PopupWindow
           closeButton={setIsOpen}
           windowClassName={windowClassName}
@@ -35,7 +46,7 @@ export default function Popup({
         >
           {popupBox}
         </PopupWindow>
-      )}
-    </div>
+      </Transition>
+    </>
   );
 }
