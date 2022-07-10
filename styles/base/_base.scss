@@ -1,0 +1,115 @@
+@import "./settings";
+@import "./mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  color: $color-dark-grey;
+  line-height: 1.6;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: $font-size-small;
+}
+
+ol,
+ul {
+  padding-left: 40px;
+}
+
+html {
+  font-size: 68%;
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 62%;
+  }
+  @media only screen and (max-width: $bp-small) {
+    font-size: 56%;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+.is-active {
+  font-weight: bold;
+}
+
+.pdf-renderer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  canvas {
+    margin: auto;
+  }
+  margin-bottom: 100px;
+}
+
+.pdf-renderer-buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex !important;
+  justify-content: center;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 7px !important;
+    width: 0;
+  }
+}
+
+.pdf-renderer-left-button {
+  @extend .pdf-renderer-buttons;
+  left: 25px;
+
+  @media only screen and (max-width: $bp-large) {
+    left: 20px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    left: 15px;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    left: 7px;
+  }
+}
+
+.pdf-renderer-right-button {
+  @extend .pdf-renderer-buttons;
+  right: 25px;
+
+  @media only screen and (max-width: $bp-large) {
+    right: 20px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    right: 15px;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    right: 7px;
+  }
+}
+
+.pdf-renderer-document {
+  width: 50vw;
+
+  @media only screen and (max-width: 768px) {
+    width: 70vw;
+  }
+}
+
+.pdf-renderer-loading {
+  min-height: 150px;
+}

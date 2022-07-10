@@ -1,0 +1,96 @@
+// textbox that changes width based on screen size
+@mixin center-text-box {
+    width: 60%;
+    margin: 0 auto;
+    @media only screen and (max-width: $bp-largest) {
+        width: 70%;
+    }
+    @media only screen and (max-width: $bp-medium) {
+        width: 75%;
+    }
+    @media only screen and (max-width: $bp-small) {
+        width: 90%;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+        width: 100%;
+    }
+}
+
+.recruitment-header {
+    background-image: linear-gradient(to right bottom, rgba($color-dark-grey, 0.8), rgba($color-dark-grey, 0.8)), url("../../assets/AboutUsPage/aboutuspagebg.jpg");
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+
+    &__text-box {        
+        @include center-text-box();
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 1.5rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 1rem;
+    }
+}
+
+.section-recruitment {
+    background-color: $color-white;
+    color: $color-black;
+    padding: 5vh 0;
+    font-size: $font-size-medium;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    @media only screen and (max-width: $bp-small) {
+        width: 90%;
+    }
+    &__title {
+        font-size: $font-size-header-secondary;
+    }
+    &__description {
+        font-size: inherit;
+        @include center-text-box();
+        padding-bottom: 24px;
+    }
+    &__roles-title {
+        margin-top: 4vh;
+        font-size: $font-size-header-tertiary;
+    }
+    &__roles-group {
+        margin-top: 3vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }    
+    &__role {
+        width: 29%;
+        margin-bottom: 3vh;
+        display: flex;        
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        h4 {
+            width: 100%;            
+            font-size: $font-size-header-tertiary;
+        }
+        img {
+            height: 12vh;
+        }
+        p {
+            font-size: inherit;
+        }
+        @media only screen and (max-width: $bp-largest) {
+            width: 45%;
+        }
+        @media only screen and (max-width: $bp-small) {
+            width: 90%;
+        }
+    }
+}

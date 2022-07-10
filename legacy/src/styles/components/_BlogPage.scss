@@ -1,0 +1,114 @@
+.blog {
+    background-color: $color-light-grey;
+
+    &__header {
+        text-align: center;
+        // padding: 10rem;
+        background-image: linear-gradient(to right bottom, rgba($color-blue, 0.65), rgba($color-teal, 0.65)), url(../../assets/BlogPage/blogbg.jpg);
+        background-size: cover;
+        background-position: center;
+        // background-blend-mode: color;
+        color: $color-white;
+        height: 95vh;
+        text-shadow: .2rem .5rem .5rem rgba($color-dark-grey, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__content {
+        padding: $l-size;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            padding: $m-size;
+        }
+    }
+
+    &__articles {
+        flex: 0 0 70%;
+        margin-right: $l-size;
+        @media only screen and (max-width: $bp-small) {
+            margin-bottom: $m-size;
+            margin-right: 0;
+        }
+    }
+
+    &__article {
+        &:not(:last-child) {
+            margin-bottom: $l-size;
+        }
+    }
+
+    &__sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__list-item {
+        transition: all .2s;
+
+        a {
+            color: inherit;
+        }
+
+        &:hover {
+            color: $color-blue;
+            transform: translateY(-3px);
+        }
+    }
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &__box {
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__button {
+        border: none;
+        margin: 3px;
+    }
+
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: $color-light-grey;
+        border: none;
+        padding: .7rem 2rem;
+        border-radius: 100px;
+        width: 80%;
+        transition: all .2s;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: $color-grey;
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: $color-medium-grey;
+        }
+    }
+}

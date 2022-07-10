@@ -1,0 +1,28 @@
+.team-header {
+    background-image: linear-gradient(to right bottom, rgba($color-dark-yellow-grey, 0.5), rgba($color-dark-yellow-grey, 0.5)), url("../../assets/AboutUsPage/aboutuspagebg.jpg") !important;
+}
+
+.section-header {
+    padding: 6rem;
+    text-align: center;
+    p {
+        font-size: $font-size-medium;
+    }
+}
+
+.section-teampage {
+    background-color: $color-light-grey !important;
+    padding: $l-size;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.section-red {
+    background-color: $color-red !important;
+    color: $color-white !important;
+}
+
+.team__carousel {
+    margin: 0 auto;
+    padding: $l-size;
+}
