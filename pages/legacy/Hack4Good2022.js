@@ -27,7 +27,11 @@ const AboutComponent = () => (
       src="/assets/Hack4Good2022/ourThemes.png"
       style={{ marginTop: "90px" }}
     />
-    <a href="https://gdsc.community.dev/e/mp83tu/" target="_blank">
+    <a
+      href="https://gdsc.community.dev/e/mp83tu/"
+      target="_blank"
+      rel="noreferrer"
+    >
       <div className="white-btn-border">
         <div className="white-btn-content">
           <text className="white-btn-text">Register</text>
@@ -133,7 +137,7 @@ const ScheduleComponent = () => {
           selectedClassName="hack-tabpanel__selected"
         >
           <p className="hack-body__time">02:30pm - 02:40pm</p>
-          <p className="hack-body__activity">Participants' Arrival</p>
+          <p className="hack-body__activity">Participants&apos; Arrival</p>
           <p className="hack-body__time">02:40pm - 02:50pm</p>
           <p className="hack-body__activity">Opening address by DSC Lead</p>
           <p className="hack-body__time">02:50pm - 03:00pm</p>
@@ -560,28 +564,40 @@ const ContactUsComponent = () => (
   <header className="home-header hack-contact-us__bg">
     <h2 className="hack-header white-header">Contact Us</h2>
     <div className="hack-contact-us__links">
-      <a href="https://t.me/dscnus" target="_blank">
+      <a href="https://t.me/dscnus" target="_blank" rel="noreferrer">
         <img
           src="/assets/Hack4Good2022/telegram.png"
           className="hack-contact-us__image"
         />
       </a>
       <hr className="hack-contact-us__white-line" />
-      <a href="https://www.instagram.com/dscnus/" target="_blank">
+      <a
+        href="https://www.instagram.com/dscnus/"
+        target="_blank"
+        rel="noreferrer"
+      >
         <img
           src="/assets/Hack4Good2022/insta.png"
           className="hack-contact-us__image"
         />
       </a>
       <hr className="hack-contact-us__white-line" />
-      <a href="https://www.linkedin.com/company/dscnus" target="_blank">
+      <a
+        href="https://www.linkedin.com/company/dscnus"
+        target="_blank"
+        rel="noreferrer"
+      >
         <img
           src="/assets/Hack4Good2022/linkedin.png"
           className="hack-contact-us__image"
         />
       </a>
       <hr className="hack-contact-us__white-line" />
-      <a href="mailto:ops.head.dscnus@gmail.com" target="_blank">
+      <a
+        href="mailto:ops.head.dscnus@gmail.com"
+        target="_blank"
+        rel="noreferrer"
+      >
         <img
           src="/assets/Hack4Good2022/email.png"
           className="hack-contact-us__image"
@@ -603,7 +619,11 @@ const Hack4Good2022 = () => {
           src="/assets/Hack4Good2022/hfg2022_logo.svg"
           className="hack-logo"
         />
-        <a href="https://gdsc.community.dev/e/mp83tu/" target="_blank">
+        <a
+          href="https://gdsc.community.dev/e/mp83tu/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <div className="blue-btn-border">
             <div className="blue-btn-content">
               <text className="blue-btn-text">Register</text>
@@ -631,7 +651,7 @@ const Hack4Good2022 = () => {
         <FaqsComponent />
       </section>
       <ContactUsComponent />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

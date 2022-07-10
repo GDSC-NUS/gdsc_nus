@@ -118,7 +118,9 @@ export default function Navbar({
         </div>
         <div className="float-right flex flex-grow flex-row justify-end">
           {list.map((child, id) => (
-            <div className="relative">{child}</div>
+            <div className="relative" key={id}>
+              {child}
+            </div>
           ))}
         </div>
       </nav>

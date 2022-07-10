@@ -1,6 +1,8 @@
 import React from "react";
 import { Icon } from "semantic-ui-react";
 
+// REPLACE <a> with <Link> from NextJS
+
 const Footer = () => (
   <footer className="footer">
     <div className="footer__logo-box">

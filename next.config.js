@@ -8,6 +8,7 @@ const nextConfig = {
     NEXT_PUBLIC_PLASMIC_PROJECT_ID: process.env.PLASMIC_PROJECT_ID,
     NEXT_PUBLIC_PLASMIC_PROJECT_TOKEN: process.env.PLASMIC_PROJECT_TOKEN,
   },
+  eslint: { ignoreDuringBuilds: true },
 };
 
 module.exports = nextConfig;
