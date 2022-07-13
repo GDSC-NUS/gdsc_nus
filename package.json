@@ -10,13 +10,13 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.6.6",
-    "@plasmicapp/host": "^1.0.70",
-    "@plasmicapp/loader-nextjs": "^1.0.156",
-    "@plasmicpkgs/react-youtube": "^7.13.73",
+    "@heroicons/react": "^1.0.6",
+    "@plasmicapp/host": "^1.0.71",
+    "@plasmicapp/loader-nextjs": "^1.0.157",
+    "@plasmicpkgs/react-youtube": "^7.13.74",
     "clsx": "^1.2.1",
     "next": "12.2.2",
     "react": "^18.2.0",
-    "react-burger-menu": "^3.0.8",
     "react-dom": "^18.2.0",
     "react-faq-component": "^1.3.4",
     "react-icons": "^4.4.0",
@@ -36,7 +36,7 @@
     "postcss-import": "^14.1.0",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.12",
-    "tailwindcss": "^3.1.5",
+    "tailwindcss": "^3.1.6",
     "typescript": "4.7.4"
   }
 }

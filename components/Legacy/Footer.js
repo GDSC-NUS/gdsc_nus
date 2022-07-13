@@ -1,7 +1,6 @@
 import React from "react";
 import { Icon } from "semantic-ui-react";
-
-// REPLACE <a> with <Link> from NextJS
+import NextLink from "next/link";
 
 const Footer = () => (
   <footer className="footer">
@@ -17,29 +16,33 @@ const Footer = () => (
         <div className="footer__navigation">
           <ul className="footer__list">
             <li className="footer__item">
-              <a href="/about" className="footer__link">
+              <NextLink href="/legacy/about" className="footer__link">
                 About Us
-              </a>
+              </NextLink>
             </li>
             <li className="footer__item">
-              <a href="/team" className="footer__link">
-                Our Core Team
-              </a>
+              {/* href="/legacy/team" */}
+              <NextLink href="#" className="footer__link">
+                Our Team
+              </NextLink>
             </li>
             <li className="footer__item">
-              <a href="/internalprojects" className="footer__link">
-                Internal Projects
-              </a>
+              {/* href="/legacy/internalprojects" */}
+              <NextLink href="#" className="footer__link">
+                Our Projects
+              </NextLink>
             </li>
             <li className="footer__item">
-              <a href="/externalprojects" className="footer__link">
+              {/* href="/legacy/externalprojects" */}
+              <NextLink href="#" className="footer__link">
                 External Projects
-              </a>
+              </NextLink>
             </li>
             <li className="footer__item">
-              <a href="/blog" className="footer__link">
+              {/* href="/legacy/blog" */}
+              <NextLink href="#" className="footer__link">
                 Blog
-              </a>
+              </NextLink>
             </li>
           </ul>
         </div>

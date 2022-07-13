@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Footer from "../../components/Legacy/Footer";
+import PageHeader from "../../components/Legacy/PageHeader";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import Carousel from "react-multi-carousel";
@@ -613,7 +614,7 @@ const Hack4Good2022 = () => {
   }, []);
   return (
     <div className="hack-background">
-      {/* <PageHeader /> */}
+      <PageHeader className="w-screen" />
       <header className="home-header hackathon-header">
         <Image
           src="/assets/Hack4Good2022/hfg2022_logo.svg"
@@ -651,7 +652,7 @@ const Hack4Good2022 = () => {
         <FaqsComponent />
       </section>
       <ContactUsComponent />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
