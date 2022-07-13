@@ -1,4 +1,4 @@
-import { Disclosure } from "@headlessui/react";
+import { Menu, Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Dropdown from "./Dropdown";
 import NextLink from "next/link";
@@ -79,20 +79,27 @@ export default function PageHeader() {
                     />
                   </NextLink>
                 </div>
-                <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
-                  {navigation.map((item) => (
-                    <div
-                      key={item.name}
-                      className="cursor-pointer rounded-md px-3 py-2 text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                      aria-current={item.current ? "page" : undefined}
-                    >
-                      {item.dropdown ? (
+                <div className="hidden text-2xl font-medium text-gray-300 md:ml-6 md:flex md:items-center md:space-x-4">
+                  {navigation.map((item) =>
+                    item.dropdown ? (
+                      <Menu
+                        as="div"
+                        key={item.name}
+                        className="cursor-pointer rounded-md px-3 py-2 hover:bg-gray-700 hover:text-white"
+                      >
                         <Dropdown item={item} />
-                      ) : (
-                        <NextLink href={item.href}>{item.name}</NextLink>
-                      )}
-                    </div>
-                  ))}
+                      </Menu>
+                    ) : (
+                      <NextLink href={item.href}>
+                        <div
+                          key={item.name}
+                          className="cursor-pointer rounded-md px-3 py-2 text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                        >
+                          {item.name}
+                        </div>
+                      </NextLink>
+                    )
+                  )}
                 </div>
               </div>
             </div>
@@ -103,20 +110,24 @@ export default function PageHeader() {
               {navigation.map((item) =>
                 item.dropdown ? (
                   item.dropdown.map((link) => (
-                    <Disclosure.Button
-                      key={link.name}
-                      className="block rounded-md px-3 py-3 text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      <NextLink href={link.href}>{link.name}</NextLink>
-                    </Disclosure.Button>
+                    <NextLink href={link.href}>
+                      <Disclosure.Button
+                        key={link.name}
+                        className="block rounded-md px-3 py-3 text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                      >
+                        {link.name}
+                      </Disclosure.Button>
+                    </NextLink>
                   ))
                 ) : (
-                  <Disclosure.Button
-                    key={item.name}
-                    className="block rounded-md px-3 py-3 text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                  >
-                    <NextLink href={item.href}>{item.name}</NextLink>
-                  </Disclosure.Button>
+                  <NextLink href={item.href}>
+                    <Disclosure.Button
+                      key={item.name}
+                      className="block rounded-md px-3 py-3 text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >
+                      {item.name}
+                    </Disclosure.Button>
+                  </NextLink>
                 )
               )}
             </div>

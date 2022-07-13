@@ -5,7 +5,7 @@ import NextLink from "next/link";
 
 export default function Dropdown({ item }) {
   return (
-    <Menu as="div">
+    <>
       <Menu.Button className="flex">
         {item.name}
         <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
@@ -21,14 +21,16 @@ export default function Dropdown({ item }) {
       >
         <Menu.Items className="absolute mt-3 rounded-md bg-gray-800 focus:outline-none">
           {item.dropdown.map((link, index) => (
-            <Menu.Item key={index}>
-              <div className="block py-4 px-8 text-2xl text-gray-300 hover:bg-gray-700 hover:text-white">
-                <NextLink href={link.href}>{link.name}</NextLink>
-              </div>
-            </Menu.Item>
+            <NextLink href={link.href}>
+              <Menu.Item key={index}>
+                <div className="block py-4 px-8 text-2xl text-gray-300 hover:bg-gray-700 hover:text-white">
+                  {link.name}
+                </div>
+              </Menu.Item>
+            </NextLink>
           ))}
         </Menu.Items>
       </Transition>
-    </Menu>
+    </>
   );
 }
