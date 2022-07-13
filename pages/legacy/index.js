@@ -13,12 +13,14 @@ class Home extends Component {
     return (
       <div>
         <PageHeader />
-        <header class="home-header">
-          <div class="home-header__text-box">
-            <h1 class="heading-primary">
-              <span class="heading-primary--main">Developer Student Clubs</span>
+        <header className="home-header">
+          <div className="home-header__text-box">
+            <h1 className="heading-primary">
+              <span className="heading-primary--main">
+                Developer Student Clubs
+              </span>
               <Divider />
-              <span class="heading-primary--sub">
+              <span className="heading-primary--sub">
                 #TECHFOR
                 <span style={{ color: "#ea3f31" }}>G</span>
                 <span style={{ color: "#4285f4" }}>O</span>
@@ -31,15 +33,15 @@ class Home extends Component {
         {appOpen && (
           <section className="section-home">
             <div className="section-home__content section-home__content-reverse">
-              <div class="section-home__image-box">
+              <div className="section-home__image-box">
                 <img
                   className="section-home__image"
                   alt="Sign Up"
                   src="/assets/HomePage/signup.png"
                 />
               </div>
-              <div class="section-home__text-box">
-                <h2 class="heading-secondary">
+              <div className="section-home__text-box">
+                <h2 className="heading-secondary">
                   Sign ups for AY21/22 are open!
                 </h2>
                 <p>
@@ -60,8 +62,8 @@ class Home extends Component {
         )}
         <section className="section-home section-blue">
           <div className="section-home__content">
-            <div class="section-home__text-box">
-              <h2 class="heading-secondary">Who Are We?</h2>
+            <div className="section-home__text-box">
+              <h2 className="heading-secondary">Who Are We?</h2>
               <p>
                 DSC comprises of members who are passionate learners of
                 technology and aims to make a difference in the society.
@@ -84,15 +86,15 @@ class Home extends Component {
         </section>
         <section className="section-home">
           <div className="section-home__content section-home__content-reverse">
-            <div class="section-home__image-box">
+            <div className="section-home__image-box">
               <img
                 className="section-home__image"
                 alt="What We Do"
                 src="/assets/HomePage/whatwedo.jpg"
               />
             </div>
-            <div class="section-home__text-box">
-              <h2 class="heading-secondary">What we do?</h2>
+            <div className="section-home__text-box">
+              <h2 className="heading-secondary">What we do?</h2>
               <p>
                 By equipping our members with the relevant skills and industry
                 knowledge, we aspire our members to give back for the betterment
@@ -106,7 +108,9 @@ class Home extends Component {
           </div>
         </section>
         <section className="section-vertical">
-          <h2 class="heading-secondary recent-events__header">Recent Events</h2>
+          <h2 className="heading-secondary recent-events__header">
+            Recent Events
+          </h2>
           <div className="recents">
             {/* href="/hack4good" */}
             <NextLink href="#">
