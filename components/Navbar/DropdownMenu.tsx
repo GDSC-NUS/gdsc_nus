@@ -25,7 +25,7 @@ export default function DropdownMenu({
       <Menu>
         <Menu.Button className="h-full">{menuTitle}</Menu.Button>
         <Menu.Items className="align-left absolute flex flex-col">
-          {children.map((child) => (
+          {list.map((child) => (
             <Menu.Item>{child}</Menu.Item>
           ))}
         </Menu.Items>
