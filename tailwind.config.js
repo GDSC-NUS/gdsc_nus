@@ -4,9 +4,16 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   safelist: [
-    {
-      pattern: /./, // disable purging
-    },
+    "relative",
+    "bottom-20",
+    "bottom-10",
+    "border-b-2",
+    "border-gray-200",
+    "border-solid",
+    "bg-white",
+    // {
+    //   pattern: /./, // disable purging
+    // },
   ],
   theme: {
     extend: {},

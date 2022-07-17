@@ -44,7 +44,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
       // Using incremental static regeneration, will re-generate this page
       // after 300s
-      revalidate: 300,
+      // revalidate: 300,
     };
   } else {
     // This is some non-Plasmic catch-all page

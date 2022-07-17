@@ -1,13 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  staticPageGenerationTimeout: 180,
+  staticPageGenerationTimeout: 300,
   publicRuntimeConfig: {
     NEXT_PUBLIC_NODE_ENV: process.env.NODE_ENV,
     NEXT_PUBLIC_PLASMIC_PREVIEW: process.env.PLASMIC_PREVIEW,
     NEXT_PUBLIC_PLASMIC_PROJECT_ID: process.env.PLASMIC_PROJECT_ID,
     NEXT_PUBLIC_PLASMIC_PROJECT_TOKEN: process.env.PLASMIC_PROJECT_TOKEN,
   },
+  eslint: { ignoreDuringBuilds: true },
 };
 
 module.exports = nextConfig;

@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { AiOutlineClose } from "react-icons/ai";
-import React, { ReactNode } from "react";
+import React from "react";
 
 export interface PopupWindowProps {
   windowClassName?: string;

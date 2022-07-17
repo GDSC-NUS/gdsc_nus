@@ -24,7 +24,11 @@ export default function Link({
   const isExternal = link.startsWith("http://") || link.startsWith("https://");
   if (isExternal || openInNewTab)
     return (
-      <a href={link} target={openInNewTab ? "_blank" : undefined}>
+      <a
+        href={link}
+        target={openInNewTab ? "_blank" : undefined}
+        rel="noreferrer"
+      >
         {child}
       </a>
     );

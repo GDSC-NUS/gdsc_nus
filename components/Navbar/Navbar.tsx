@@ -105,17 +105,20 @@ export default function Navbar({
       >
         <div className="pl-3 align-middle">
           <Link className="relative float-left ml-5" link="/">
+
             <Image
               src="/images/DSC_square_logo.png"
               alt="logo"
-              width="50px"
               height="50px"
+              width="50px"
+              objectPosition="0px 2.5px"
             />
           </Link>
         </div>
         <div className="float-right mr-5 flex flex-grow flex-row justify-end">
           {items.map((child) => (
             <div className="inline-block">{child}</div>
+
           ))}
         </div>
       </nav>
