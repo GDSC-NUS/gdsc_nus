@@ -133,6 +133,7 @@ PLASMIC.registerComponent(WorkshopCard, {
     image: "slot",
     popupSpeakers: "slot",
     popupImage: "slot",
+    popupDescription: "slot",
     preview: "boolean",
   },
 });
