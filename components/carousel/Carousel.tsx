@@ -3,7 +3,6 @@ import { useSwipeable } from "react-swipeable";
 import { CarouselCardInterface, CarouselInterface } from ".";
 import IndicatorButtons from "./IndicatorButton";
 import NavigationButtons from "./NavigationButton";
-import React from "react";
 
 export type CarouselProps = {
   className: string;
