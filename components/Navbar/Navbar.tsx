@@ -1,12 +1,10 @@
 import clsx from "clsx";
-import DropdownMenu from "./DropdownMenu";
-import { AiOutlineClose } from "react-icons/ai";
-import { FaBars } from "react-icons/fa";
-import { IconContext } from "react-icons";
-import { Children, useState } from "react";
+import React, { useState } from "react";
 import { useWindowDimensions } from "../utils";
 import Link from "../Link";
-import Image from "next/image";
+import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
+import usePreventBodyScroll from "./usePreventBodyScroll";
+import Image from "next/Image";
 
 type NavbarProps = {
   className?: string;
@@ -14,6 +12,8 @@ type NavbarProps = {
   editMobile: boolean;
   mobileWidthRange: number;
 };
+
+type scrollVisibilityApiType = React.ContextType<typeof VisibilityContext>;
 
 export default function Navbar({
   className,
@@ -26,71 +26,69 @@ export default function Navbar({
   //handles width: checks for mobile vs small desktop vs normal desktop
   const { height, width } = useWindowDimensions(window);
   const isMobile = width <= mobileWidthRange;
-  //For mobile menu only
-  const [showSidebar, setShowSidebar] = useState(false);
 
-  const list = Array.isArray(children) ? children : [children];
+  //Converts children to an array
+  const items = Array.isArray(children) ? children : [children];
 
-  // mobile view
+  //Converts items to a format that is usable for Mobile View ScrollMenu
+  const getItems = () =>
+    items.map((child, ind) => ({ id: `element-${ind}`, child: { child } }));
+  const [list, setList] = useState(getItems);
+
+  //Displays in Mobile View. Checks if item is visible, before fading it (if at corners)
+  function DisplayItem({ child, itemId }: { child: any; itemId: string }) {
+    const { isItemVisible } = React.useContext(VisibilityContext);
+    if (isItemVisible(itemId)) {
+      return <div className="inline-block">{child.child}</div>;
+    }
+    return <div className="inline-block opacity-50">{child.child}</div>;
+  }
+
+  //Scroll/Swipe for mobile view
+  function onWheel(apiObj: any, ev: React.WheelEvent): void {
+    const isTouchpad = Math.abs(ev.deltaX) !== 0 || Math.abs(ev.deltaY) < 15;
+
+    if (isTouchpad) {
+      ev.stopPropagation();
+      return;
+    }
+
+    if (ev.deltaY > 0) {
+      apiObj.scrollNext();
+    } else if (ev.deltaY < 0) {
+      apiObj.scrollPrev();
+    }
+  }
+
+  //Mobile view
+  const { disableScroll, enableScroll } = usePreventBodyScroll();
+
   if (isMobile) {
     return (
       <>
-        {(showSidebar || editMobile) && (
-          <div
-            className="fixed inset-0 z-30 w-full bg-gray-400 bg-opacity-75"
-            onClick={() => setShowSidebar(false)}
-          />
-        )}
         <div
-          className={
-            showSidebar || editMobile
-              ? clsx(
-                  "fixed left-0 top-0 z-50 h-screen w-6/12 self-start bg-white pt-5 pl-5 duration-1000 ease-out",
-                  className
-                )
-              : clsx(
-                  "fixed -left-full z-40 h-screen self-start pt-5 pl-5",
-                  className
-                )
-          }
+          className={clsx("absolute z-50 w-full bg-white", className)}
+          onMouseEnter={disableScroll}
+          onMouseLeave={enableScroll}
         >
-          <div
-            className="float-right cursor-pointer pr-3"
-            onClick={() => setShowSidebar(false)}
-          >
-            <IconContext.Provider value={{ size: "30px" }}>
-              <AiOutlineClose />
-            </IconContext.Provider>
+          <div className="float-left inline-block border-b-0 pl-3 pr-3 align-middle">
+            <Link className="pt-1" link="/">
+              <Image
+                src="/images/DSC_square_logo.png"
+                alt="logo"
+                width="50px"
+                height="50px"
+              />
+            </Link>
           </div>
-          <ul className="absolute left-0 pt-10">
-            {list.map((child, id) =>
-              child.type !== DropdownMenu ? (
-                <li className="border-right-color left -0 relative top-0 flex flex-col text-left">
-                  {child}
-                </li>
-              ) : (
-                Children.map(child.props.children, (grandchild) => (
-                  <li className="align-left border-right-color relative flex flex-col">
-                    {grandchild}
-                  </li>
-                ))
-              )
-            )}
-          </ul>
-        </div>
-
-        <div
-          className={
-            showSidebar || editMobile
-              ? "fixed -left-full cursor-pointer pt-3 pl-10"
-              : "fixed left-0 z-50 h-0 cursor-pointer pt-3 pl-10 duration-500 ease-out"
-          }
-        >
-          <button className="">
-            <IconContext.Provider value={{ color: "#c0c0c0", size: "50px" }}>
-              <FaBars onClick={() => setShowSidebar(true)} />
-            </IconContext.Provider>
-          </button>
+          <ScrollMenu
+            onWheel={onWheel}
+            scrollContainerClassName="scrollbar-hide flex flex-row flex-grow float-right mr-5 h-full"
+          >
+            {list.map(({ child, id }) => (
+              <DisplayItem child={child} itemId={id} />
+            ))}
+          </ScrollMenu>
         </div>
       </>
     );
@@ -105,7 +103,7 @@ export default function Navbar({
           className
         )}
       >
-        <div className="inline-flex w-3/12 pl-3 align-middle">
+        <div className="pl-3 align-middle">
           <Link className="relative float-left ml-5" link="/">
             <Image
               src="/images/DSC_square_logo.png"
@@ -116,8 +114,8 @@ export default function Navbar({
           </Link>
         </div>
         <div className="float-right mr-5 flex flex-grow flex-row justify-end">
-          {list.map((child, id) => (
-            <div className="relative">{child}</div>
+          {items.map((child) => (
+            <div className="inline-block">{child}</div>
           ))}
         </div>
       </nav>
