@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useSwipeable } from "react-swipeable";
 import { CarouselCardInterface, CarouselInterface } from ".";
 import IndicatorButtons from "./IndicatorButton";
 import NavigationButtons from "./NavigationButton";
@@ -45,9 +46,22 @@ export default function Carousel({
     setSelectedCard(parseInt(activeKey));
   }, [activeKey]);
 
+  // For enabling swipe functionality
+  const handlers = useSwipeable({
+    onSwipedLeft: () => {
+      setSelectedCard((children!.length + selectedCard - 1) % children!.length);
+    },
+    onSwipedRight: () => {
+      setSelectedCard((selectedCard + 1) % children!.length);
+    },
+    swipeDuration: 500,
+    preventScrollOnSwipe: true,
+    trackMouse: true,
+  });
+
   return (
     <div className={className}>
-      <div className="absolute h-full w-full">
+      <div {...handlers} className="absolute h-full w-full">
         {children && children[selectedCard]}
       </div>
       {showIndicators && (
