@@ -4,7 +4,7 @@ import { useWindowDimensions } from "../utils";
 import Link from "../Link";
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 import usePreventBodyScroll from "./usePreventBodyScroll";
-import Image from "next/Image";
+import Image from "next/image";
 
 type NavbarProps = {
   className?: string;
