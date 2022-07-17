@@ -1,9 +1,12 @@
 import clsx from "clsx";
-import React, { useState } from "react";
+import React, { Children, useState } from "react";
 import { useWindowDimensions } from "../utils";
 import Link from "../Link";
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
+
+import DropdownMenu from "./DropdownMenu";
 import usePreventBodyScroll from "./usePreventBodyScroll";
+
 import Image from "next/image";
 
 type NavbarProps = {
@@ -85,9 +88,15 @@ export default function Navbar({
             onWheel={onWheel}
             scrollContainerClassName="scrollbar-hide flex flex-row flex-grow float-right mr-5 h-full"
           >
-            {list.map(({ child, id }) => (
-              <DisplayItem child={child} itemId={id} />
-            ))}
+            {list.map(({ child, id }) =>
+              child.type !== DropdownMenu ? (
+                <DisplayItem child={child} itemId={id} />
+              ) : (
+                Children.map(child.props.children, (grandchild) => (
+                  <DisplayItem child={grandchild} itemId={id} />
+                ))
+              )
+            )}
           </ScrollMenu>
         </div>
       </>
@@ -105,7 +114,6 @@ export default function Navbar({
       >
         <div className="pl-3 align-middle">
           <Link className="relative float-left ml-5" link="/">
-
             <Image
               src="/images/DSC_square_logo.png"
               alt="logo"
@@ -118,7 +126,6 @@ export default function Navbar({
         <div className="float-right mr-5 flex flex-grow flex-row justify-end">
           {items.map((child) => (
             <div className="inline-block">{child}</div>
-
           ))}
         </div>
       </nav>
