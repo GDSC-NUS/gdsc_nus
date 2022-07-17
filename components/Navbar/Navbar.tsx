@@ -36,7 +36,6 @@ export default function Navbar({
 
   const mobileItemsList = Array();
 
-  console.log(mobileItems);
   for (let i = 0; i < mobileItems.length; i++) {
     if (mobileItems[i] !== null && mobileItems[i].type !== DropdownMenu) {
       mobileItemsList.push(mobileItems[i]);
