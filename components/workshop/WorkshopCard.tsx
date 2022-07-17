@@ -46,7 +46,7 @@ export default function WorkshopCard({
       >
         <div className="h-[140px] w-full overflow-hidden">{image}</div>
         <div className="relative m-0 flex h-[120px] w-full flex-col space-y-1 rounded-lg bg-cover px-3 pt-1 pb-3">
-          <h3 className="w-full text-sm font-bold md:text-xl">{title}</h3>
+          <h3 className="w-full text-xl font-bold">{title}</h3>
           <h5 className="w-full text-sm font-medium">{date}</h5>
           <p className="h-[2rem] w-full flex-shrink overflow-hidden text-ellipsis whitespace-normal text-start text-xs">
             {excerpt}
@@ -74,8 +74,8 @@ export default function WorkshopCard({
           {popupImage}
         </div>
         <div className="flex h-full w-full flex-col space-y-5 lg:w-1/2">
-          <h3 className="w-full text-start text-[20px] font-bold">{title}</h3>
-          <h5 className="w-full text-sm font-medium">{date}</h5>
+          <h3 className="w-full text-center text-[20px] font-bold">{title}</h3>
+          <h5 className="w-full text-center text-sm font-medium">{date}</h5>
           <div className="flex w-full space-x-2">
             {cardTags.map((tag) => (
               <p
@@ -86,7 +86,7 @@ export default function WorkshopCard({
               </p>
             ))}
           </div>
-          <div className="flex w-full flex-row space-x-2">{popupSpeakers}</div>
+          <div className="flex w-full flex-row space-x-4">{popupSpeakers}</div>
           <div className="w-full flex-grow">{popupDescription}</div>
         </div>
       </div>
