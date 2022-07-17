@@ -2,12 +2,27 @@ import clsx from "clsx";
 import React from "react";
 import { useState } from "react";
 import { Menu } from "@headlessui/react";
+import { IconContext } from "react-icons";
+import { AiFillCaretDown } from "react-icons/ai";
 
 type DropdownMenuProps = {
   className?: string;
   children: JSX.Element[];
   menuTitle: string;
 };
+
+function DisplayMenuTitle({ menuTitle }: { menuTitle: string }) {
+  return (
+    <div>
+      <div className="inline-block">{menuTitle}</div>
+      <div className="inline-block pl-2">
+        <IconContext.Provider value={{ color: "63666A" }}>
+          <AiFillCaretDown />
+        </IconContext.Provider>
+      </div>
+    </div>
+  );
+}
 
 export default function DropdownMenu({
   className,
@@ -24,7 +39,7 @@ export default function DropdownMenu({
     <div className="h-full">
       <Menu>
         <Menu.Button className={clsx("h-full", className)}>
-          {menuTitle}
+          <DisplayMenuTitle menuTitle={menuTitle} />
         </Menu.Button>
         <Menu.Items className="align-left absolute flex flex-col">
           {list.map((child) => (
