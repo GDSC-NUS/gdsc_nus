@@ -37,12 +37,13 @@ export default function Navbar({
   const mobileItemsList = Array();
 
   for (let i = 0; i < mobileItems.length; i++) {
-    if (mobileItems[i].type === DropdownMenu) {
+    if (mobileItems[i] !== null && mobileItems[i].type !== DropdownMenu) {
+      mobileItemsList.push(mobileItems[i]);
+    }
+    if (mobileItems[i] !== null && mobileItems[i].type === DropdownMenu) {
       Children.map(mobileItems[i].props.children, (grandchild) => {
         mobileItemsList.push(grandchild);
       });
-    } else {
-      mobileItemsList.push(mobileItems[i]);
     }
   }
 
