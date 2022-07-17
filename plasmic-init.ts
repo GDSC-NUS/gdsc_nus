@@ -5,6 +5,9 @@ import { Popup } from "./components/Popup";
 import { Carousel, CarouselCard } from "./components/carousel";
 import { DropdownMenu, Navbar } from "./components/Navbar";
 import { registerYouTube, youtubeMeta } from "@plasmicpkgs/react-youtube";
+import Workshop from "./components/workshop/Workshop";
+import WorkshopCard from "./components/workshop/WorkshopCard";
+import TagFilter from "./components/workshop/TagFilter";
 
 const { publicRuntimeConfig } = getConfig();
 const {
@@ -106,5 +109,31 @@ PLASMIC.registerComponent(DropdownMenu, {
     children: "slot",
     className: "string",
     menuTitle: "string",
+  },
+});
+
+PLASMIC.registerComponent(Workshop, {
+  name: "Workshop",
+  props: {
+    title: "string",
+    children: "slot",
+    className: "string",
+    showTags: "boolean",
+  },
+});
+
+PLASMIC.registerComponent(WorkshopCard, {
+  name: "WorkshopCard",
+  props: {
+    className: "string",
+    title: "string",
+    date: "string",
+    excerpt: "string",
+    tags: "string",
+    image: "slot",
+    popupSpeakers: "slot",
+    popupImage: "slot",
+    popupDescription: "slot",
+    preview: "boolean",
   },
 });

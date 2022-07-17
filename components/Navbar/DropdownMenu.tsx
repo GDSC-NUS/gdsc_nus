@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React from "react";
-import { AiFillCaretDown } from "react-icons/ai";
 import { useState } from "react";
+import { Menu } from "@headlessui/react";
 
 type DropdownMenuProps = {
   className?: string;
@@ -18,30 +18,20 @@ export default function DropdownMenu({
   const toggleDropdown = () => setShowDropdown(!showDropdown);
 
   const list = Array.isArray(children) ? children : [children];
+  var l = 0;
 
   return (
-    <>
-      <div>
-        <div className={clsx(className)}>
-          <div
-            onClick={toggleDropdown}
-            className="cursor-pointer hover:brightness-125"
-          >
-            <div className="inline-block align-middle">{menuTitle}</div>
-            <div className="inline-block pl-2 align-middle">
-              <AiFillCaretDown />
-            </div>
-          </div>
-        </div>
-        <ul className="align-left absolute flex flex-col pl-2">
-          {showDropdown &&
-            list.map((item, index) => (
-              <li className="relative flex flex-col" key={index}>
-                {item}
-              </li>
-            ))}
-        </ul>
-      </div>
-    </>
+    <div className="h-full">
+      <Menu>
+        <Menu.Button className={clsx("h-full", className)}>
+          {menuTitle}
+        </Menu.Button>
+        <Menu.Items className="align-left absolute flex flex-col">
+          {list.map((child) => (
+            <Menu.Item>{child}</Menu.Item>
+          ))}
+        </Menu.Items>
+      </Menu>
+    </div>
   );
 }

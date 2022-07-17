@@ -6,6 +6,7 @@ import {
 } from "@plasmicapp/loader-nextjs";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Error from "next/error";
+import Head from "next/head";
 import { PLASMIC } from "../plasmic-init";
 
 /**
@@ -64,13 +65,10 @@ export default function CatchallPage(props: {
     return <Error statusCode={404} />;
   }
   const pageMeta = plasmicData.entryCompMetas[0];
+
   return (
     // Pass in the data fetched in getStaticProps as prefetchedData
     <PlasmicRootProvider loader={PLASMIC} prefetchedData={plasmicData}>
-      {
-        // plasmicData.entryCompMetas[0].name contains the name
-        // of the component you fetched.
-      }
       <PlasmicComponent component={pageMeta.name} />
     </PlasmicRootProvider>
   );
