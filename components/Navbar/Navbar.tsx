@@ -1,9 +1,12 @@
 import clsx from "clsx";
-import React, { useState } from "react";
+import React, { Children, useState } from "react";
 import { useWindowDimensions } from "../utils";
 import Link from "../Link";
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
+
+import DropdownMenu from "./DropdownMenu";
 import usePreventBodyScroll from "./usePreventBodyScroll";
+
 import Image from "next/image";
 
 type NavbarProps = {
@@ -29,11 +32,31 @@ export default function Navbar({
 
   //Converts children to an array
   const items = Array.isArray(children) ? children : [children];
+  const mobileItems = Array.isArray(children) ? children : [children];
+
+  const mobileItemsList = Array();
+
+  for (let i = 0; i < mobileItems.length; i++) {
+    if (mobileItems[i].type === DropdownMenu) {
+      Children.map(mobileItems[i].props.children, (grandchild) => {
+        mobileItemsList.push(grandchild);
+      });
+    } else {
+      mobileItemsList.push(mobileItems[i]);
+    }
+  }
 
   //Converts items to a format that is usable for Mobile View ScrollMenu
   const getItems = () =>
     items.map((child, ind) => ({ id: `element-${ind}`, child: { child } }));
   const [list, setList] = useState(getItems);
+
+  const getMobileItems = () =>
+    mobileItemsList.map((child, ind) => ({
+      id: `element-${ind}`,
+      child: { child },
+    }));
+  const [mobileList, setMobileList] = useState(getMobileItems);
 
   //Displays in Mobile View. Checks if item is visible, before fading it (if at corners)
   function DisplayItem({ child, itemId }: { child: any; itemId: string }) {
@@ -60,6 +83,30 @@ export default function Navbar({
     }
   }
 
+  function LeftArrow() {
+    const { isFirstItemVisible } = React.useContext(VisibilityContext);
+    if (isFirstItemVisible) {
+      return <div></div>;
+    }
+    return (
+      <div className="flex flex-row justify-center pr-2">
+        <div className="h-10 w-5">&lt;</div>
+      </div>
+    );
+  }
+
+  function RightArrow() {
+    const { isLastItemVisible } = React.useContext(VisibilityContext);
+    if (isLastItemVisible) {
+      return <div></div>;
+    }
+    return (
+      <div className="flex flex-row justify-center">
+        <div className="h-10 w-5">&gt;</div>
+      </div>
+    );
+  }
+
   //Mobile view
   const { disableScroll, enableScroll } = usePreventBodyScroll();
 
@@ -84,8 +131,10 @@ export default function Navbar({
           <ScrollMenu
             onWheel={onWheel}
             scrollContainerClassName="scrollbar-hide flex flex-row flex-grow float-right mr-5 h-full"
+            LeftArrow={LeftArrow}
+            RightArrow={RightArrow}
           >
-            {list.map(({ child, id }) => (
+            {mobileList.map(({ child, id }) => (
               <DisplayItem child={child} itemId={id} />
             ))}
           </ScrollMenu>
@@ -105,7 +154,6 @@ export default function Navbar({
       >
         <div className="pl-3 align-middle">
           <Link className="relative float-left ml-5" link="/">
-
             <Image
               src="/images/DSC_square_logo.png"
               alt="logo"
@@ -118,7 +166,6 @@ export default function Navbar({
         <div className="float-right mr-5 flex flex-grow flex-row justify-end">
           {items.map((child) => (
             <div className="inline-block">{child}</div>
-
           ))}
         </div>
       </nav>
