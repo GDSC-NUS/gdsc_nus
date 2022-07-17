@@ -21,9 +21,11 @@ export default function DropdownMenu({
   var l = 0;
 
   return (
-    <div className={clsx("h-full", className)}>
+    <div className="h-full">
       <Menu>
-        <Menu.Button className="h-full">{menuTitle}</Menu.Button>
+        <Menu.Button className={clsx("h-full", className)}>
+          {menuTitle}
+        </Menu.Button>
         <Menu.Items className="align-left absolute flex flex-col">
           {list.map((child) => (
             <Menu.Item>{child}</Menu.Item>
