@@ -1,7 +1,4 @@
 import { Link } from "../components";
-import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
-import usePreventBodyScroll from "../components/Navbar/UsePreventBodyScroll";
-
 
 export default function Test() {
   return (

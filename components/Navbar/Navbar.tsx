@@ -25,7 +25,6 @@ export default function Navbar({
   mobileWidthRange = 760,
 }: NavbarProps) {
   if (typeof window === "undefined") return <h2>Error Message</h2>;
-
   //handles width: checks for mobile vs small desktop vs normal desktop
   const { height, width } = useWindowDimensions(window);
   const isMobile = width <= mobileWidthRange;
@@ -84,30 +83,6 @@ export default function Navbar({
     }
   }
 
-  function LeftArrow() {
-    const { isFirstItemVisible } = React.useContext(VisibilityContext);
-    if (isFirstItemVisible) {
-      return <div></div>;
-    }
-    return (
-      <div className="flex flex-row justify-center pr-2">
-        <div className="h-10 w-5">&lt;</div>
-      </div>
-    );
-  }
-
-  function RightArrow() {
-    const { isLastItemVisible } = React.useContext(VisibilityContext);
-    if (isLastItemVisible) {
-      return <div></div>;
-    }
-    return (
-      <div className="flex flex-row justify-center">
-        <div className="h-10 w-5">&gt;</div>
-      </div>
-    );
-  }
-
   //Mobile view
   const { disableScroll, enableScroll } = usePreventBodyScroll();
 
@@ -119,21 +94,20 @@ export default function Navbar({
           onMouseEnter={disableScroll}
           onMouseLeave={enableScroll}
         >
-          <div className="float-left inline-block border-b-0 pl-3 pr-3 align-middle">
-            <Link className="pt-1" link="/">
+          <div className="pl-3 align-middle">
+            <Link className="relative float-left ml-5" link="/">
               <Image
                 src="/images/DSC_square_logo.png"
                 alt="logo"
                 width="50px"
                 height="50px"
+                objectPosition="0px 2.5px"
               />
             </Link>
           </div>
           <ScrollMenu
             onWheel={onWheel}
             scrollContainerClassName="scrollbar-hide flex flex-row flex-grow float-right mr-5 h-full"
-            LeftArrow={LeftArrow}
-            RightArrow={RightArrow}
           >
             {mobileList.map(({ child, id }) => (
               <DisplayItem child={child} itemId={id} />
@@ -147,12 +121,7 @@ export default function Navbar({
   //desktop
   return (
     <>
-      <nav
-        className={clsx(
-          "fixed z-50 flex w-full flex-row items-center bg-white",
-          className
-        )}
-      >
+      <nav className={clsx("fixed z-50 w-full bg-white", className)}>
         <div className="pl-3 align-middle">
           <Link className="relative float-left ml-5" link="/">
             <Image

@@ -15,8 +15,10 @@ function DisplayMenuTitle({ menuTitle }: { menuTitle: string }) {
   return (
     <div>
       <div className="inline-block">{menuTitle}</div>
-      <div className="inline-block pl-2">
-        <IconContext.Provider value={{ color: "63666A" }}>
+      <div className="inline-block pl-3">
+        <IconContext.Provider
+          value={{ color: "63666A", className: "pt-3 h-8", size: "14px" }}
+        >
           <AiFillCaretDown />
         </IconContext.Provider>
       </div>
