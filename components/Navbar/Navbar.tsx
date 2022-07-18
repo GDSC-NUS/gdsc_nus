@@ -49,7 +49,6 @@ export default function Navbar({
   //Converts items to a format that is usable for Mobile View ScrollMenu
   const getItems = () =>
     items.map((child, ind) => ({ id: `element-${ind}`, child: { child } }));
-  const [list, setList] = useState(getItems);
 
   const getMobileItems = () =>
     mobileItemsList.map((child, ind) => ({
@@ -95,7 +94,7 @@ export default function Navbar({
           onMouseLeave={enableScroll}
         >
           <div className="pl-3 align-middle">
-            <Link className="relative float-left ml-5" link="/">
+            <Link className="relative float-left ml-5 mr-5" link="/">
               <Image
                 src="/images/DSC_square_logo.png"
                 alt="logo"
