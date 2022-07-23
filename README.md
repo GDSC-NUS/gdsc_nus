@@ -37,3 +37,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - jishnu28
 - brian16600
 - Josephaedan
+
+## Designers
+
+- Christabelle
+- Varrene
+- Josephaeden
