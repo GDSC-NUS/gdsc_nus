@@ -19,7 +19,7 @@ export default function PopupWindow({
     <>
       <div
         className={clsx(
-          "fixed inset-0 z-10 bg-gray-500 bg-opacity-75",
+          "fixed inset-0 z-10 h-screen w-screen bg-gray-500 bg-opacity-75",
           windowClassName
         )}
         onClick={() => closeButton(false)}
