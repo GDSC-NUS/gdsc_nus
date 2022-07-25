@@ -30,14 +30,15 @@ export default function Popup({
       >
         {clickable}
       </div>
+      {/*Disabled transitions as elements underneath transition slide will show up as the opacity of gray screen is non-100% */}
       <Transition
         show={isOpen || preview}
-        enter="transition-opacity duration-300"
-        enterFrom="opacity-0"
-        enterTo="opacity-100"
-        leave="transition-opacity duration-300"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0"
+        // enter="transition-opacity duration-300"
+        // enterFrom="opacity-0"
+        // enterTo="opacity-100"
+        // leave="transition-opacity duration-300"
+        // leaveFrom="opacity-100"
+        // leaveTo="opacity-0"
       >
         <PopupWindow
           closeButton={setIsOpen}

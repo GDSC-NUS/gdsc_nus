@@ -94,7 +94,7 @@ export default function Workshop({
   return (
     <div
       className={clsx(
-        "mx-auto flex h-full w-4/5 flex-col items-center space-y-5",
+        "mx-auto flex h-full w-4/5 max-w-[1920px] flex-col items-center space-y-5",
         className
       )}
     >
