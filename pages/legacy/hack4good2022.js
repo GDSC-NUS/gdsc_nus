@@ -369,11 +369,17 @@ const goldSponsors = [
     ),
     content: (
       <p className="hack-workshops__body" style={{ textAlign: "center" }}>
-        GIC is one of the three investment entities in Singapore that manage the
-        Government’s reserves, alongside the Monetary Authority of Singapore
-        (MAS) and Temasek. They manage most of the Government’s financial
-        assets, investing for the long term with an aim to preserve and enhance
-        the international purchasing power of the funds placed in its care.
+        GIC is a leading global investment firm established in 1981 to secure
+        Singapore’s financial future. As the manager of Singapore’s foreign
+        reserves, we take a long-term, disciplined approach to investing, 
+        and are uniquely positioned across a wide range of asset classes and 
+        active strategies globally. These include equities, fixed income, 
+        real estate, private equity, venture capital, and infrastructure. 
+        Our long-term approach, multi-asset capabilities, and global 
+        connectivity enable us to be an investor of choice. We seek to add 
+        meaningful value to our investments. Headquartered in Singapore, 
+        we have a global talent force of over 1,900 people in 11 key financial 
+        cities and have investments in over 40 countries.
       </p>
     ),
   },
