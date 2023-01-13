@@ -24,7 +24,7 @@ export default function Navbar({
   editMobile,
   mobileWidthRange = 760,
 }: NavbarProps) {
-  if (typeof window === "undefined") return <h2>Error Message</h2>;
+  if (typeof window === "undefined") return <></>;
   //handles width: checks for mobile vs small desktop vs normal desktop
   const { height, width } = useWindowDimensions(window);
   const isMobile = width <= mobileWidthRange;
@@ -88,7 +88,7 @@ export default function Navbar({
   if (isMobile) {
     return (
       <>
-        <div
+        <nav
           className={clsx("absolute z-50 w-full bg-white", className)}
           onMouseEnter={disableScroll}
           onMouseLeave={enableScroll}
@@ -112,7 +112,7 @@ export default function Navbar({
               <DisplayItem child={child} itemId={id} />
             ))}
           </ScrollMenu>
-        </div>
+        </nav>
       </>
     );
   }
