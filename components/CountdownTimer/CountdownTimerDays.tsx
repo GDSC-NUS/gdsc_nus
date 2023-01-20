@@ -13,6 +13,7 @@ export default function CountdownTimerDays({
   const [daysToCountdown, setDaysToCountdown] = useState<number>();
 
   const calculateDaysToCountdown = () => {
+    //This keeps the interval ticking so the timer keeps counting down
     const interval = setInterval(() => {
       const now = Date.now();
       const parsedEndDate = Date.parse(endDate);
@@ -22,12 +23,15 @@ export default function CountdownTimerDays({
 
       if (daysLeft < 0) {
         //invalid timer
+        clearInterval(interval);
         setDaysToCountdown(0);
       } else {
         setDaysToCountdown(daysLeft);
       }
     });
   };
+
+  //This continually refreshes and updates the timer
   useEffect(() => {
     calculateDaysToCountdown();
   });

@@ -132,6 +132,7 @@
 }
 
 @layer base {
+  //Adds the font-outline Tailwind CSS property
   .font-outline {
     -webkit-text-stroke: 4px black;
   }

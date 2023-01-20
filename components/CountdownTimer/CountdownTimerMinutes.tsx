@@ -13,6 +13,7 @@ export default function CountdownTimerMinutes({
   const [minsToCountdown, setMinsToCountdown] = useState<number>();
 
   const calculateMinsToCountdown = () => {
+    //Interval function resets regularly to ensure the timer keeps ticking
     const interval = setInterval(() => {
       const now = Date.now();
       const parsedEndDate = Date.parse(endDate);
@@ -30,6 +31,7 @@ export default function CountdownTimerMinutes({
     });
   };
 
+  //This continually refreshes and updates the timer
   useEffect(() => {
     calculateMinsToCountdown();
   });

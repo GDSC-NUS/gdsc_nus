@@ -13,6 +13,7 @@ export default function CountdownTimerHours({
   const [hoursToCountdown, setHoursToCountdown] = useState<number>();
 
   const calculateHoursToCountdown = () => {
+    //Interval function resets regularly to ensure the timer keeps ticking
     const interval = setInterval(() => {
       const now = Date.now();
       const parsedEndDate = Date.parse(endDate);
@@ -30,6 +31,7 @@ export default function CountdownTimerHours({
     });
   };
 
+  //This continually refreshes and updates the timer
   useEffect(() => {
     calculateHoursToCountdown();
   });
