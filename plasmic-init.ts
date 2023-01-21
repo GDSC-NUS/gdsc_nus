@@ -1,5 +1,9 @@
 import getConfig from "next/config";
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
+import CountDownTimerDays from "./components/CountdownTimer/CountdownTimerDays";
+import CountDownTimerHours from "./components/CountdownTimer/CountdownTimerHours";
+import CountDownTimerMinutes from "./components/CountdownTimer/CountdownTimerMinutes";
+import Outline from "./components/Outline";
 import { HelloWorld, Link } from "./components";
 import { Popup } from "./components/Popup";
 import { Carousel, CarouselCard } from "./components/carousel";
@@ -135,5 +139,37 @@ PLASMIC.registerComponent(WorkshopCard, {
     popupImage: "slot",
     popupDescription: "slot",
     preview: "boolean",
+  },
+});
+
+PLASMIC.registerComponent(CountDownTimerDays, {
+  name: "CountDownTimerDays",
+  props: {
+    className: "string",
+    endDate: "string",
+  },
+});
+
+PLASMIC.registerComponent(CountDownTimerHours, {
+  name: "CountDownTimerHours",
+  props: {
+    className: "string",
+    endDate: "string",
+  },
+});
+
+PLASMIC.registerComponent(CountDownTimerMinutes, {
+  name: "CountDownTimerMinutes",
+  props: {
+    className: "string",
+    endDate: "string",
+  },
+});
+
+PLASMIC.registerComponent(Outline, {
+  name: "Outline",
+  props: {
+    className: "string",
+    children: "slot",
   },
 });
