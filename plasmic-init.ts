@@ -171,5 +171,6 @@ PLASMIC.registerComponent(Outline, {
   props: {
     className: "string",
     children: "slot",
+    largeSize: "boolean",
   },
 });
