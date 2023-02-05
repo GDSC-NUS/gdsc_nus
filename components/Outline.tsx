@@ -1,5 +1,7 @@
+import clsx from "clsx";
+
 type OutlineProps = {
-  className?: string;
+  className: string;
   largeSize: boolean;
   children: JSX.Element[];
 };
@@ -10,8 +12,12 @@ export default function Outline({
   largeSize,
 }: OutlineProps) {
   if (largeSize) {
-    return <div className="font-outline-large">{children}</div>;
+    return (
+      <div className={clsx("font-outline-large", className)}>{children}</div>
+    );
   } else {
-    return <div className="font-outline-small">{children}</div>;
+    return (
+      <div className={clsx("font-outline-small", className)}>{children}</div>
+    );
   }
 }
