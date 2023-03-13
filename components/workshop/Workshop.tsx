@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { useMemo, useState } from "react";
 import { WorkshopCardInterface } from "./WorkshopCard";
 import TagFilter, { TagFilterInterface } from "./TagFilter";
+import DateFilter, { DateFilterInterface } from "./DatesFilter";
 import React from "react";
 
 export type WorkshopProps = {
@@ -13,6 +14,7 @@ export type WorkshopProps = {
 };
 
 export const TagsContext = React.createContext<string[]>([]);
+export const DatesContext = React.createContext<string[]>([]);
 
 export default function Workshop({
   title,
@@ -22,6 +24,7 @@ export default function Workshop({
   tags,
 }: WorkshopProps): JSX.Element {
   const [filtered, setFiltered] = useState<string[]>([]);
+  const [filteredDate, setFilteredDate] = useState<string>('');
 
   const workshopTags = useMemo(() => {
     if (!children) {
@@ -63,8 +66,25 @@ export default function Workshop({
       return;
     }
     if (filtered.length === 0) {
-      return children;
+      const filteredCards: any[] | undefined = [];
+      if (!children.length) {
+        const child: WorkshopCardInterface =
+          children as unknown as WorkshopCardInterface;
+        if (card.props.date.includes(filteredDate)) { //filter by date
+          return child;
+        };
+        return;
+      } else {
+        children.forEach((card) => {
+          if (card.props.date) {
+            if (card.props.date.includes(filteredDate)) { //filter by date
+              filteredCards.push(card);
+            }
+          }
+        });
+      }
     }
+
     const filteredCards: any[] | undefined = [];
     if (!children.length) {
       const child: WorkshopCardInterface =
@@ -72,7 +92,8 @@ export default function Workshop({
       const cardTags: string[] = child.props.tags
         .split(",")
         .map((text: string) => text.trim());
-      if (filtered.every((tag: string) => cardTags.includes(tag))) {
+      if (filtered.every((tag: string) => cardTags.includes(tag))
+        && card.props.date.includes(filteredDate)) { //filter by date
         return child;
       }
       return;
@@ -82,14 +103,16 @@ export default function Workshop({
           const cardTags: string[] = card.props.tags
             .split(",")
             .map((text: string) => text.trim());
-          if (filtered.every((tag: string) => cardTags.includes(tag))) {
+          if (filtered.every((tag: string) => cardTags.includes(tag))
+            && card.props.date.includes(filteredDate)) { //filter by date
             filteredCards.push(card);
           }
         }
       });
     }
+
     return filteredCards;
-  }, [children, filtered]);
+  }, [children, filtered, filteredDate]);
 
   return (
     <div
@@ -103,9 +126,12 @@ export default function Workshop({
       </h1>
       <TagsContext.Provider value={workshopTags}>
         {showTags && <TagFilter setFiltered={setFiltered} />}
-        <div className="grid w-full grid-cols-1 justify-items-center gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {children && filteredChildren}
-        </div>
+        <DatesContext.Provider value={["2023", "2022", "2021"]}>
+          {<DateFilter setFiltered={setFilteredDate} />}
+          <div className="grid w-full grid-cols-1 justify-items-center gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {children && filteredChildren}
+          </div>
+        </DatesContext.Provider>
       </TagsContext.Provider>
     </div>
   );
