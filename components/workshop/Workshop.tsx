@@ -93,7 +93,7 @@ export default function Workshop({
         .split(",")
         .map((text: string) => text.trim());
       if (filtered.every((tag: string) => cardTags.includes(tag))
-        && card.props.date.includes(filteredDate)) { //filter by date
+        && child.props.date.includes(filteredDate)) { //filter by date
         return child;
       }
       return;
