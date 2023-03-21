@@ -9,7 +9,7 @@ import {
 import { DatesContext } from "./Workshop";
 
 export type DateFilterProps = {
-  setFiltered: React.Dispatch<React.SetStateAction<string[]>>;
+  setFiltered: React.Dispatch<React.SetStateAction<string>>;
 };
 
 export interface DateFilterInterface extends JSX.Element {}
