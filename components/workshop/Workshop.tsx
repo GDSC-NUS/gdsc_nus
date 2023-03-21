@@ -70,7 +70,7 @@ export default function Workshop({
       if (!children.length) {
         const child: WorkshopCardInterface =
           children as unknown as WorkshopCardInterface;
-        if (card.props.date.includes(filteredDate)) { //filter by date
+        if (child.props.date.includes(filteredDate)) { //filter by date
           return child;
         };
         return;
