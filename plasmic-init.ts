@@ -11,6 +11,8 @@ import { DropdownMenu, Navbar } from "./components/Navbar";
 import { registerYouTube, youtubeMeta } from "@plasmicpkgs/react-youtube";
 import Workshop from "./components/workshop/Workshop";
 import WorkshopCard from "./components/workshop/WorkshopCard";
+import QuestionBox from "./components/FAQ/QuestionBox";
+import AnswerBox from "./components/FAQ/AnswerBox";
 import TagFilter from "./components/workshop/TagFilter";
 
 const { publicRuntimeConfig } = getConfig();
@@ -172,5 +174,22 @@ PLASMIC.registerComponent(Outline, {
     className: "string",
     children: "slot",
     largeSize: "boolean",
+  },
+});
+
+PLASMIC.registerComponent(AnswerBox, {
+  name: "AnswerBox",
+  props: {
+    className: "string",
+    answer: "string",
+  },
+});
+
+PLASMIC.registerComponent(QuestionBox, {
+  name: "QuestionBox",
+  props: {
+    className: "string",
+    children: "slot",
+    question: "string",
   },
 });
