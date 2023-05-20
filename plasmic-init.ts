@@ -177,7 +177,7 @@ PLASMIC.registerComponent(Outline, {
 });
 
 PLASMIC.registerComponent(TitleBox, {
-  name: "QuestionBox",
+  name: "TitleBox",
   props: {
     className: "string",
     children: "slot",

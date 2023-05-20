@@ -1,8 +1,5 @@
-import React from "react";
 import clsx from "clsx";
 import { useState } from "react";
-import { ReactNode } from "react";
-import { classicNameResolver } from "typescript";
 
 interface TitleBoxProps {
   title: JSX.Element;
@@ -24,7 +21,7 @@ export default function TitleBox({
       <button
         onClick={toggleExpanded}
         className={clsx(
-          "border-stone-950 w-1/2 flex-row bg-blue-300 p-2 font-bold text-gray-900 hover:bg-blue-200",
+          "border-stone-950 w-1/2 flex-row bg-blue-400 p-2 font-bold text-gray-900 hover:bg-blue-200",
           className
         )}
       >
