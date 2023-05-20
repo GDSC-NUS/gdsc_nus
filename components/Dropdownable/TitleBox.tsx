@@ -16,27 +16,18 @@ export default function TitleBox({
     setExpanded(!expanded);
   };
 
-  const [domLoaded, setDomLoaded] = useState(false);
-  useEffect(() => {
-    setDomLoaded(true);
-  }, []);
-
   return (
-    <>
-      {domLoaded && (
-        <div>
-          <button
-            onClick={toggleExpanded}
-            className={clsx(
-              "border-stone-950 w-1/2 flex-row bg-blue-400 p-2 font-bold text-gray-900 hover:bg-blue-200",
-              className
-            )}
-          >
-            {title}
-          </button>
-          {expanded && <div>{children}</div>}
-        </div>
-      )}
-    </>
+    <div>
+      <button
+        onClick={toggleExpanded}
+        className={clsx(
+          "border-stone-950 w-1/2 flex-row bg-blue-400 p-2 font-bold text-gray-900 hover:bg-blue-200",
+          className
+        )}
+      >
+        {title}
+      </button>
+      {expanded && <div>{children}</div>}
+    </div>
   );
 }
