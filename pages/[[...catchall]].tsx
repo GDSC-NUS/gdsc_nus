@@ -36,6 +36,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       ? `/${catchall.join("/")}`
       : "/";
   const plasmicData = await PLASMIC.maybeFetchComponentData(plasmicPath);
+
   if (plasmicData) {
     // This is a path that Plasmic knows about; pass the data
     // in as props
