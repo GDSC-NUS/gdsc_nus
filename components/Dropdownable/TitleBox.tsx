@@ -17,16 +17,8 @@ export default function TitleBox({
   };
 
   return (
-    <div>
-      <button
-        onClick={toggleExpanded}
-        className={clsx(
-          "border-stone-950 w-1/2 flex-row bg-blue-400 p-2 font-bold text-gray-900 hover:bg-blue-200",
-          className
-        )}
-      >
-        {title}
-      </button>
+    <div className={className}>
+      <button onClick={toggleExpanded}>{title}</button>
       {expanded && <div>{children}</div>}
     </div>
   );
